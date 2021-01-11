@@ -1,0 +1,38 @@
+.container {
+  padding: 8vh 120px 5vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  column-gap: 10vh;
+}
+
+.text {
+  font-family: Mulish;
+
+  &_points {
+    margin-top: 3vh;
+
+    div {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 3vh;
+
+      img {
+        margin-right: 15px;
+      }
+
+      p {
+        margin-top: 0;
+        width: 398px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        color: #333533;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}

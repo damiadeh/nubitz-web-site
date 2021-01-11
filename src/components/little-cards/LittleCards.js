@@ -1,0 +1,56 @@
+import Styles from "./littleCards.module.scss";
+
+const LittleCards = ({
+  icon,
+  title,
+  text,
+  width,
+  height,
+  radius,
+  backgroundColor,
+  textColor,
+  titleColor,
+}) => {
+  let useStyle = {
+    backgroundColor: "#1e396e",
+    height: `${height}`,
+    borderRadius: `${radius}`,
+  };
+
+  if (backgroundColor) {
+    useStyle = {
+      backgroundColor: `${backgroundColor}`,
+      height: `${height}`,
+      borderRadius: `${radius}`,
+      border: "0.5px solid #C2D9EB",
+      color: "#1E396E",
+    };
+  }
+
+  return (
+    <div className={Styles.card} style={useStyle}>
+      <div className={Styles.card_icon}>
+        <img src={icon} alt="icon" />
+      </div>
+      <p
+        className={Styles.card_title}
+        style={{
+          color: `${titleColor}`,
+        }}
+      >
+        {title}
+      </p>
+      <p
+        className={Styles.card_text}
+        style={{
+          color: `${textColor}`,
+          width: `${width}`,
+        }}
+      >
+        {text}
+      </p>
+    </div>
+  );
+};
+
+export default LittleCards;

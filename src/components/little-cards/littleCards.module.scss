@@ -1,0 +1,26 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 10;
+  padding: 20px;
+
+  p {
+    margin: 1vh 0;
+  }
+
+  &_title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  &_text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
