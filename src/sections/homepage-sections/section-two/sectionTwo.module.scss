@@ -1,0 +1,29 @@
+.container {
+  background: linear-gradient(
+    180deg,
+    rgba(236, 244, 248, 0.23) 0%,
+    #ecf4f8 100%
+  );
+  padding: 8vh 120px 5vh;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  column-gap: 10vh;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 3vh;
+}
+
+.arrows {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 2vh;
+
+  img {
+    cursor: pointer;
+  }
+}
