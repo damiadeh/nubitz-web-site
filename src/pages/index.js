@@ -2,10 +2,15 @@ import Image from "next/image";
 import Card from "../components/cards/Card";
 
 import Button from "../components/primary-button/Button";
+import SectionFive from "../sections/homepage-sections/section-five/SectionFive";
+import SectionFour from "../sections/homepage-sections/section-four/SectionFour";
 import SectionOne from "../sections/homepage-sections/section-one/SectionOne";
+import SectionSeven from "../components/contact/Contact";
+import SectionSix from "../sections/homepage-sections/section-six/SectionSix";
 import SectionThree from "../sections/homepage-sections/section-three/SectionThree";
 import SectionTwo from "../sections/homepage-sections/section-two/SectionTwo";
 import Styles from "../styles/home.module.scss";
+import Footer from "../components/footer/Footer";
 
 const HomePage = () => {
   return (
@@ -75,6 +80,11 @@ const HomePage = () => {
       <SectionOne />
       <SectionTwo />
       <SectionThree />
+      <SectionFour />
+      <SectionFive />
+      <SectionSix />
+      <SectionSeven />
+      <Footer />
     </div>
   );
 };

@@ -1,15 +1,17 @@
 import Styles from "./button.module.scss";
 
-const Button = ({ text, backgroundColor, textColor, primary }) => {
+const Button = ({ text, backgroundColor, textColor, primary, width }) => {
   let useStyle = {
     backgroundColor: "#fff",
     color: "#1E396E",
+    width: `${width}`,
   };
 
   if (!primary) {
     useStyle = {
       backgroundColor: `${backgroundColor}`,
       color: `${textColor}`,
+      width: `${width}`,
     };
   }
 
