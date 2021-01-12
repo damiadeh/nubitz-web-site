@@ -3,7 +3,9 @@
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: center;
-  column-gap: 10vh;
+  justify-content: center;
+  column-gap: 20vh;
+  font-family: "Mulish", sans-serif;
 }
 
 .text {

@@ -1,8 +1,29 @@
 .container {
-  background-color: #1e396e;
+  background-color: #214a7e;
   padding: 8vh 120px 5vh;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: auto auto;
   align-items: center;
   column-gap: 10vh;
+  font-family: "Mulish", sans-serif;
+}
+
+.languages {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  column-gap: 8vh;
+  row-gap: 4vh;
+
+  div {
+    background-color: #173163;
+    color: white;
+    padding: 15px 0;
+    border-radius: 8px;
+    width: 131px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
