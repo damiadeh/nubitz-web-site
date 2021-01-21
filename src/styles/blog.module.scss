@@ -1,0 +1,225 @@
+.container {
+  .hero {
+    background-image: url("../../public/assets/blog/hero.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    padding: 15px 120px 0;
+
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
+
+    &_text {
+      position: relative;
+      top: 25%;
+      width: 45%;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 40px;
+
+      @media screen and (max-width: 768px) {
+        top: 60%;
+        padding: 40px;
+        width: 75%;
+      }
+
+      @media screen and (max-width: 420px) {
+        top: 50%;
+        padding: 15px;
+        width: 95%;
+      }
+
+      h3 {
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 35px;
+        text-transform: capitalize;
+        color: #242423;
+        width: 362px;
+        margin: 0;
+      }
+
+      p {
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 24px;
+        color: #333533;
+        width: 375px;
+
+        @media screen and (max-width: 768px) {
+          width: unset;
+        }
+      }
+    }
+
+    &_person {
+      display: flex;
+      align-items: flex-start;
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+
+      p {
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 13px;
+        text-transform: capitalize;
+        color: #333533;
+        margin: 0;
+
+        @media screen and (max-width: 768px) {
+          width: unset;
+        }
+      }
+
+      span {
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 10px;
+        text-transform: capitalize;
+        color: rgba(51, 53, 51, 0.6);
+      }
+    }
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      padding: 15px 20px 0;
+    }
+
+    .nav_items {
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        z-index: 10;
+
+        li {
+          list-style: none;
+
+          a {
+            font-weight: normal;
+            padding-right: 40px;
+            font-style: normal;
+            line-height: 18px;
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+
+      @media screen and (max-width: 768px) {
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .post {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 8vh 120px 10vh;
+    column-gap: 3vh;
+    row-gap: 3vh;
+    border-radius: 5px;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: auto auto;
+      padding: 30px;
+    }
+
+    @media screen and (max-width: 420px) {
+      grid-template-columns: auto;
+      padding: 15px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &_content {
+      margin: 2vh 0;
+      h5 {
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333533;
+        margin: 0;
+      }
+
+      p {
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &_person {
+      display: flex;
+      align-items: flex-start;
+      margin: 2vh 0 0;
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+
+      p {
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 13px;
+        text-transform: capitalize;
+        color: #333533;
+        margin: 0;
+      }
+
+      span {
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 10px;
+        text-transform: capitalize;
+        color: rgba(51, 53, 51, 0.6);
+      }
+    }
+  }
+}

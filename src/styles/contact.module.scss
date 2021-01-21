@@ -1,0 +1,54 @@
+.container {
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 120px;
+    z-index: 10;
+
+    @media screen and (max-width: 768px) {
+      padding: 10px 20px;
+    }
+
+    .nav_items {
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        z-index: 10;
+
+        li {
+          list-style: none;
+
+          a {
+            font-weight: normal;
+            padding-right: 40px;
+            font-style: normal;
+            line-height: 18px;
+            font-size: 14px;
+            color: #00103c;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+
+      @media screen and (max-width: 768px) {
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+}

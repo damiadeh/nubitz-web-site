@@ -1,6 +1,11 @@
 .wrapper {
   padding: 30px 120px;
   font-family: Mulish;
+  margin-bottom: 8vh;
+
+  @media screen and (max-width: 768px) {
+    padding: 15px;
+  }
 
   &_text {
     display: flex;
@@ -8,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     margin: 8vh 0;
+
 
     h2 {
       text-transform: capitalize;
@@ -28,6 +34,10 @@
       font-size: 16px;
       width: 1010px;
       margin: 0;
+
+      @media screen and (max-width: 768px) {
+        width: unset;
+      }
     }
   }
 
@@ -38,8 +48,9 @@
     column-gap: 3vh;
 
     @media screen and (max-width: 768px) {
-      column-gap: 2vh;
-      row-gap: 2vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
 
     div {
@@ -63,7 +74,8 @@
       }
 
       @media screen and (max-width: 768px) {
-        width: 100px;
+        width: 100%;
+        margin-bottom: 2vh;
       }
     }
   }

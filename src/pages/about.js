@@ -35,16 +35,28 @@ const About = () => (
             </Link>
           </li>
           <li>
-            <a>Blog</a>
+            <Link href="/blog">
+              <a>Blog</a>
+            </Link>
           </li>
           <li>
             <a>Get hired</a>
           </li>
         </ul>
+
         <Button
-          text="Get Started"
+          text="Contact Us"
+          route="/contact-us"
           backgroundColor="#214A7E"
           textColor="white"
+        />
+      </div>
+      <div className={Styles.hamburger}>
+        <Image
+          src="/assets/menu-dark.svg"
+          width="30"
+          height="30"
+          alt="hamburger-menu"
         />
       </div>
     </nav>

@@ -1,6 +1,15 @@
+import Link from "next/link";
+
 import Styles from "./button.module.scss";
 
-const Button = ({ text, backgroundColor, textColor, primary, width }) => {
+const Button = ({
+  text,
+  backgroundColor,
+  textColor,
+  primary,
+  width,
+  route,
+}) => {
   let useStyle = {
     backgroundColor: "#fff",
     color: "#1E396E",
@@ -17,9 +26,11 @@ const Button = ({ text, backgroundColor, textColor, primary, width }) => {
 
   return (
     <>
-      <button style={useStyle} className={Styles.button}>
-        {text}
-      </button>
+      <Link href={`${route}`}>
+        <button style={useStyle} className={Styles.button}>
+          {text}
+        </button>
+      </Link>
     </>
   );
 };

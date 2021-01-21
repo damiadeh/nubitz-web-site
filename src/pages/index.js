@@ -33,7 +33,7 @@ const HomePage = () => {
             <Link href="/">
               <Image
                 src="/assets/home/header/logo.svg"
-                width="120"
+                width="100"
                 height="50"
                 alt="nubitz-logo"
               />
@@ -52,13 +52,23 @@ const HomePage = () => {
                 </Link>
               </li>
               <li>
-                <a>Blog</a>
+                <Link href="/blog">
+                  <a>Blog</a>
+                </Link>
               </li>
               <li>
                 <a>Get hired</a>
               </li>
             </ul>
             <Button text="Get Started" primary />
+          </div>
+          <div className={Styles.hamburger}>
+            <Image
+              src="/assets/menu-white.svg"
+              width="30"
+              height="30"
+              alt="hamburger-menu"
+            />
           </div>
         </nav>
         <div className={Styles.hero_text}>
