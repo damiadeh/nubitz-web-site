@@ -1,45 +1,62 @@
 import Image from "next/image";
+import Link from "next/link";
 import Card from "../components/cards/Card";
 
 import Button from "../components/primary-button/Button";
 import SectionFive from "../sections/homepage-sections/section-five/SectionFive";
 import SectionFour from "../sections/homepage-sections/section-four/SectionFour";
 import SectionOne from "../sections/homepage-sections/section-one/SectionOne";
-import SectionSeven from "../components/contact/Contact";
 import SectionSix from "../sections/homepage-sections/section-six/SectionSix";
 import SectionThree from "../sections/homepage-sections/section-three/SectionThree";
 import SectionTwo from "../sections/homepage-sections/section-two/SectionTwo";
-import Styles from "../styles/home.module.scss";
+import Contact from "../components/contact/Contact";
 import Footer from "../components/footer/Footer";
+import Styles from "../styles/home.module.scss";
 
 const HomePage = () => {
   return (
     <div className={Styles.container}>
-      <div className={Styles.background_video}>
-        <video
-          src={require("../../public/assets/home/header/hero-video.mp4")}
-          muted
-          loop
-          autoPlay
-        ></video>
-        <div className={Styles.overlay}></div>
+      <div className={Styles.header}>
+        <div className={Styles.background_video}>
+          <video
+            src={require("../../public/assets/home/header/hero-video.mp4")}
+            muted
+            loop
+            autoPlay
+          ></video>
+          <div className={Styles.overlay}></div>
+        </div>
       </div>
       <div className={Styles.content}>
         <nav>
           <div className={Styles.logo_container}>
-            <Image
-              src="/assets/home/header/logo.svg"
-              width="120"
-              height="50"
-              alt="nubitz-logo"
-            />
+            <Link href="/">
+              <Image
+                src="/assets/home/header/logo.svg"
+                width="120"
+                height="50"
+                alt="nubitz-logo"
+              />
+            </Link>
           </div>
           <div className={Styles.nav_items}>
             <ul>
-              <li>About us</li>
-              <li>Project request</li>
-              <li>Blog</li>
-              <li>Get hired</li>
+              <li>
+                <Link href="/about">
+                  <a>About Us</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/project-brief">
+                  <a>Project request</a>
+                </Link>
+              </li>
+              <li>
+                <a>Blog</a>
+              </li>
+              <li>
+                <a>Get hired</a>
+              </li>
             </ul>
             <Button text="Get Started" primary />
           </div>
@@ -83,7 +100,7 @@ const HomePage = () => {
       <SectionFour />
       <SectionFive />
       <SectionSix />
-      <SectionSeven />
+      <Contact />
       <Footer />
     </div>
   );

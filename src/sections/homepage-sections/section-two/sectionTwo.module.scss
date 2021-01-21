@@ -10,12 +10,21 @@
   align-items: center;
   column-gap: 10vh;
   font-family: "Mulish", sans-serif;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    padding: 30px;
+  }
 }
 
 .cards {
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 3vh;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 }
 
 .arrows {
@@ -23,6 +32,10 @@
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 2vh;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 
   img {
     cursor: pointer;

@@ -34,6 +34,17 @@ const SectionFive = () => {
             alt="right_arrow"
           />
         </div>
+        <div className={Styles.client_mobileArrows}>
+          <img
+            src="/assets/home/section_five/left_arrow.svg"
+            alt="left_arrow"
+            style={{ marginRight: "10px" }}
+          />
+          <img
+            src="/assets/home/section_five/right_arrow.svg"
+            alt="right_arrow"
+          />
+        </div>
       </div>
     </div>
   );

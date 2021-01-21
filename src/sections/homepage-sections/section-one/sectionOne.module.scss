@@ -4,8 +4,25 @@
   grid-template-columns: 50% 50%;
   align-items: center;
   justify-content: center;
-  column-gap: 20vh;
+  column-gap: 10vh;
   font-family: "Mulish", sans-serif;
+
+  @media screen and (max-width: 768px) {
+    padding: 30px;
+    display: block;
+  }
+
+  .img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    img {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
 }
 
 .text {

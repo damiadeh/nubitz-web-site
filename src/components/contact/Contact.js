@@ -25,7 +25,7 @@ const contactInfo = {
 const Contact = () => {
   return (
     <div className={Styles.container}>
-      <div>
+      <div className={Styles.contactInfoContainer}>
         {contactInfo.items.map((item) => (
           <div className={Styles.contact}>
             <img src={item.icon} alt={item.title} />
@@ -36,7 +36,7 @@ const Contact = () => {
           </div>
         ))}
       </div>
-      <div>
+      <div className={Styles.formContainer}>
         <SectionText
           width="550px"
           textColor="white"

@@ -6,6 +6,12 @@
   align-items: center;
   column-gap: 10vh;
   font-family: "Mulish", sans-serif;
+
+  @media screen and (max-width: 768px) {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .languages {
@@ -14,6 +20,11 @@
   justify-content: center;
   column-gap: 8vh;
   row-gap: 4vh;
+
+  @media screen and (max-width: 768px) {
+    column-gap: 2vh;
+    row-gap: 2vh;
+  }
 
   div {
     background-color: #173163;
@@ -25,5 +36,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 768px) {
+      width: 100px;
+    }
   }
 }

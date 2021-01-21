@@ -8,6 +8,11 @@
     grid-template-columns: auto auto auto auto;
     column-gap: 10vh;
     align-items: flex-start;
+
+    @media screen and (max-width: 768px) {
+      padding: 60px 30px;
+      grid-template-columns: auto;
+    }
   }
 }
 
@@ -31,9 +36,14 @@
   }
 }
 
+.mobile_quicklinks,
+.mobile_services,
 .services,
 .quicklinks,
 .contact {
+  @media screen and (max-width: 768px) {
+    margin-top: 5vh;
+  }
   p {
     font-style: normal;
     font-weight: bold;
@@ -58,6 +68,23 @@
   }
 }
 
+.quicklinks,
+.services {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile_mid {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 5vh;
+  }
+}
+
 .copyright {
   font-style: normal;
   font-weight: normal;
@@ -66,4 +93,8 @@
   color: rgba(54, 56, 57, 0.7);
   text-align: center;
   padding: 5px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 5px 0 30px;
+  }
 }

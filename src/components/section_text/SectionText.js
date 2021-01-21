@@ -7,11 +7,22 @@ const SectionText = ({
   description,
   textColor,
   secondary,
+  lineHeight,
+  padding,
+  fontSize,
   number,
   mini,
+  backgroundColor,
 }) => {
   return (
-    <div className={Styles.text}>
+    <div
+      className={Styles.text}
+      style={{
+        backgroundColor: `${backgroundColor}`,
+        borderRadius: "5px",
+        padding: `${padding}`,
+      }}
+    >
       <p
         className={Styles.text_welcome}
         style={
@@ -62,7 +73,10 @@ const SectionText = ({
                   color: "#333533",
                   width: `${width}`,
                 }
-              : { color: `${textColor}`, width: `${width}` }
+              : {
+                  color: `${textColor}`,
+                  width: `${width}`,
+                }
           }
         >
           {description}
@@ -74,8 +88,12 @@ const SectionText = ({
             !secondary
               ? {
                   color: "#333533",
+                  fontSize: `${fontSize}`,
+                  lineHeight: `${lineHeight}`,
                 }
-              : { color: `${textColor}` }
+              : {
+                  color: `${textColor}`,
+                }
           }
         >
           {description}

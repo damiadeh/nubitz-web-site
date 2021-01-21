@@ -6,6 +6,26 @@
   background-color: #214a7e;
   padding: 10vh 120px 5vh;
   font-family: "Mulish", sans-serif;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+}
+
+.contactInfoContainer {
+  @media screen and (max-width: 768px) {
+    order: 2;
+    width: 100%;
+    margin-top: 8vh;
+  }
+}
+
+.formContainer {
+  @media screen and (max-width: 768px) {
+    order: 1;
+  }
 }
 
 .contact {

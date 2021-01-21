@@ -40,6 +40,30 @@ const Footer = () => {
             <li>Cloud Services</li>
           </ul>
         </div>
+        <div className={Styles.mobile_mid}>
+          <div className={Styles.mobile_quicklinks}>
+            <p>Quick Links</p>
+            <ul>
+              <li>About Us</li>
+              <li>Portfolio</li>
+              <li>Testimonials</li>
+              <li>Blog</li>
+              <li>Technology</li>
+              <li>Portfolio</li>
+              <li>Project Request</li>
+            </ul>
+          </div>
+          <div className={Styles.mobile_services}>
+            <p>Services</p>
+            <ul>
+              <li>Digital Martketing</li>
+              <li>Product Design</li>
+              <li>Product Development</li>
+              <li>Web Development</li>
+              <li>Cloud Services</li>
+            </ul>
+          </div>
+        </div>
         <div className={Styles.contact}>
           <p>Get In Touch</p>
           <ul>

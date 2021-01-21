@@ -1,27 +1,51 @@
 .container {
   padding: 15vh 120px 5vh;
   font-family: "Mulish", sans-serif;
+
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+  }
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: auto 40%;
-  column-gap: 3vh;
-  row-gap: 3vh;
-  margin-top: 5vh;
+  column-gap: 2vh;
+  margin-top: 2vh;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 
   &_inverted {
     display: grid;
     grid-template-columns: 40% auto;
-    column-gap: 3vh;
-    row-gap: 3vh;
-    margin-top: 5vh;
+    column-gap: 2vh;
+    margin-top: 2vh;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
   }
 }
 
 .portfolio {
   padding: 15px;
   border-radius: 8px;
+
+  &_add {
+    padding: 15px;
+    border-radius: 8px;
+
+    @media screen and (max-width: 768px) {
+      height: 327px;
+      margin: 2vh 0 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 2vh 0 0;
+  }
 }
 
 .title {
@@ -50,6 +74,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  img {
+    @media screen and (max-width: 768px) {
+      width: 300px;
+    }
+  }
+}
+
+.tagContainer {
+  padding: 15vh 120px 5vh;
+  font-family: "Mulish", sans-serif;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    padding: 0 0 5vh;
+  }
 }
 
 .tagline {
@@ -62,4 +102,10 @@
   border-radius: 24px;
   padding: 55px 100px;
   margin-top: 5vh;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    padding: 15px;
+    border-radius: unset;
+  }
 }
