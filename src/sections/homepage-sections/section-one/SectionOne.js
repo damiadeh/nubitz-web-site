@@ -4,7 +4,7 @@ import Styles from "./sectionOne.module.scss";
 const SectionOne = () => {
   return (
     <div className={Styles.container}>
-      <div>
+      <div className={Styles.img}>
         <img src="/assets/home/section_one/section_one.svg" alt="section_one" />
       </div>
       <div>

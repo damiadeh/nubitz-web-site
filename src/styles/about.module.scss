@@ -1,0 +1,148 @@
+.container {
+  font-family: Mulish;
+
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 120px 0;
+    z-index: 10;
+
+    @media screen and (max-width: 768px) {
+      padding: 15px 20px 0;
+    }
+
+    .nav_items {
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        z-index: 10;
+
+        li {
+          list-style: none;
+
+          a {
+            font-weight: normal;
+            padding-right: 40px;
+            font-style: normal;
+            line-height: 18px;
+            font-size: 14px;
+            color: #00103c;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+
+      @media screen and (max-width: 768px) {
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .wrapper {
+    padding: 30px 120px;
+
+    @media screen and (max-width: 768px) {
+      padding: 15px;
+    }
+
+    &_text {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin: 8vh 0;
+
+      h2 {
+        text-transform: capitalize;
+        font-style: normal;
+        line-height: 48px;
+        color: #1e396e;
+        font-weight: 800;
+        font-size: 32px;
+        margin: 0;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: normal;
+        text-align: center;
+        line-height: 26px;
+        color: #333333;
+        font-size: 16px;
+        width: 1010px;
+        margin: 0;
+
+        @media screen and (max-width: 768px) {
+          width: unset;
+        }
+      }
+    }
+  }
+
+  .imageGrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1.5vh;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+
+    &_lhs {
+      width: 100%;
+      object-fit: contain;
+    }
+
+    &_rhs {
+      &_top {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 2vh;
+        margin-bottom: 2vh;
+
+        &_one {
+          width: 100%;
+          object-fit: contain;
+        }
+        &_two {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      &_bottom {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 2vh;
+
+        &_three {
+          width: 100%;
+          background-repeat: no-repeat;
+          object-fit: contain;
+        }
+        &_four {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

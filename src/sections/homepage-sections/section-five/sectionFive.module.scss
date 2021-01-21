@@ -2,6 +2,10 @@
   padding: 8vh 120px 5vh;
   background-color: #fff;
   font-family: "Mulish", sans-serif;
+
+  @media screen and (max-width: 768px) {
+    padding: 30px;
+  }
 }
 
 .title {
@@ -36,6 +40,18 @@
   align-items: center;
   margin-top: 8vh;
 
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+
+  &_mobileArrows {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+
   &_details,
   &_remarks {
     display: flex;
@@ -67,6 +83,10 @@
 
     img {
       margin-right: 25px;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
@@ -82,6 +102,10 @@
 
     img {
       margin-left: 25px;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 }

@@ -6,6 +6,10 @@
     #ecf4f8 100%
   );
   font-family: "Mulish", sans-serif;
+
+  @media screen and (max-width: 768px) {
+    padding: 30px;
+  }
 }
 
 .title {
@@ -40,4 +44,9 @@
   row-gap: 8vh;
   align-items: center;
   margin: 10vh 0 0;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: auto;
+    row-gap: 5vh;
+  }
 }
