@@ -2,8 +2,19 @@
   padding: 30px 120px;
   font-family: Mulish;
 
+  @media screen and (max-width: 1024px) {
+    padding: 30px 120px;
+    margin-top: 2vh;
+  }
+
   @media screen and (max-width: 768px) {
+    padding: 30px 60px;
+    margin-top: 2vh;
+  }
+
+  @media screen and (max-width: 420px) {
     padding: 15px;
+    margin-top: 2vh;
   }
 
   &_text {
@@ -33,7 +44,7 @@
       width: 1010px;
       margin: 0;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         width: unset;
       }
     }
@@ -47,7 +58,17 @@
     align-items: center;
     margin: 10vh 0 0;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: auto auto;
+      row-gap: 5vh;
+    }
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: auto;
+      row-gap: 5vh;
+    }
+
+    @media screen and (max-width: 420px) {
       grid-template-columns: auto;
       row-gap: 5vh;
     }

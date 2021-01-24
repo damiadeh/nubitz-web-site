@@ -43,38 +43,47 @@ const languages = {
     {
       image: "/assets/home/section_three/java.svg",
       name: "Java",
+      id: 1
     },
     {
       image: "/assets/home/section_three/ruby.svg",
       name: "Ruby",
+      id: 2
     },
     {
       image: "/assets/home/section_three/java.svg",
       name: "Java",
+      id: 3
     },
     {
       image: "/assets/home/section_three/html.svg",
       name: "Html",
+      id: 4
     },
     {
       image: "/assets/home/section_three/react.svg",
       name: "React",
+      id: 5
     },
     {
       image: "/assets/home/section_three/react.svg",
       name: "React",
+      id: 6
     },
     {
       image: "/assets/home/section_three/python.svg",
       name: "Python",
+      id: 7
     },
     {
       image: "/assets/home/section_three/php.svg",
       name: "Php",
+      id: 8
     },
     {
       image: "/assets/home/section_three/python.svg",
       name: "Python",
+      id: 9
     },
   ],
 };
@@ -133,7 +142,7 @@ const SectionThree = () => {
       </div>
       <div className={Styles.languages}>
         {languages.items.map((item) => (
-          <div>
+          <div key={item.id}>
             <img src={item.image} alt={item.name} />
             <p>{item.name}</p>
           </div>

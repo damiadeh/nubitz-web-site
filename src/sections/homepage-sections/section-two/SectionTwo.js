@@ -17,7 +17,7 @@ const littleCards = {
       title: "Product Development",
       text:
         "We create the optimal platform to develop and run digital applications for our clients.",
-      backgroundColor: "rgba(234, 241, 246, 0.72);",
+      backgroundColor: "rgba(234, 241, 246, 0.72)",
     },
   ],
 };
@@ -56,6 +56,7 @@ const SectionTwo = () => {
               width="200px"
               height="272px"
               radius="8px"
+              key={item.title}
             />
           ))}
         </div>

@@ -38,11 +38,15 @@ const ContactUs = () => {
               </Link>
             </li>
             <li>
-              <a>Get hired</a>
+              <Link href="/career">
+                <a>Get hired</a>
+              </Link>
             </li>
           </ul>
+
           <Button
             text="Contact Us"
+            route="/contact-us"
             backgroundColor="#214A7E"
             textColor="white"
           />
@@ -56,7 +60,6 @@ const ContactUs = () => {
           />
         </div>
       </nav>
-
       <Contact />
       <Footer />
     </div>

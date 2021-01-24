@@ -7,7 +7,7 @@
   );
   font-family: "Mulish", sans-serif;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     padding: 30px;
   }
 }
@@ -44,6 +44,11 @@
   row-gap: 8vh;
   align-items: center;
   margin: 10vh 0 0;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: auto auto;
+    row-gap: 5vh;
+  }
 
   @media screen and (max-width: 768px) {
     grid-template-columns: auto;

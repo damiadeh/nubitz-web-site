@@ -27,7 +27,7 @@ const Contact = () => {
     <div className={Styles.container}>
       <div className={Styles.contactInfoContainer}>
         {contactInfo.items.map((item) => (
-          <div className={Styles.contact}>
+          <div className={Styles.contact} key={item.title}>
             <img src={item.icon} alt={item.title} />
             <div>
               <p className={Styles.contact_title}>{item.title}</p>
