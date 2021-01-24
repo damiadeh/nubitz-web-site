@@ -43,6 +43,7 @@ const SectionTwo = () => {
             fontSize="15px"
             padding="20px 15px"
             lineHeight="19px"
+            key={item.number}
           />
         ))}
       </div>

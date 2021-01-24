@@ -38,7 +38,7 @@ const SectionOne = () => {
       </div>
       <div className={Styles.languages}>
         {services.items.map((item) => (
-          <div>
+          <div key={item.name}>
             <img src={item.image} alt={item.name} />
             <p>{item.name}</p>
           </div>

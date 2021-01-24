@@ -40,7 +40,9 @@ const About = () => (
             </Link>
           </li>
           <li>
-            <a>Get hired</a>
+            <Link href="/career">
+              <a>Get hired</a>
+            </Link>
           </li>
         </ul>
 

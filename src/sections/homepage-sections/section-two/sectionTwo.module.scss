@@ -11,7 +11,7 @@
   column-gap: 10vh;
   font-family: "Mulish", sans-serif;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: block;
     padding: 30px;
   }
@@ -22,7 +22,7 @@
   grid-template-columns: auto auto;
   column-gap: 3vh;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: block;
   }
 }
@@ -33,7 +33,7 @@
   justify-content: flex-end;
   margin-bottom: 2vh;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 

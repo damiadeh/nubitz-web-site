@@ -3,7 +3,7 @@
   background-color: #fff;
   font-family: "Mulish", sans-serif;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     padding: 30px;
   }
 }
@@ -40,14 +40,14 @@
   align-items: center;
   margin-top: 8vh;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: block;
   }
 
   &_mobileArrows {
     display: none;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       display: block;
     }
   }
@@ -84,7 +84,7 @@
     img {
       margin-right: 25px;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         display: none;
       }
     }
@@ -103,7 +103,7 @@
     img {
       margin-left: 25px;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         display: none;
       }
     }

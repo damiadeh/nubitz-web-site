@@ -1,13 +1,13 @@
 .container {
   padding: 8vh 120px 5vh;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 48% 48%;
   align-items: center;
   justify-content: center;
   column-gap: 10vh;
   font-family: "Mulish", sans-serif;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     padding: 30px;
     display: block;
   }
@@ -18,7 +18,7 @@
     justify-content: flex-end;
 
     img {
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         display: none;
       }
     }

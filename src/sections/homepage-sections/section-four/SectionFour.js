@@ -9,36 +9,42 @@ const SectionFour = () => {
         title: "High Quality Handware",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
+          id: 1
       },
       {
         number: "/assets/home/section_four/02.svg",
         title: "High Quality Handware",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
+          id: 2
       },
       {
         number: "/assets/home/section_four/03.svg",
         title: "High Quality Handware",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
+          id: 3
       },
       {
         number: "/assets/home/section_four/04.svg",
         title: "High Quality Handware",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
+          id: 4
       },
       {
         number: "/assets/home/section_four/05.svg",
         title: "High Quality Handware",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
+          id: 5
       },
       {
         number: "/assets/home/section_four/06.svg",
         title: "High Quality Handware",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
+          id: 6
       },
     ],
   };
@@ -56,6 +62,7 @@ const SectionFour = () => {
             description={item.text}
             mini
             width="unset"
+            key={item.id}
           />
         ))}
       </div>

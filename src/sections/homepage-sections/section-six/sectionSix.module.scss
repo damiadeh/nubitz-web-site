@@ -2,7 +2,7 @@
   padding: 15vh 120px 5vh;
   font-family: "Mulish", sans-serif;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     padding: 10px;
   }
 }
@@ -13,7 +13,7 @@
   column-gap: 2vh;
   margin-top: 2vh;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: block;
   }
 
@@ -23,7 +23,7 @@
     column-gap: 2vh;
     margin-top: 2vh;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       display: block;
     }
   }
@@ -37,13 +37,13 @@
     padding: 15px;
     border-radius: 8px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       height: 327px;
       margin: 2vh 0 0;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     margin: 2vh 0 0;
   }
 }
@@ -76,7 +76,7 @@
   justify-content: center;
 
   img {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       width: 300px;
     }
   }
@@ -86,7 +86,7 @@
   padding: 15vh 120px 5vh;
   font-family: "Mulish", sans-serif;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: block;
     padding: 0 0 5vh;
   }
@@ -103,7 +103,7 @@
   padding: 55px 100px;
   margin-top: 5vh;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: block;
     padding: 15px;
     border-radius: unset;

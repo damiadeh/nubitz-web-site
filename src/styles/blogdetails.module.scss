@@ -1,0 +1,279 @@
+.container {
+
+    nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 120px;
+        z-index: 10;
+    
+        @media screen and (max-width: 768px) {
+          padding: 15px 20px 0;
+        }
+    
+        .nav_items {
+          display: flex;
+          align-items: center;
+    
+          @media screen and (max-width: 768px) {
+            display: none;
+          }
+    
+          ul {
+            display: flex;
+            align-items: center;
+            z-index: 10;
+    
+            li {
+              list-style: none;
+    
+              a {
+                font-weight: normal;
+                padding-right: 40px;
+                font-style: normal;
+                line-height: 18px;
+                font-size: 14px;
+                color: #00103c;
+                cursor: pointer;
+                text-decoration: none;
+                text-transform: capitalize;
+              }
+            }
+          }
+        }
+    
+        .hamburger {
+          display: none;
+    
+          @media screen and (max-width: 768px) {
+            display: block;
+            cursor: pointer;
+          }
+        }
+      }
+
+    .hero {
+        background-image: url("../../public/assets/blog/details.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        height: 100vh;
+
+        &_content {
+          background: #FDFDFD;
+          box-shadow: 0px 4px 30px rgba(30, 57, 110, 0.08);
+          border-radius: 8px;
+          padding: 50px 80px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          position: absolute;
+          bottom: -120px;
+          margin: 0 120px;
+
+          @media screen and (max-width: 768px) {
+              margin: 0px 20px;
+              bottom: -90px;
+              padding: 40px;
+          }
+
+            h3 {
+                font-family: Mulish;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 40px;
+                line-height: 50px;
+                text-align: center;
+                text-transform: capitalize;
+                color: #242423;
+                width: 958px;
+                margin: 0;
+
+                @media screen and (max-width: 1024px) {
+                  font-size: 20px;
+                  line-height: 20px;
+                  width: unset;
+                }
+            }
+
+            p {
+              font-family: Mulish;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 34px;
+              color: #333533;
+              margin: 2vh 0;
+            }
+
+            div {
+              display: flex;
+              align-items: center;
+            }
+        }
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 22% auto;
+      padding: 15% 120px 10%;
+      column-gap: 5vh;
+
+      @media screen and (max-width: 1024px) {
+        grid-template-columns: 30% auto;
+        padding: 20% 15px;
+      }
+
+      @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20% 15px;
+      }
+
+      @media screen and (max-width: 420px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40% 15px;
+      }
+
+      &_lhs {
+        background: rgba(255, 255, 255, 0.97);
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 30px 20px;
+        height: fit-content;
+        
+        @media screen and (max-width: 768px) {
+          order: 2;
+          width: 100%;
+        }
+
+        .title {
+          font-family: Mulish;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 24px;
+          color: #2D4059;
+          margin-bottom: 2vh;
+
+          @media screen and (max-width: 768px) {
+            width: unset;
+          }
+        }
+
+        img {
+          margin-right: 15px;
+        }
+
+        .featured {
+          display: flex;
+          align-items: center;
+          margin-top: 2vh;
+        }
+
+        div {
+            p {
+              font-family: Mulish;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 18px;
+              color: #2D4059;
+
+              @media screen and (max-width: 1024px) {
+                width: unset;
+              }
+            }
+
+            span {
+              font-family: Josefin Sans;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 12px;
+              line-height: 12px;
+              color: #2D4059;
+
+              .circle {
+                width: 5px;
+                height: 5px;
+                border-radius: 100%;
+                background-color: #C4C4C4;
+              }
+            }
+        }
+
+        p {
+          margin: 0;
+
+          @media screen and (max-width: 1024px) {
+            width: unset;
+          }
+        }
+      }
+
+      &_rhs {
+        @media screen and (max-width: 1024px) {
+          order: 1;
+        }
+
+        .title {
+          font-family: Mulish;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 34px;
+          color: #333533;
+          margin: 0;
+
+          @media screen and (max-width: 1024px) {
+            width: unset;
+          }
+        }
+
+        p {
+          font-family: Mulish;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 34px;
+          color: #333533;
+          font-size: 16px;
+          width: 851px;
+
+          @media screen and (max-width: 1024px) {
+            width: unset;
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &_quote {
+
+        p {
+          font-family: Mulish;
+          font-style: italic;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 24px;
+          text-align: center;
+          text-transform: capitalize;
+          color: #B7BABD;
+          padding: 5vh 0;
+         
+          @media screen and (max-width: 1024px) {
+            width: unset;
+          }      
+        }
+      }
+    }
+}

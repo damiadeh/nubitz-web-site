@@ -8,31 +8,37 @@ const SectionThree = () => {
         number: "/assets/about/code-round.svg",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
+          id: 1
       },
       {
         number: "/assets/about/code-round.svg",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
+          id: 2
       },
       {
         number: "/assets/about/code-round.svg",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
+          id: 3
       },
       {
         number: "/assets/about/code-round.svg",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
+          id: 4
       },
       {
         number: "/assets/about/code-round.svg",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
+          id: 5
       },
       {
         number: "/assets/about/code-round.svg",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
+          id: 6
       },
     ],
   };
@@ -54,6 +60,7 @@ const SectionThree = () => {
             description={item.text}
             mini
             width="unset"
+            key={item.id}
           />
         ))}
       </div>

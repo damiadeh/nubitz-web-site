@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Button from "../components/primary-button/Button";
-import Contact from "../components/contact/Contact";
-import Footer from "../components/footer/Footer";
-import Styles from "../styles/blog.module.scss";
+import Button from "../../components/primary-button/Button";
+import Contact from "../../components/contact/Contact";
+import Footer from "../../components/footer/Footer";
+import Styles from "../../styles/blog.module.scss";
 
 const posts = {
   items: [
@@ -16,6 +16,7 @@ const posts = {
         "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
       author: "Eric Mart",
       date: "28 Dec, 2020",
+      id: 1,
     },
     {
       profile: "/assets/blog/profile.png",
@@ -25,6 +26,7 @@ const posts = {
         "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
       author: "Eric Mart",
       date: "28 Dec, 2020",
+      id: 2,
     },
     {
       profile: "/assets/blog/profile.png",
@@ -34,6 +36,7 @@ const posts = {
         "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
       author: "Eric Mart",
       date: "28 Dec, 2020",
+      id: 3,
     },
     {
       profile: "/assets/blog/profile.png",
@@ -43,6 +46,7 @@ const posts = {
         "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
       author: "Eric Mart",
       date: "28 Dec, 2020",
+      id: 4,
     },
     {
       profile: "/assets/blog/profile.png",
@@ -52,6 +56,7 @@ const posts = {
         "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
       author: "Eric Mart",
       date: "28 Dec, 2020",
+      id: 5,
     },
     {
       profile: "/assets/blog/profile.png",
@@ -61,6 +66,7 @@ const posts = {
         "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
       author: "Eric Mart",
       date: "28 Dec, 2020",
+      id: 6,
     },
     {
       profile: "/assets/blog/profile.png",
@@ -70,6 +76,7 @@ const posts = {
         "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
       author: "Eric Mart",
       date: "28 Dec, 2020",
+      id: 7,
     },
     {
       profile: "/assets/blog/profile.png",
@@ -79,6 +86,7 @@ const posts = {
         "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
       author: "Eric Mart",
       date: "28 Dec, 2020",
+      id: 8,
     },
     {
       profile: "/assets/blog/profile.png",
@@ -88,6 +96,7 @@ const posts = {
         "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
       author: "Eric Mart",
       date: "28 Dec, 2020",
+      id: 9,
     },
     {
       profile: "/assets/blog/profile.png",
@@ -97,6 +106,7 @@ const posts = {
         "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
       author: "Eric Mart",
       date: "28 Dec, 2020",
+      id: 10,
     },
     {
       profile: "/assets/blog/profile.png",
@@ -106,6 +116,7 @@ const posts = {
         "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
       author: "Eric Mart",
       date: "28 Dec, 2020",
+      id: 11,
     },
     {
       profile: "/assets/blog/profile.png",
@@ -115,6 +126,7 @@ const posts = {
         "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
       author: "Eric Mart",
       date: "28 Dec, 2020",
+      id: 12,
     },
   ],
 };
@@ -152,7 +164,9 @@ const blog = () => {
                 </Link>
               </li>
               <li>
-                <a>Get hired</a>
+                <Link href="/career">
+                  <a>Get hired</a>
+                </Link>
               </li>
             </ul>
             <Button text="Get Started" primary />
@@ -182,20 +196,22 @@ const blog = () => {
       </div>
       <div className={Styles.post}>
         {posts.items.map((post) => (
-          <div>
-            <img src={post.image} alt="/" />
-            <div className={Styles.post_content}>
-              <h5>{post.title}</h5>
-              <p>{post.content}</p>
-              <div className={Styles.post_person}>
-                <img src={post.profile} alt="/" />
-                <div>
-                  <p>{post.author}</p>
-                  <span>{post.date}</span>
+          <Link href={`/blog/${encodeURIComponent(post.title)}`}>
+            <div key={post.id}>
+              <img src={post.image} alt="/" />
+              <div className={Styles.post_content}>
+                <h5>{post.title}</h5>
+                <p>{post.content}</p>
+                <div className={Styles.post_person}>
+                  <img src={post.profile} alt="/" />
+                  <div>
+                    <p>{post.author}</p>
+                    <span>{post.date}</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <Contact />

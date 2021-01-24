@@ -9,7 +9,7 @@
     column-gap: 10vh;
     align-items: flex-start;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       padding: 60px 30px;
       grid-template-columns: auto;
     }
@@ -41,7 +41,7 @@
 .services,
 .quicklinks,
 .contact {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     margin-top: 5vh;
   }
   p {
@@ -70,7 +70,7 @@
 
 .quicklinks,
 .services {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 }
@@ -78,7 +78,7 @@
 .mobile_mid {
   display: none;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 5vh;

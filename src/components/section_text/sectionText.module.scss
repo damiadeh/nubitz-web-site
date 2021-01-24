@@ -10,7 +10,7 @@
     text-transform: capitalize;
     margin: 0 0 5px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       width: unset !important;
     }
   }
@@ -24,7 +24,7 @@
     text-transform: capitalize;
     margin: 0;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       width: unset !important;
       font-size: 23px;
     }
@@ -44,6 +44,10 @@
     font-size: 16px;
     line-height: 26px;
     margin: 0;
+
+    @media screen and (max-width: 1024px) {
+      width: unset !important;
+    }
 
     @media screen and (max-width: 768px) {
       width: unset !important;
