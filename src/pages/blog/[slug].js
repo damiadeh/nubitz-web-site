@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import Button from "../../components/primary-button/Button";
 import Contact from "../../components/contact/Contact";
@@ -8,6 +9,8 @@ import Styles from "../../styles/blogdetails.module.scss";
 import { Divider } from "@material-ui/core";
 
 const BlogPostDetails = () => {
+  const router = useRouter();
+
   return (
     <div className={Styles.container}>
       <nav>
@@ -23,22 +26,30 @@ const BlogPostDetails = () => {
         </div>
         <div className={Styles.nav_items}>
           <ul>
-            <li>
+            <li className={router.pathname === "/about" ? Styles.active : ""}>
               <Link href="/about">
                 <a>About Us</a>
               </Link>
             </li>
-            <li>
+            <li
+              className={
+                router.pathname === "/project-brief" ? Styles.active : ""
+              }
+            >
               <Link href="/project-brief">
                 <a>Project request</a>
               </Link>
             </li>
-            <li>
+            <li
+              className={
+                router.pathname.startsWith("/blog") ? Styles.active : ""
+              }
+            >
               <Link href="/blog">
                 <a>Blog</a>
               </Link>
             </li>
-            <li>
+            <li className={router.pathname === "/career" ? Styles.active : ""}>
               <Link href="/career">
                 <a>Get hired</a>
               </Link>

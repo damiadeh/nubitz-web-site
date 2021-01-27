@@ -102,6 +102,11 @@
           align-items: center;
           z-index: 10;
 
+          .active a {
+            background-color: green;
+            font-size: 30px;
+          }
+
           li {
             list-style: none;
 

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Card from "../components/cards/Card";
 
 import Button from "../components/primary-button/Button";
@@ -14,6 +15,8 @@ import Footer from "../components/footer/Footer";
 import Styles from "../styles/home.module.scss";
 
 const HomePage = () => {
+  const router = useRouter();
+
   return (
     <div className={Styles.container}>
       <div className={Styles.header}>
@@ -41,22 +44,28 @@ const HomePage = () => {
           </div>
           <div className={Styles.nav_items}>
             <ul>
-              <li>
+              <li className={router.pathname === "/about" ? Styles.active : ""}>
                 <Link href="/about">
                   <a>About Us</a>
                 </Link>
               </li>
-              <li>
+              <li
+                className={
+                  router.pathname === "/project-brief" ? Styles.active : ""
+                }
+              >
                 <Link href="/project-brief">
                   <a>Project request</a>
                 </Link>
               </li>
-              <li>
+              <li className={router.pathname === "/blog" ? Styles.active : ""}>
                 <Link href="/blog">
                   <a>Blog</a>
                 </Link>
               </li>
-              <li>
+              <li
+                className={router.pathname === "/career" ? Styles.active : ""}
+              >
                 <Link href="/career">
                   <a>Get hired</a>
                 </Link>
@@ -64,6 +73,7 @@ const HomePage = () => {
             </ul>
             <Button text="Get Started" primary />
           </div>
+
           <div className={Styles.hamburger}>
             <Image
               src="/assets/menu-white.svg"
