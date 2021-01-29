@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -14,8 +15,44 @@ import Contact from "../components/contact/Contact";
 import Footer from "../components/footer/Footer";
 import Styles from "../styles/home.module.scss";
 
+const companies = {
+  items: [
+    {
+      image: "/assets/home/accomplishments/medtox.svg",
+      active: "/assets/home/accomplishments-active/medtox.svg",
+      name: "Medtox",
+      id: 1,
+    },
+    {
+      image: "/assets/home/accomplishments/surlatable.svg",
+      active: "/assets/home/accomplishments-active/surlatable.svg",
+      name: "Surlatable",
+      id: 2,
+    },
+    {
+      image: "/assets/home/accomplishments/singtel.svg",
+      active: "/assets/home/accomplishments-active/singtel.svg",
+      name: "Singtel",
+      id: 3,
+    },
+    {
+      image: "/assets/home/accomplishments/banamex.svg",
+      active: "/assets/home/accomplishments-active/banamex.svg",
+      name: "Banamex",
+      id: 4,
+    },
+    {
+      image: "/assets/home/accomplishments/orion.svg",
+      active: "/assets/home/accomplishments-active/orion.svg",
+      name: "Orion",
+      id: 5,
+    },
+  ],
+};
+
 const HomePage = () => {
   const router = useRouter();
+  const [id, setId] = useState(null);
 
   return (
     <div className={Styles.container}>
@@ -73,7 +110,6 @@ const HomePage = () => {
             </ul>
             <Button text="Get Started" primary />
           </div>
-
           <div className={Styles.hamburger}>
             <Image
               src="/assets/menu-white.svg"
@@ -97,24 +133,23 @@ const HomePage = () => {
         </div>
       </div>
       <div className={Styles.companies}>
-        <div>
-          <img src="/assets/home/accomplishments/medtox.svg" alt="Medtox" />
-        </div>
-        <div>
-          <img
-            src="/assets/home/accomplishments/surlatable.svg"
-            alt="Surlatable"
-          />
-        </div>
-        <div>
-          <img src="/assets/home/accomplishments/singtel.svg" alt="Singtel" />
-        </div>
-        <div>
-          <img src="/assets/home/accomplishments/banamex.svg" alt="Banamex" />
-        </div>
-        <div>
-          <img src="/assets/home/accomplishments/orion.svg" alt="Orion" />
-        </div>
+        {companies.items.map((item) => (
+          <div key={item.id}>
+            {id === item.id ? (
+              <img
+                src={item.active}
+                alt={item.name}
+                onMouseLeave={() => setId(null)}
+              />
+            ) : (
+              <img
+                src={item.image}
+                alt={item.name}
+                onMouseEnter={() => setId(item.id)}
+              />
+            )}
+          </div>
+        ))}
       </div>
       <SectionOne />
       <SectionTwo />

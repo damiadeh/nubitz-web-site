@@ -24,41 +24,48 @@ const littleCards = {
 
 const SectionTwo = () => {
   return (
-    <div className={Styles.container}>
-      <div>
-        <SectionText
-          welcome="Our services"
-          title="Our Services Are Rendered In The Areas Of Technology"
-          description="As one of the best IT service providers, we take pride in being able to offer you the best quality services that solves high impact buisness challenges."
-        />
-      </div>
-      <div>
-        <div className={Styles.arrows}>
-          <img
-            src="/assets/home/section_two/left_arrow.svg"
-            alt="left arrow"
-            style={{ marginRight: "3vh" }}
-          />
-          <img
-            src="/assets/home/section_two/right_arrow.svg"
-            alt="right arrow"
+    <div className={Styles.main}>
+      <img
+        src="/assets/home/bubbles/bubble-one.svg"
+        alt="/"
+        className={Styles.bubble}
+      />
+      <div className={Styles.container}>
+        <div>
+          <SectionText
+            welcome="Our services"
+            title="Our Services Are Rendered In The Areas Of Technology"
+            description="As one of the best IT service providers, we take pride in being able to offer you the best quality services that solves high impact buisness challenges."
           />
         </div>
-        <div className={Styles.cards}>
-          {littleCards.items.map((item) => (
-            <LittleCards
-              icon={item.icon}
-              title={item.title}
-              text={item.text}
-              titleColor={item.titleColor}
-              textColor={item.textColor}
-              backgroundColor={item.backgroundColor}
-              width="200px"
-              height="272px"
-              radius="8px"
-              key={item.title}
+        <div>
+          <div className={Styles.arrows}>
+            <img
+              src="/assets/home/section_two/left_arrow.svg"
+              alt="left arrow"
+              style={{ marginRight: "3vh" }}
             />
-          ))}
+            <img
+              src="/assets/home/section_two/right_arrow.svg"
+              alt="right arrow"
+            />
+          </div>
+          <div className={Styles.cards}>
+            {littleCards.items.map((item) => (
+              <LittleCards
+                icon={item.icon}
+                title={item.title}
+                text={item.text}
+                titleColor={item.titleColor}
+                textColor={item.textColor}
+                backgroundColor={item.backgroundColor}
+                width="200px"
+                height="272px"
+                radius="8px"
+                key={item.title}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

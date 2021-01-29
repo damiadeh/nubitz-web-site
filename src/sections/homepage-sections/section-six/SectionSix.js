@@ -147,21 +147,34 @@ const SectionSix = () => {
           </div>
         </div>
       </div>
+
       <div className={Styles.tagContainer}>
-        <div className={Styles.tagline}>
-          <div>
-            <SectionText
-              title="Get the best with nubitz"
-              description="We are an IT support and IT services company existing to help businesses develop solutions that help them achieve their own desired outcomes."
-              width="560px"
+        <div className={Styles.main}>
+          <div className={Styles.tagline}>
+            <img
+              src="/assets/home/bubbles/bubble-four.svg"
+              alt="/"
+              className={Styles.bubble}
             />
-          </div>
-          <div>
-            <Button
-              text="Get Started"
-              backgroundColor="#214A7E"
-              textColor="white"
+            <img
+              src="/assets/home/bubbles/bubble-five.svg"
+              alt="/"
+              className={Styles.bubble}
             />
+            <div>
+              <SectionText
+                title="Get the best with nubitz"
+                description="We are an IT support and IT services company existing to help businesses develop solutions that help them achieve their own desired outcomes."
+                width="560px"
+              />
+            </div>
+            <div>
+              <Button
+                text="Get Started"
+                backgroundColor="#214A7E"
+                textColor="white"
+              />
+            </div>
           </div>
         </div>
       </div>

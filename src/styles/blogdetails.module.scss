@@ -24,7 +24,8 @@
         align-items: center;
         z-index: 10;
 
-        .active a {
+        .active a,
+        li:hover {
           &::after {
             content: "";
             position: absolute;
