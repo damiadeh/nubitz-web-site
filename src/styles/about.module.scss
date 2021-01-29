@@ -26,8 +26,23 @@
         align-items: center;
         z-index: 10;
 
+        .active a,
+        li:hover {
+          &::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 0px;
+            left: 0;
+            bottom: 0;
+            top: 25px;
+            border: 2px solid #1e396e;
+          }
+        }
+
         li {
           list-style: none;
+          position: relative;
 
           a {
             font-weight: normal;
@@ -57,12 +72,12 @@
   .wrapper {
     padding: 30px 120px;
 
-  @media screen and (max-width: 1024px) {
-    padding: 30px 120px;
-    margin-top: 2vh;
-  }
-  
-  @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
+      padding: 30px 120px;
+      margin-top: 2vh;
+    }
+
+    @media screen and (max-width: 768px) {
       padding: 30px 60px;
       margin-top: 2vh;
     }

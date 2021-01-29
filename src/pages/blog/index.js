@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import Button from "../../components/primary-button/Button";
 import Contact from "../../components/contact/Contact";
@@ -132,6 +133,8 @@ const posts = {
 };
 
 const blog = () => {
+  const router = useRouter();
+
   return (
     <div className={Styles.container}>
       <div className={Styles.hero}>
@@ -148,27 +151,34 @@ const blog = () => {
           </div>
           <div className={Styles.nav_items}>
             <ul>
-              <li>
+              <li className={router.pathname === "/about" ? Styles.active : ""}>
                 <Link href="/about">
                   <a>About Us</a>
                 </Link>
               </li>
-              <li>
+              <li
+                className={
+                  router.pathname === "/project-brief" ? Styles.active : ""
+                }
+              >
                 <Link href="/project-brief">
                   <a>Project request</a>
                 </Link>
               </li>
-              <li>
+              <li className={router.pathname === "/blog" ? Styles.active : ""}>
                 <Link href="/blog">
                   <a>Blog</a>
                 </Link>
               </li>
-              <li>
+              <li
+                className={router.pathname === "/career" ? Styles.active : ""}
+              >
                 <Link href="/career">
                   <a>Get hired</a>
                 </Link>
               </li>
             </ul>
+
             <Button text="Get Started" primary />
           </div>
           <div className={Styles.hamburger}>

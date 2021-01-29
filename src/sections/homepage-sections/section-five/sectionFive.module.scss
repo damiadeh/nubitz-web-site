@@ -1,6 +1,19 @@
+.main {
+  background-color: #fff;
+  position: relative;
+
+  .bubble {
+    position: absolute;
+    right: 0;
+    top: -100%;
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+}
 .container {
   padding: 8vh 120px 5vh;
-  background-color: #fff;
   font-family: "Mulish", sans-serif;
 
   @media screen and (max-width: 1024px) {
