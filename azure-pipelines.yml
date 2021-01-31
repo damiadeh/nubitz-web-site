@@ -36,3 +36,5 @@ steps:
   displayName: 'Publish Artifact: Nubitz'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)\ArtifactsToBePublished'
+
+- script: zip -r --symlinks '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip' .
