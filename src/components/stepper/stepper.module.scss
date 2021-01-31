@@ -1,0 +1,120 @@
+.container {
+  padding: 8vh 120px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 3vh 120px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 3vh 20px;
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f7fa;
+    padding: 10px;
+
+    p {
+      margin: 0;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      color: #b8b6bf;
+      cursor: pointer;
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
+
+      @media screen and (max-width: 420px) {
+        font-size: 13px;
+      }
+    }
+
+    span {
+      font-size: 18px;
+      color: #b8b6bf;
+      padding: 0 30px;
+      font-weight: 500;
+
+      @media screen and (max-width: 768px) {
+        padding: 0 7px;
+      }
+    }
+  }
+
+  .text {
+    text-align: center;
+    padding: 8vh 0;
+
+    @media screen and (max-width: 768px) {
+      padding: 4vh;
+    }
+
+    h5 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 34px;
+      color: #1e396e;
+      margin: 0;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 25px;
+      color: #333333;
+      margin: 5px 0 0;
+    }
+  }
+
+  .requests {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    justify-content: center;
+    column-gap: 2%;
+    row-gap: 4vh;
+
+    @media screen and (max-width: 1024px) {
+      column-gap: 2vh;
+      row-gap: 2vh;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 48% 48%;
+      column-gap: 2%;
+    }
+
+    .request {
+      color: #00103c;
+      cursor: pointer;
+      background: #ffffff;
+      border: 1px solid rgba(0, 16, 60, 0.4);
+      box-sizing: border-box;
+      box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 5px;
+      padding: 50px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &:nth-child(2) {
+        background-color: #00103c;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4vh;
+  }
+}

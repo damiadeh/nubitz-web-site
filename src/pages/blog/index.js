@@ -158,10 +158,10 @@ const blog = () => {
               </li>
               <li
                 className={
-                  router.pathname === "/project-brief" ? Styles.active : ""
+                  router.pathname === "/project-request" ? Styles.active : ""
                 }
               >
-                <Link href="/project-brief">
+                <Link href="/project-request">
                   <a>Project request</a>
                 </Link>
               </li>
