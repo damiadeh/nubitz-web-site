@@ -184,7 +184,7 @@ const CaseStudy = () => {
             <img src="/assets/case-study/project.png" alt="/" />
             <div className={Styles.projects_item_text}>
               <h5>Spotify</h5>
-              <span>Web Development</span>
+              <span>Web Development </span>
             </div>
           </div>
           <div className={Styles.projects_item}>
