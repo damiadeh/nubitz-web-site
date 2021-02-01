@@ -17,9 +17,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "next start",
+    "dev": "node server.js",
     "build": "next build",
-    "dev": "next",
+    "start": "node server.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

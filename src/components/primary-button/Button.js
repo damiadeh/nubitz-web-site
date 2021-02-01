@@ -9,6 +9,7 @@ const Button = ({
   primary,
   width,
   route,
+  onClick,
 }) => {
   let useStyle = {
     backgroundColor: "#fff",
@@ -26,11 +27,17 @@ const Button = ({
 
   return (
     <>
-      <Link href={`${route}`}>
-        <button style={useStyle} className={Styles.button}>
+      {route ? (
+        <Link href={`${route}`}>
+          <button style={useStyle} className={Styles.button} onClick={onClick}>
+            {text}
+          </button>
+        </Link>
+      ) : (
+        <button style={useStyle} className={Styles.button} onClick={onClick}>
           {text}
         </button>
-      </Link>
+      )}
     </>
   );
 };
