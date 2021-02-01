@@ -9,7 +9,7 @@ import Footer from "../components/footer/Footer";
 
 const ContactUs = () => {
   const router = useRouter();
-  
+
   return (
     <div className={Styles.container}>
       <nav>
@@ -32,10 +32,10 @@ const ContactUs = () => {
             </li>
             <li
               className={
-                router.pathname === "/project-brief" ? Styles.active : ""
+                router.pathname === "/project-request" ? Styles.active : ""
               }
             >
-              <Link href="/project-brief">
+              <Link href="/project-request">
                 <a>Project request</a>
               </Link>
             </li>
@@ -66,7 +66,7 @@ const ContactUs = () => {
             alt="hamburger-menu"
           />
         </div>
-      </nav>
+      </nav>  
       <Contact />
       <Footer />
     </div>
