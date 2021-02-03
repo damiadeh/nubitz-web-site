@@ -101,8 +101,6 @@ const Stepper = () => {
     if (step < 4) {
       setStep(step + 1);
     }
-
-    console.log(step);
   };
 
   return (

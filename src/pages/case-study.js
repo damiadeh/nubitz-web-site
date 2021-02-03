@@ -55,7 +55,7 @@ const CaseStudy = () => {
         </div>
         <div className={Styles.hamburger}>
           <Image
-            src="/assets/menu-dark.svg"
+            src="/assets/menu-white.svg"
             width="30"
             height="30"
             alt="hamburger-menu"
@@ -78,6 +78,7 @@ const CaseStudy = () => {
         <h5>Overview {"&"} Problems</h5>
         <div className={Styles.overviews_wrapper}>
           <div className={Styles.overviews_lhs}>
+            <h5>Overview {"&"} Problems</h5>
             <p>
               Mauris volutpat maecenas quis molestie pellentesque sit diam
               egestas sed. Est ornare bibendum ut facilisis rhoncus porta
@@ -109,11 +110,13 @@ const CaseStudy = () => {
                 <p>Fintech</p>
               </div>
             </div>
-            <Button
-              text="View Live Site >>"
-              backgroundColor="#00103C"
-              textColor="white"
-            />
+            <div className={Styles.button}>
+              <Button
+                text="View Live Site >>"
+                backgroundColor="#00103C"
+                textColor="white"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -121,6 +124,7 @@ const CaseStudy = () => {
         <h5>Solution Delivered</h5>
         <div className={Styles.solutions_wrapper}>
           <div className={Styles.solutions_lhs}>
+            <h5>Solution Delivered</h5>
             <p>
               Mauris volutpat maecenas quis molestie pellentesque sit diam
               egestas sed. Est ornare bibendum ut facilisis rhoncus porta
@@ -200,7 +204,7 @@ const CaseStudy = () => {
             background: "rgba(0, 16, 60, 0.32)",
           }}
         />
-      </div>
+      </div>  
       <Contact />
       <Footer />
     </div>
