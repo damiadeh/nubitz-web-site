@@ -1,6 +1,4 @@
-module.exports = {
-  
-};
+
 
 const withVideos = require("next-videos");
 
