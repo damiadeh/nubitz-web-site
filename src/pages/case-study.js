@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -10,10 +11,27 @@ import SectionThree from "../sections/homepage-sections/section-three/SectionThr
 
 const CaseStudy = () => {
   const router = useRouter();
+  const [caseStudyItem, setCaseStudyItem] = useState(0);
+
+  useEffect(() => {
+    getIdFromLocalStorage();
+  }, []);
+
+  const getIdFromLocalStorage = () => {
+    setCaseStudyItem(JSON.parse(localStorage.getItem("caseStudy")));
+  };
 
   return (
     <div className={Styles.container}>
-      <nav>
+      <nav
+        style={{
+          backgroundColor: `${
+            !caseStudyItem.backgroundColor
+              ? caseStudyItem.secondbackgroundColor
+              : caseStudyItem.backgroundColor
+          }`,
+        }}
+      >
         <div className={Styles.logo_container}>
           <Link href="/">
             <Image
@@ -62,12 +80,29 @@ const CaseStudy = () => {
           />
         </div>
       </nav>
-      <div className={Styles.hero}>
+      <div
+        className={Styles.hero}
+        style={{
+          backgroundColor: `${
+            !caseStudyItem.backgroundColor
+              ? caseStudyItem.secondbackgroundColor
+              : caseStudyItem.backgroundColor
+          }`,
+        }}
+      >
         <div className={Styles.hero_container}>
           <div className={Styles.hero_text}>
             <img src="/assets/case-study/ova-logo.svg" alt="ova-logo" />
-            <h3>OVA PAY</h3>
-            <p>Product Design, UI/UX</p>
+            <h3>
+              {!caseStudyItem.name
+                ? caseStudyItem.secondname
+                : caseStudyItem.name}
+            </h3>
+            <p>
+              {!caseStudyItem.product
+                ? caseStudyItem.secondproduct
+                : caseStudyItem.product}
+            </p>
           </div>
           <div className={Styles.hero_image}>
             <img src="/assets/case-study/iphone.svg" alt="/" />
@@ -204,7 +239,7 @@ const CaseStudy = () => {
             background: "rgba(0, 16, 60, 0.32)",
           }}
         />
-      </div>  
+      </div>
       <Contact />
       <Footer />
     </div>

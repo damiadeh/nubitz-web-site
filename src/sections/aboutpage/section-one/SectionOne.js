@@ -1,31 +1,16 @@
+import { useRouter } from "next/router";
 import Styles from "./sectionOne.module.scss";
 
-const services = {
-  items: [
-    {
-      image: "/assets/about/lamp.svg",
-      name: "Digital Marketing",
-    },
-    {
-      image: "/assets/about/code.svg",
-      name: "Product Development",
-    },
-    {
-      image: "/assets/about/deal.svg",
-      name: "Product Design",
-    },
-    {
-      image: "/assets/about/development.svg",
-      name: "Web Development",
-    },
-    {
-      image: "/assets/about/provider.svg",
-      name: "Cloud Services",
-    },
-  ],
-};
+import servicesObject from "./object/servicesObject";
 
 const SectionOne = () => {
+  const router = useRouter();
+
+  const setServiceItemInLocalStorage = (service) => {
+    localStorage.setItem("currentServiceItem", JSON.stringify(service));
+    router.push("/services");
+  };
+
   return (
     <div className={Styles.wrapper}>
       <div className={Styles.wrapper_text}>
@@ -37,8 +22,8 @@ const SectionOne = () => {
         </p>
       </div>
       <div className={Styles.languages}>
-        {services.items.map((item) => (
-          <div key={item.name}>
+        {servicesObject.items.map((item) => (
+          <div key={item.id} onClick={() => setServiceItemInLocalStorage(item)}>
             <img src={item.image} alt={item.name} />
             <p>{item.name}</p>
           </div>

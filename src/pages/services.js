@@ -1,16 +1,27 @@
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import Button from "../components/primary-button/Button";
-import SectionThree from "../sections/homepage-sections/section-three/SectionThree";
-import Contact from "../components/contact/Contact";
 import Footer from "../components/footer/Footer";
 import Styles from "../styles/services.module.scss";
-import SectionText from "../components/section_text/SectionText";
+import Contact from "../components/contact/Contact";
+import Button from "../components/primary-button/Button";
+import SectionThree from "../sections/homepage-sections/section-three/SectionThree";
 
 const services = () => {
   const router = useRouter();
+  const [serviceItem, setServiceItem] = useState(0);
+
+  const getServiceItemFromLocalStorage = () => {
+    setServiceItem(JSON.parse(localStorage.getItem("currentServiceItem")));
+  };
+
+  useEffect(() => {
+    getServiceItemFromLocalStorage();
+  }, []);
+
+  console.log(serviceItem);
 
   return (
     <div className={Styles.container}>
@@ -69,10 +80,10 @@ const services = () => {
         </div>
       </nav>
       <div className={Styles.hero}>
-        <img src="/assets/services/design/hero.png" alt="hero" width="100%" />
+        <img src={serviceItem.hero} alt="hero" width="100%" />
         <div className={Styles.hero_text}>
           <div>
-            <h2 className={Styles.hero_title}>Product Design</h2>
+            <h2 className={Styles.hero_title}>{serviceItem.name}</h2>
             <p className={Styles.hero_description}>
               Is simply dummy text of the printing and types etting industry.
               Lorem Ipsum has been the indu stry's standard dummy textis simply
@@ -84,7 +95,7 @@ const services = () => {
       <div className={Styles.offer}>
         <div className={Styles.offer_image}>
           <img
-            src="/assets/services/service.png"
+            src={serviceItem.service}
             alt="service"
             className={Styles.service}
           />
@@ -98,7 +109,7 @@ const services = () => {
           <div>
             <p className={Styles.offer_welcome}>What We Do</p>
             <h2 className={Styles.offer_title}>
-              Product Design - How we do it
+              {serviceItem.name} - How we do it
             </h2>
             <p className={Styles.offer_description}>
               Is simply dummy text of the printing and types etting industry.

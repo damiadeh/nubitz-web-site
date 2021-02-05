@@ -1,9 +1,17 @@
+import { useRouter } from "next/router";
+
 import Button from "../../../components/primary-button/Button";
 import SectionText from "../../../components/section_text/SectionText";
-import Porfolio from "./object/PortfolioObject";
+import CaseStudy from "./object/caseStudyObject";
 import Styles from "./sectionSix.module.scss";
 
 const SectionSix = () => {
+  const router = useRouter();
+  const setItemInLocalStorage = (item) => {
+    localStorage.setItem("caseStudy", JSON.stringify(item));
+    router.push("/case-study");
+  };
+
   return (
     <>
       <div className={Styles.container}>
@@ -13,138 +21,164 @@ const SectionSix = () => {
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel mi lobortis enim, facilisis etiam."
         />
         <div className={Styles.main_wrapper}>
-          <div className={Styles.wrapper}>
-            <div
-              className={Styles.portfolio}
-              style={{
-                backgroundColor: "#234085",
-              }}
-            >
-              <div className={Styles.title}>
-                <p>Annexa</p>
-                <span>Product Design, UI/UX</span>
-              </div>
-              <div className={Styles.image}>
-                <img src="/assets/home/section-six/annexa.svg" alt="Annexa" />
-              </div>
-            </div>
-            <div
-              className={Styles.portfolio}
-              style={{
-                backgroundColor: "#D1E1E1",
-              }}
-            >
-              <div className={Styles.title}>
-                <p>Docxna</p>
-                <span>Product Design, UI/UX</span>
-              </div>
-              <div className={Styles.image}>
-                <img src="/assets/home/section-six/docxna.svg" alt="Docxna" />
-              </div>
-            </div>
-          </div>
-          <div className={Styles.wrapper_inverted}>
-            <div
-              className={Styles.portfolio}
-              style={{
-                backgroundColor: "#01DBF0",
-              }}
-            >
-              <div className={Styles.title}>
-                <p>Hire Me</p>
-                <span>Product Design, UI/UX</span>
-              </div>
-              <div className={Styles.image}>
-                <img src="/assets/home/section-six/hire.svg" alt="Hire Me" />
-              </div>
-            </div>
-            <div
-              className={Styles.portfolio}
-              style={{
-                backgroundColor: "#796AF2",
-              }}
-            >
-              <div className={Styles.title}>
-                <p>Danco</p>
-                <span>Product Design, UI/UX</span>
-              </div>
-              <div className={Styles.image}>
-                <img src="/assets/home/section-six/danco.svg" alt="Danco" />
-              </div>
-            </div>
-          </div>
-          <div className={Styles.wrapper}>
-            <div
-              className={Styles.portfolio}
-              style={{
-                backgroundColor: "#FF5E95",
-              }}
-            >
-              <div className={Styles.title}>
-                <p>Telescope</p>
-                <span>Product Design, UI/UX</span>
-              </div>
-              <div className={Styles.image}>
-                <img
-                  src="/assets/home/section-six/telescope.svg"
-                  alt="Telescope"
-                />
-              </div>
-            </div>
-            <div
-              className={Styles.portfolio}
-              style={{
-                backgroundColor: "#00601B",
-              }}
-            >
-              <div className={Styles.title}>
-                <p>Hire Me</p>
-                <span>Product Design, UI/UX</span>
-              </div>
-              <div className={Styles.image}>
-                <img
-                  src="/assets/home/section-six/hire_green.svg"
-                  alt="Hire Me"
-                />
-              </div>
-            </div>
-          </div>
-          <div className={Styles.wrapper_inverted}>
-            <div
-              className={Styles.portfolio}
-              style={{
-                backgroundColor: "#505252",
-              }}
-            >
-              <div className={Styles.title}>
-                <p>Docxna</p>
-                <span>Product Design, UI/UX</span>
-              </div>
-              <div className={Styles.image}>
-                <img
-                  src="/assets/home/section-six/docxna_grey.svg"
-                  alt="Docxna"
-                />
-              </div>
-            </div>
-            <div
-              className={Styles.portfolio_add}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                backgroundColor: "#EEF3FE",
-                border: "0.5px solid #214A7E",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                color: "#214A7E",
-                fontWeight: "bold",
-              }}
-            >
-              <p style={{ marginRight: "10px" }}>Add your own project</p>
-              <img src="/assets/home/section-six/arrow.svg" alt="arrow" />
-            </div>
-          </div>
+          {CaseStudy.items.map((item) => (
+            <>
+              {item.inverted !== true ? (
+                <div className={Styles.wrapper}>
+                  <div
+                    className={Styles.portfolio}
+                    style={{
+                      backgroundColor: `${item.backgroundColor}`,
+                    }}
+                    onClick={() => {
+                      let clonedItem = JSON.parse(JSON.stringify(item));
+                      let names = Object.keys(clonedItem);
+                      names.map((name) => {
+                        if (name.startsWith("second")) {
+                          delete clonedItem[name];
+                        }
+                      });
+
+                      setItemInLocalStorage(clonedItem);
+                    }}
+                  >
+                    <div
+                      className={Styles.title}
+                      style={{
+                        color: `${item.textColor}`,
+                      }}
+                    >
+                      <p>{item.name}</p>
+                      <span>{item.product}</span>
+                    </div>
+                    <div className={Styles.image}>
+                      <img src={item.image} alt={item.name} />
+                    </div>
+                  </div>
+                  <div
+                    className={Styles.portfolio}
+                    style={{
+                      backgroundColor: `${item.secondbackgroundColor}`,
+                    }}
+                    onClick={() => {
+                      let clonedItem = JSON.parse(JSON.stringify(item));
+                      let names = Object.keys(clonedItem);
+                      names.map((name) => {
+                        if (!name.startsWith("second")) {
+                          delete clonedItem[name];
+                        }
+                      });
+
+                      setItemInLocalStorage(clonedItem);
+                    }}
+                  >
+                    <div
+                      className={Styles.title}
+                      style={{
+                        color: `${item.secondtextColor}`,
+                      }}
+                    >
+                      <p>{item.secondname}</p>
+                      <span>{item.secondproduct}</span>
+                    </div>
+                    <div className={Styles.image}>
+                      <img src={item.secondimage} alt={item.secondname} />
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className={Styles.wrapper_inverted}>
+                  <div
+                    className={Styles.portfolio}
+                    style={{
+                      backgroundColor: `${item.backgroundColor}`,
+                    }}
+                    onClick={() => {
+                      let clonedItem = JSON.parse(JSON.stringify(item));
+                      let names = Object.keys(clonedItem);
+                      names.map((name) => {
+                        if (name.startsWith("second")) {
+                          delete clonedItem[name];
+                        }
+                      });
+
+                      setItemInLocalStorage(clonedItem);
+                    }}
+                  >
+                    <div
+                      className={Styles.title}
+                      style={{
+                        color: `${item.textColor}`,
+                      }}
+                    >
+                      <p>{item.name}</p>
+                      <span>{item.product}</span>
+                    </div>
+                    <div className={Styles.image}>
+                      <img src={item.image} alt={item.name} />
+                    </div>
+                  </div>
+                  <div
+                    onClick={() => {
+                      let clonedItem = JSON.parse(JSON.stringify(item));
+                      let names = Object.keys(clonedItem);
+                      names.map((name) => {
+                        if (!name.startsWith("second")) {
+                          delete clonedItem[name];
+                        }
+                      });
+
+                      setItemInLocalStorage(clonedItem);
+                    }}
+                    className={
+                      item.secondimage ? Styles.portfolio : Styles.portfolio_add
+                    }
+                    style={
+                      item.secondimage
+                        ? {
+                            backgroundColor: `${item.secondbackgroundColor}`,
+                          }
+                        : {
+                            display: "flex",
+                            alignItems: "center",
+                            backgroundColor: "#EEF3FE",
+                            border: "0.5px solid #214A7E",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            color: "#214A7E",
+                            fontWeight: "bold",
+                          }
+                    }
+                  >
+                    <div
+                      className={item.secondimage && Styles.title}
+                      style={
+                        item.secondimage
+                          ? {
+                              color: `${item.secondtextColor}`,
+                            }
+                          : { marginRight: "10px", color: "#214A7E" }
+                      }
+                    >
+                      <p>{item.secondname}</p>
+                      <span>{item.secondproduct}</span>
+                    </div>
+                    {item.secondimage ? (
+                      <div className={Styles.image}>
+                        <img src={item.secondimage} alt={item.secondname} />
+                      </div>
+                    ) : (
+                      <img
+                        src="/assets/home/section-six/arrow.svg"
+                        alt="arrow"
+                      />
+                    )}
+                  </div>
+                </div>
+              )}
+            </>
+          ))}
         </div>
       </div>
 
