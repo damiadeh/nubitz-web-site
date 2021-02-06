@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -10,10 +11,27 @@ import SectionThree from "../sections/homepage-sections/section-three/SectionThr
 
 const CaseStudy = () => {
   const router = useRouter();
+  const [caseStudyItem, setCaseStudyItem] = useState(0);
+
+  useEffect(() => {
+    getIdFromLocalStorage();
+  }, []);
+
+  const getIdFromLocalStorage = () => {
+    setCaseStudyItem(JSON.parse(localStorage.getItem("caseStudy")));
+  };
 
   return (
     <div className={Styles.container}>
-      <nav>
+      <nav
+        style={{
+          backgroundColor: `${
+            !caseStudyItem.backgroundColor
+              ? caseStudyItem.secondbackgroundColor
+              : caseStudyItem.backgroundColor
+          }`,
+        }}
+      >
         <div className={Styles.logo_container}>
           <Link href="/">
             <Image
@@ -55,19 +73,36 @@ const CaseStudy = () => {
         </div>
         <div className={Styles.hamburger}>
           <Image
-            src="/assets/menu-dark.svg"
+            src="/assets/menu-white.svg"
             width="30"
             height="30"
             alt="hamburger-menu"
           />
         </div>
       </nav>
-      <div className={Styles.hero}>
+      <div
+        className={Styles.hero}
+        style={{
+          backgroundColor: `${
+            !caseStudyItem.backgroundColor
+              ? caseStudyItem.secondbackgroundColor
+              : caseStudyItem.backgroundColor
+          }`,
+        }}
+      >
         <div className={Styles.hero_container}>
           <div className={Styles.hero_text}>
             <img src="/assets/case-study/ova-logo.svg" alt="ova-logo" />
-            <h3>OVA PAY</h3>
-            <p>Product Design, UI/UX</p>
+            <h3>
+              {!caseStudyItem.name
+                ? caseStudyItem.secondname
+                : caseStudyItem.name}
+            </h3>
+            <p>
+              {!caseStudyItem.product
+                ? caseStudyItem.secondproduct
+                : caseStudyItem.product}
+            </p>
           </div>
           <div className={Styles.hero_image}>
             <img src="/assets/case-study/iphone.svg" alt="/" />
@@ -78,6 +113,7 @@ const CaseStudy = () => {
         <h5>Overview {"&"} Problems</h5>
         <div className={Styles.overviews_wrapper}>
           <div className={Styles.overviews_lhs}>
+            <h5>Overview {"&"} Problems</h5>
             <p>
               Mauris volutpat maecenas quis molestie pellentesque sit diam
               egestas sed. Est ornare bibendum ut facilisis rhoncus porta
@@ -109,11 +145,13 @@ const CaseStudy = () => {
                 <p>Fintech</p>
               </div>
             </div>
-            <Button
-              text="View Live Site >>"
-              backgroundColor="#00103C"
-              textColor="white"
-            />
+            <div className={Styles.button}>
+              <Button
+                text="View Live Site >>"
+                backgroundColor="#00103C"
+                textColor="white"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -121,6 +159,7 @@ const CaseStudy = () => {
         <h5>Solution Delivered</h5>
         <div className={Styles.solutions_wrapper}>
           <div className={Styles.solutions_lhs}>
+            <h5>Solution Delivered</h5>
             <p>
               Mauris volutpat maecenas quis molestie pellentesque sit diam
               egestas sed. Est ornare bibendum ut facilisis rhoncus porta

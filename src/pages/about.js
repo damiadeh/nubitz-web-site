@@ -61,7 +61,6 @@ const About = () => {
             textColor="white"
           />
         </div>
-
         <div className={Styles.hamburger}>
           <Image
             src="/assets/menu-dark.svg"

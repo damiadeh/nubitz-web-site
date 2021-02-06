@@ -32,6 +32,7 @@
 .portfolio {
   padding: 15px;
   border-radius: 8px;
+  cursor: pointer;
 
   &_add {
     padding: 15px;
@@ -101,7 +102,6 @@
   position: relative;
   background-color: #eef3fe;
   border-radius: 24px;
-  // margin-top: 5vh;
 
   .bubble {
     position: absolute;

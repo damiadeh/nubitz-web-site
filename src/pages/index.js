@@ -56,82 +56,85 @@ const HomePage = () => {
 
   return (
     <div className={Styles.container}>
-      <div className={Styles.header}>
-        <div className={Styles.background_video}>
-          <video
-            src={require("../../public/assets/home/header/hero-video.mp4")}
-            muted
-            loop
-            autoPlay
-          ></video>
-          <div className={Styles.overlay}></div>
-        </div>
-      </div>
-      <div className={Styles.content}>
-        <nav>
-          <div className={Styles.logo_container}>
-            <Link href="/">
-              <Image
-                src="/assets/home/header/logo.svg"
-                width="100"
-                height="50"
-                alt="nubitz-logo"
-              />
-            </Link>
-          </div>
-          <div className={Styles.nav_items}>
-            <ul>
-              <li className={router.pathname === "/about" ? Styles.active : ""}>
-                <Link href="/about">
-                  <a>About Us</a>
-                </Link>
-              </li>
-              <li
-                className={
-                  router.pathname === "/project-request" ? Styles.active : ""
-                }
-              >
-                <Link href="/project-request">
-                  <a>Project request</a>
-                </Link>
-              </li>
-              <li className={router.pathname === "/blog" ? Styles.active : ""}>
-                <Link href="/blog">
-                  <a>Blog</a>
-                </Link>
-              </li>
-              <li
-                className={router.pathname === "/career" ? Styles.active : ""}
-              >
-                <Link href="/career">
-                  <a>Get hired</a>
-                </Link>
-              </li>
-            </ul>
-            <Button text="Get Started" primary />
-          </div>
-          <div className={Styles.hamburger}>
+      <nav>
+        <div className={Styles.logo_container}>
+          <Link href="/">
             <Image
-              src="/assets/menu-white.svg"
-              width="30"
-              height="30"
-              alt="hamburger-menu"
+              src="/assets/home/header/logo.svg"
+              width="100"
+              height="50"
+              alt="nubitz-logo"
             />
-          </div>
-        </nav>
-        <div className={Styles.hero_text}>
-          <h1>We solve problems related to IT infrastructure</h1>
-          <p>
-            We are a software development and digital marketing company existing
-            to help businesses develop solutions that help them achieve their
-            own desired outcomes.
-          </p>
+          </Link>
+        </div>
+        <div className={Styles.nav_items}>
+          <ul>
+            <li className={router.pathname === "/about" ? Styles.active : ""}>
+              <Link href="/about">
+                <a>About Us</a>
+              </Link>
+            </li>
+            <li
+              className={
+                router.pathname === "/project-request" ? Styles.active : ""
+              }
+            >
+              <Link href="/project-request">
+                <a>Project request</a>
+              </Link>
+            </li>
+            <li className={router.pathname === "/blog" ? Styles.active : ""}>
+              <Link href="/blog">
+                <a>Blog</a>
+              </Link>
+            </li>
+            <li className={router.pathname === "/career" ? Styles.active : ""}>
+              <Link href="/career">
+                <a>Get hired</a>
+              </Link>
+            </li>
+          </ul>
           <Button text="Get Started" primary />
         </div>
+        <div className={Styles.hamburger}>
+          <Image
+            src="/assets/menu-white.svg"
+            width="30"
+            height="30"
+            alt="hamburger-menu"
+          />
+        </div>
+      </nav>
+      <div className={Styles.videoContainer}>
+        <video
+          src={require("../../public/assets/home/header/hero-video.mp4")}
+          muted
+          loop
+          autoPlay
+        ></video>
+        <img src="/assets/home-hero.png" alt="/" className={Styles.heroImage} />
+        <div className={Styles.overlay}></div>
         <div className={Styles.accomplishments}>
           <Card />
         </div>
       </div>
+      <div className={Styles.hero}>
+        <div className={Styles.hero_wrapper}>
+          <div className={Styles.hero_text}>
+            <h1>We solve problems related to IT infrastructure</h1>
+            <p>
+              We are a software development and digital marketing company
+              existing to help businesses develop solutions that help them
+              achieve their own desired outcomes.
+            </p>
+            <Button text="Get Started" primary />
+          </div>
+        </div>
+      </div>
+      <div className={Styles.accomplishmentsMobile}>
+        <Card />
+      </div>
+
       <div className={Styles.companies}>
         {companies.items.map((item) => (
           <div key={item.id}>

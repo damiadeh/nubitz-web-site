@@ -1,8 +1,10 @@
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   align-items: center;
   color: #fff;
   font-family: "Mulish", sans-serif;
+  width: 100%;
 
   @media screen and (max-width: 768px) {
     display: flex;
@@ -20,7 +22,7 @@
     align-items: flex-start;
     background-color: #5893c1;
     z-index: 10;
-    padding: 20px 30px;
+    padding: 30px 30px;
 
     @media screen and (max-width: 768px) {
       padding: 30px;

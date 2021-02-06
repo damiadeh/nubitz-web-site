@@ -43,47 +43,47 @@ const languages = {
     {
       image: "/assets/home/section_three/java.svg",
       name: "Java",
-      id: 1
+      id: 1,
     },
     {
       image: "/assets/home/section_three/ruby.svg",
       name: "Ruby",
-      id: 2
+      id: 2,
     },
     {
       image: "/assets/home/section_three/java.svg",
       name: "Java",
-      id: 3
+      id: 3,
     },
     {
       image: "/assets/home/section_three/html.svg",
       name: "Html",
-      id: 4
+      id: 4,
     },
     {
       image: "/assets/home/section_three/react.svg",
       name: "React",
-      id: 5
+      id: 5,
     },
     {
       image: "/assets/home/section_three/react.svg",
       name: "React",
-      id: 6
+      id: 6,
     },
     {
       image: "/assets/home/section_three/python.svg",
       name: "Python",
-      id: 7
+      id: 7,
     },
     {
       image: "/assets/home/section_three/php.svg",
       name: "Php",
-      id: 8
+      id: 8,
     },
     {
       image: "/assets/home/section_three/python.svg",
       name: "Python",
-      id: 9
+      id: 9,
     },
   ],
 };
@@ -104,36 +104,98 @@ const SectionThree = () => {
           <Timeline className={classes.root}>
             <TimelineItem>
               <TimelineSeparator>
-                <TimelineDot className={classes.timelineDotWhite} />
-                <TimelineConnector className={classes.timelineConnector} />
+                <TimelineDot
+                  className={classes.timelineDotWhite}
+                  style={{
+                    color: "white",
+                    backgroundColor: "white",
+                  }}
+                />
+                <TimelineConnector
+                  className={classes.timelineConnector}
+                  style={{
+                    color: "rgba(253, 253, 253, 0.6)",
+                    backgroundColor: "rgba(253, 253, 253, 0.6)",
+                  }}
+                />
               </TimelineSeparator>
-              <TimelineContent className={classes.timelineContentWhite}>
+              <TimelineContent
+                className={classes.timelineContentWhite}
+                style={{
+                  color: "white",
+                }}
+              >
                 Web applications
               </TimelineContent>
             </TimelineItem>
             <TimelineItem>
               <TimelineSeparator>
-                <TimelineDot className={classes.timelineDot} />
-                <TimelineConnector className={classes.timelineConnector} />
+                <TimelineDot
+                  className={classes.timelineDot}
+                  style={{
+                    color: "rgba(253, 253, 253, 0.6)",
+                    backgroundColor: "rgba(253, 253, 253, 0.6)",
+                  }}
+                />
+                <TimelineConnector
+                  className={classes.timelineConnector}
+                  style={{
+                    color: "rgba(253, 253, 253, 0.6)",
+                    backgroundColor: "rgba(253, 253, 253, 0.6)",
+                  }}
+                />
               </TimelineSeparator>
-              <TimelineContent className={classes.timelineContent}>
+              <TimelineContent
+                className={classes.timelineContent}
+                style={{
+                  color: "rgba(253, 253, 253, 0.6)",
+                }}
+              >
                 Digital Marketing applications
               </TimelineContent>
             </TimelineItem>
             <TimelineItem>
               <TimelineSeparator>
-                <TimelineDot className={classes.timelineDot} />
-                <TimelineConnector className={classes.timelineConnector} />
+                <TimelineDot
+                  className={classes.timelineDot}
+                  style={{
+                    color: "rgba(253, 253, 253, 0.6)",
+                    backgroundColor: "rgba(253, 253, 253, 0.6)",
+                  }}
+                />
+                <TimelineConnector
+                  className={classes.timelineConnector}
+                  style={{
+                    color: "rgba(253, 253, 253, 0.6)",
+                    backgroundColor: "rgba(253, 253, 253, 0.6)",
+                  }}
+                />
               </TimelineSeparator>
-              <TimelineContent className={classes.timelineContent}>
+              <TimelineContent
+                className={classes.timelineContent}
+                style={{
+                  color: "rgba(253, 253, 253, 0.6)",
+                }}
+              >
                 Mobile applications
               </TimelineContent>
             </TimelineItem>
             <TimelineItem>
               <TimelineSeparator>
-                <TimelineDot className={classes.timelineDot} />
+                <TimelineDot
+                  className={classes.timelineDot}
+                  style={{
+                    color: "rgba(253, 253, 253, 0.6)",
+                    backgroundColor: "rgba(253, 253, 253, 0.6)",
+                  }}
+                />
               </TimelineSeparator>
-              <TimelineContent className={classes.timelineContent}>
+              <TimelineContent
+                className={classes.timelineContent}
+                style={{
+                  color: "rgba(253, 253, 253, 0.6)",
+                }}
+              >
                 Server applications
               </TimelineContent>
             </TimelineItem>

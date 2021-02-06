@@ -8,29 +8,141 @@
     }
   }
 
-  video {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    opacity: 0.8;
-  }
-
-  .overlay {
+  nav {
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 120px 0;
+    z-index: 10;
+
+    @media screen and (max-width: 768px) {
+      padding: 15px 20px 0;
+    }
+
+    .nav_items {
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        z-index: 10;
+
+        .active a,
+        .li:hover {
+          &::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 0px;
+            left: 0;
+            bottom: 0;
+            top: 25px;
+            border: 2px solid #1e396e;
+          }
+        }
+
+        li {
+          list-style: none;
+
+          a {
+            font-weight: normal;
+            padding-right: 40px;
+            font-style: normal;
+            line-height: 18px;
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+
+      @media screen and (max-width: 768px) {
+        display: block;
+        cursor: pointer;
+      }
+    }
   }
 
-  .content {
-    .hero_text {
+  .videoContainer {
+    max-height: 100%;
+    position: relative;
+
+    @media screen and (max-width: 1024px) {
+      max-height: 100vh;
+      position: unset;
+    }
+
+    .heroImage {
+      display: none;
+
+      @media screen and (max-width: 1024px) {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+      }
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+
+    .overlay {
       position: absolute;
-      top: 15%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+
+    .accomplishments {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+      @media screen and (max-width: 768px) {
+        position: unset;
+        display: none;
+      }
+    }
+  }
+
+  .hero {
+    &_wrapper {
+      position: absolute;
+      bottom: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .hero_text {
       padding: 0 120px 0;
 
       @media screen and (max-width: 768px) {
@@ -46,7 +158,7 @@
         line-height: 60px;
         text-transform: capitalize;
         color: #ffffff;
-        max-width: 600px;
+        max-width: 500px;
         margin-bottom: 0;
       }
 
@@ -57,91 +169,20 @@
         font-size: 17px;
         line-height: 25px;
         color: #ffffff;
-        max-width: 510px;
+        max-width: 480px;
       }
 
       button {
         margin-top: 2vh;
       }
     }
+  }
+  .accomplishmentsMobile {
+    display: none;
 
-    .accomplishments {
-      // margin-top: 10vh;
-      bottom: 0;
-      position: absolute;
-
-      @media screen and (max-width: 768px) {
-        position: unset;
-      }
-    }
-
-    nav {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 120px 0;
-      z-index: 10;
-
-      @media screen and (max-width: 768px) {
-        padding: 15px 20px 0;
-      }
-
-      .nav_items {
-        display: flex;
-        align-items: center;
-
-        @media screen and (max-width: 768px) {
-          display: none;
-        }
-
-        ul {
-          display: flex;
-          align-items: center;
-          z-index: 10;
-
-          .active a,
-          .li:hover {
-            &::after {
-              content: "";
-              position: absolute;
-              width: 24px;
-              height: 0px;
-              left: 0;
-              bottom: 0;
-              top: 25px;
-              border: 2px solid #1e396e;
-            }
-          }
-
-          li {
-            list-style: none;
-
-            a {
-              font-weight: normal;
-              padding-right: 40px;
-              font-style: normal;
-              line-height: 18px;
-              font-size: 14px;
-              color: #fff;
-              cursor: pointer;
-              text-decoration: none;
-              text-transform: capitalize;
-            }
-          }
-        }
-      }
-
-      .hamburger {
-        display: none;
-
-        @media screen and (max-width: 768px) {
-          display: block;
-          cursor: pointer;
-        }
-      }
+    @media screen and (max-width: 768px) {
+      position: unset;
+      display: block;
     }
   }
 
@@ -165,4 +206,3 @@
     }
   }
 }
-

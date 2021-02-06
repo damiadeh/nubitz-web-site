@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #00601b;
     padding: 15px 120px;
 
     @media screen and (max-width: 768px) {
@@ -72,16 +71,29 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: #00601b;
-    
+
+    @media screen and (max-width: 768px) {
+      padding: 15px;
+    }
+
     &_container {
       display: grid;
       grid-template-columns: 48% 48%;
       column-gap: 4%;
       align-items: center;
+
+      @media screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
     }
 
     &_text {
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+
       h3 {
         font-style: normal;
         font-weight: bold;
@@ -104,12 +116,29 @@
     &_image {
       img {
         width: 100%;
+
+        @media screen and (max-width: 768px) {
+          margin-top: 10vh;
+        }
       }
     }
   }
 
   .overviews {
     padding: 5vh 120px;
+
+    @media screen and (max-width: 768px) {
+      padding: 5vh 15px;
+    }
+
+    .button {
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
 
     h5 {
       font-style: normal;
@@ -118,15 +147,38 @@
       line-height: 34px;
       color: #333533;
       margin: 0;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
 
     &_wrapper {
       display: grid;
       grid-template-columns: 65% 25%;
       column-gap: 10%;
+
+      @media screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
     }
 
     &_lhs {
+      @media screen and (max-width: 768px) {
+        order: 2;
+        margin-top: 8vh;
+      }
+
+      h5 {
+        display: none;
+
+        @media screen and (max-width: 768px) {
+          display: block;
+        }
+      }
+
       p {
         font-style: normal;
         font-weight: normal;
@@ -137,6 +189,10 @@
     }
 
     &_rhs {
+      @media screen and (max-width: 768px) {
+        order: 1;
+      }
+
       &_container {
         background: rgba(255, 255, 255, 0.97);
         border: 1px solid #c4c4c4;
@@ -174,6 +230,10 @@
   .solutions {
     padding: 5vh 120px;
 
+    @media screen and (max-width: 768px) {
+      padding: 5vh 15px;
+    }
+
     h5 {
       font-style: normal;
       font-weight: bold;
@@ -181,22 +241,31 @@
       line-height: 34px;
       color: #333533;
       margin: 0;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
 
     &_wrapper {
       display: grid;
       grid-template-columns: 50% 40%;
       column-gap: 10%;
+
+      @media screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
     }
 
     &_lhs {
       h5 {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 34px;
-        color: #333533;
-        margin: 0;
+        display: none;
+
+        @media screen and (max-width: 768px) {
+          display: block;
+        }
       }
       p {
         font-style: normal;
@@ -244,6 +313,10 @@
     flex-direction: column;
     text-align: center;
 
+    @media screen and (max-width: 768px) {
+      padding: 5vh 15px;
+    }
+
     h5 {
       font-style: normal;
       font-weight: 800;
@@ -264,6 +337,10 @@
       color: #333533;
       width: 731px;
       margin: 1vh 0 2vh;
+
+      @media screen and (max-width: 768px) {
+        width: unset;
+      }
     }
 
     span {
@@ -280,6 +357,10 @@
   .projects {
     padding: 5vh 120px;
 
+    @media screen and (max-width: 768px) {
+      padding: 5vh 15px;
+    }
+
     h5 {
       text-align: center;
       font-style: normal;
@@ -288,12 +369,21 @@
       line-height: 48px;
       color: #242423;
       margin: 0;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 5vh;
+      }
     }
 
     &_wrapper {
       display: grid;
       grid-template-columns: 33% 33% 33%;
       column-gap: 0.5%;
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 100%;
+        margin-bottom: 5vh;
+      }
     }
 
     &_item {
@@ -303,6 +393,10 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+
+      @media screen and (max-width: 768px) {
+        margin: 5vh 0 0;
+      }
 
       img {
         width: 100%;
