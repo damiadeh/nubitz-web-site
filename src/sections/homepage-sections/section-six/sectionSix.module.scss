@@ -1,6 +1,6 @@
 .container {
   padding: 15vh 120px 5vh;
-  font-family: "Mulish", sans-serif;
+  font-family: "Roboto", sans-serif;
 
   @media screen and (max-width: 1024px) {
     padding: 10px;
@@ -53,12 +53,11 @@
   text-align: left;
 
   p {
-    font-family: Mulish;
+    font-family: Roboto;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 27px;
-    color: #fdfdfd;
     margin: 0;
   }
 
@@ -67,7 +66,6 @@
     font-weight: normal;
     font-size: 11px;
     line-height: 18px;
-    color: #fdfdfd;
   }
 }
 
@@ -85,7 +83,7 @@
 
 .tagContainer {
   padding: 15vh 120px 5vh;
-  font-family: "Mulish", sans-serif;
+  font-family: "Roboto", sans-serif;
 
   @media screen and (max-width: 1024px) {
     display: block;

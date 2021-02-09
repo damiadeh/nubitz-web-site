@@ -42,7 +42,7 @@ const SectionTwo = () => {
             backgroundColor="#EEF3FE"
             fontSize="15px"
             padding="20px 15px"
-            lineHeight="19px"
+            lineHeight="25px"
             key={item.number}
           />
         ))}

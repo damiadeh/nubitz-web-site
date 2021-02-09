@@ -117,24 +117,22 @@ const HomePage = () => {
         <div className={Styles.accomplishments}>
           <Card />
         </div>
-      </div>
       <div className={Styles.hero}>
-        <div className={Styles.hero_wrapper}>
-          <div className={Styles.hero_text}>
-            <h1>We solve problems related to IT infrastructure</h1>
-            <p>
-              We are a software development and digital marketing company
-              existing to help businesses develop solutions that help them
-              achieve their own desired outcomes.
-            </p>
-            <Button text="Get Started" primary />
-          </div>
+        <div className={Styles.hero_text}>
+          <h1>We solve problems related to IT infrastructure</h1>
+          <p>
+            We are a software development and digital marketing company existing
+            to help businesses develop solutions that help them achieve their
+            own desired outcomes.
+          </p>
+          <Button text="Get Started" primary />
         </div>
       </div>
+      </div>
+
       <div className={Styles.accomplishmentsMobile}>
         <Card />
       </div>
-
       <div className={Styles.companies}>
         {companies.items.map((item) => (
           <div key={item.id}>

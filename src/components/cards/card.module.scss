@@ -3,10 +3,10 @@
   grid-template-columns: auto auto auto;
   align-items: center;
   color: #fff;
-  font-family: "Mulish", sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 100%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;

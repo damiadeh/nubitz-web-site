@@ -14,7 +14,7 @@
 }
 .container {
   padding: 8vh 120px 5vh;
-  font-family: "Mulish", sans-serif;
+  font-family: "Roboto", sans-serif;
 
   @media screen and (max-width: 1024px) {
     padding: 30px;
@@ -48,8 +48,8 @@
 
 .client {
   display: grid;
-  grid-template-columns: auto auto auto;
-  column-gap: 5vh;
+  grid-template-columns: 27% 2% 67%;
+  column-gap: 2vh;
   align-items: center;
   margin-top: 8vh;
 

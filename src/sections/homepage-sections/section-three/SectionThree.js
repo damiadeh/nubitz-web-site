@@ -94,12 +94,13 @@ const SectionThree = () => {
   return (
     <div className={Styles.container}>
       <div>
-        <SectionText
-          textColor="white"
-          secondary
-          title="We do IT better"
-          description="Sapien sem lectus tempor cursus. Tortor et viverra augue ipsum, platea sem viverra."
-        />
+        <div className={Styles.hero}>
+          <h2 className={Styles.hero_title}>We do IT better</h2>
+          <p className={Styles.hero_description}>
+            Sapien sem lectus tempor cursus. Tortor et viverra augue ipsum,
+            platea sem viverra.
+          </p>
+        </div>
         <ThemeProvider theme={theme}>
           <Timeline className={classes.root}>
             <TimelineItem>

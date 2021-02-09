@@ -12,7 +12,7 @@ const CaseStudy = {
       secondproduct: "Product Design, UI/UX",
       secondimage: "/assets/home/section-six/docxna.svg",
       secondbackgroundColor: "#D1E1E1",
-      secondtextColor: "#fff",
+      secondtextColor: "#234085",
       inverted: false,
     },
     {
