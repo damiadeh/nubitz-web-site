@@ -1,13 +1,14 @@
 .button {
-  padding: 10px 25px;
+  padding: 15px 25px;
   border-radius: 25px;
   font-style: normal;
   font-weight: bold;
-  line-height: 21px;
-  font-size: 15px;
+  line-height: 18px;
+  font-size: 13px;
   border: none;
   z-index: 10;
   cursor: pointer;
+  width: 150px;
 
   &:focus {
     outline: none;

@@ -96,10 +96,29 @@ const budget = {
 
 const Stepper = () => {
   const [step, setStep] = useState(0);
+  const [industryActive, setIndustryActive] = useState(false);
+  const [servicesActive, setServicesActive] = useState(false);
+  const [durationActive, setDurationActive] = useState(false);
+  const [budgetActive, setBudgetActive] = useState(false);
 
   const handleStep = () => {
     if (step < 4) {
-      setStep(step + 1);
+      setStep((step) => step + 1);
+    }
+    if (step === 0) {
+      setIndustryActive(true);
+    } else if (step === 1) {
+      setIndustryActive(true);
+      setServicesActive(true);
+    } else if (step === 2) {
+      setIndustryActive(true);
+      setServicesActive(true);
+      setDurationActive(true);
+    } else if (step === 3) {
+      setIndustryActive(true);
+      setServicesActive(true);
+      setDurationActive(true);
+      setBudgetActive(true);
     }
   };
 
@@ -107,19 +126,19 @@ const Stepper = () => {
     <div className={Styles.container}>
       <div className={Styles.breadcrumb}>
         <div>
-          <p>Industry</p>
+          <p style={{ color: "#242423" }}>Industry</p>
         </div>
-        <span>›</span>
+        <span style={{ color: "#242423" }}>›</span>
         <div>
-          <p>Services</p>
+          <p style={{ color: servicesActive && "#242423" }}>Services</p>
         </div>
-        <span>›</span>
+        <span style={{ color: servicesActive && "#242423" }}>›</span>
         <div>
-          <p>Project Duration</p>
+          <p style={{ color: durationActive && "#242423" }}>Project Duration</p>
         </div>
-        <span>›</span>
+        <span style={{ color: durationActive && "#242423" }}>›</span>
         <div>
-          <p>Budget</p>
+          <p style={{ color: budgetActive && "#242423" }}>Budget</p>
         </div>
       </div>
       <div className={Styles.text}>
@@ -142,8 +161,8 @@ const Stepper = () => {
         ) : step === 2 ? (
           <>
             <h5>
-              Width How much time do you have for a development? How much time
-              do you have for a development?
+              How much time do you have for a development? How much time do you
+              have for a development?
             </h5>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In etiam
@@ -198,6 +217,7 @@ const Stepper = () => {
             text="Let's Get Started"
             backgroundColor="#00103c"
             textColor="white"
+            width="180px"
           />
         ) : (
           <Button

@@ -17,6 +17,42 @@
     flex-direction: column;
   }
 }
+.hero {
+  color: #fdfdfd;
+
+  &_title {
+    width: 489px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 48px;
+    text-transform: capitalize;
+    margin: 0;
+
+    @media screen and (max-width: 1024px) {
+      width: unset !important;
+      font-size: 23px;
+    }
+  }
+
+  &_description {
+    width: 400px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 0;
+
+    @media screen and (max-width: 1024px) {
+      width: unset !important;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: unset !important;
+      margin: 3vh 0;
+    }
+  }
+}
 
 .languages {
   display: grid;

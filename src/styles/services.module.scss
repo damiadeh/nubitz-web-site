@@ -26,8 +26,7 @@
         align-items: center;
         z-index: 10;
 
-        .active a,
-        li:hover {
+        .active a {
           &::after {
             content: "";
             position: absolute;
@@ -54,6 +53,10 @@
             cursor: pointer;
             text-decoration: none;
             text-transform: capitalize;
+
+            &:hover {
+              font-weight: bold;
+            }
           }
         }
       }

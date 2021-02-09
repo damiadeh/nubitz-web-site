@@ -22,8 +22,7 @@
         display: flex;
         align-items: center;
 
-        .active a,
-        li:hover {
+        .active a {
           &::after {
             content: "";
             position: absolute;
@@ -50,6 +49,10 @@
             cursor: pointer;
             text-decoration: none;
             text-transform: capitalize;
+
+            &:hover {
+              font-weight: bold;
+            }
           }
         }
       }
