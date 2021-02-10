@@ -71,7 +71,7 @@ const ProjectRequest = () => {
       </nav>
       <div className={Styles.hero}>
         <SectionText
-          textColor="#1E396E"
+          textColor="#026AAF"
           title="Ut mattis iaculis nulla donec quam enim amet dictum a. Auctor."
           description="Mauris volutpat maecenas quis molestie pellentesque sit diam egestas sed. Est ornare bibendum ut facilisis rhoncus porta habitant. Scelerisque amet ut posuere sit nulla urna vitae amet. Nulla sit lorem tortor, nunc. Sed"
         />
