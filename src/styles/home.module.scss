@@ -1,6 +1,6 @@
 .container {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 
   .header {
     @media screen and (max-width: 768px) {
@@ -115,7 +115,7 @@
       height: 100%;
       background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, -3.7)
       );
 
@@ -163,7 +163,7 @@
       }
 
       h1 {
-        font-family: Roboto;
+        font-family: Ubuntu;
         font-style: normal;
         font-weight: 800;
         font-size: 48px;
@@ -175,7 +175,7 @@
       }
 
       p {
-        font-family: Roboto;
+        font-family: Ubuntu;
         font-style: normal;
         font-weight: normal;
         font-size: 17px;
