@@ -1,11 +1,11 @@
 .container {
-  background-color: #214a7e;
+  background-color: #026aaf;
   padding: 8vh 120px 5vh;
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
   column-gap: 10vh;
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 
   @media screen and (max-width: 1024px) {
     padding: 30px;

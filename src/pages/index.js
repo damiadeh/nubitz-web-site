@@ -122,8 +122,7 @@ const HomePage = () => {
           <h1>We solve problems related to IT infrastructure</h1>
           <p>
             We are a software development and digital marketing company existing
-            to help businesses develop solutions that help them achieve their
-            own desired outcomes.
+            to help businesses develop solutions.
           </p>
           <Button text="Get Started" primary />
         </div>

@@ -12,7 +12,7 @@ const LittleCards = ({
   titleColor,
 }) => {
   let useStyle = {
-    backgroundColor: "#1e396e",
+    backgroundColor: "#026AAF",
     height: `${height}`,
     borderRadius: `${radius}`,
   };
@@ -23,7 +23,7 @@ const LittleCards = ({
       height: `${height}`,
       borderRadius: `${radius}`,
       border: "0.5px solid #C2D9EB",
-      color: "#1E396E",
+      color: "#026AAF",
     };
   }
 

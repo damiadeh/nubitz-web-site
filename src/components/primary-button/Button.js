@@ -13,7 +13,7 @@ const Button = ({
 }) => {
   let useStyle = {
     backgroundColor: "#fff",
-    color: "#1E396E",
+    color: "#026AAF",
     width: `${width}`,
   };
 

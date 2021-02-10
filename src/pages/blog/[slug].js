@@ -59,7 +59,7 @@ const BlogPostDetails = () => {
           <Button
             text="Contact Us"
             route="/contact-us"
-            backgroundColor="#214A7E"
+            backgroundColor="#026AAF"
             textColor="white"
           />
         </div>
