@@ -159,19 +159,24 @@
       @media screen and (max-width: 768px) {
         position: unset;
         padding: 30px;
+        width: 100%;
         top: 10%;
       }
 
       h1 {
         font-family: Ubuntu;
         font-style: normal;
-        font-weight:900;
+        font-weight: 900;
         font-size: 60px;
         line-height: 60px;
         text-transform: capitalize;
         color: #ffffff;
         max-width: 800px;
         margin-bottom: 0;
+
+        @media screen and (max-width: 768px) {
+          font-size: 48px;
+        }
       }
 
       p {
