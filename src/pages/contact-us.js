@@ -54,7 +54,7 @@ const ContactUs = () => {
           <Button
             text="Contact Us"
             route="/contact-us"
-            backgroundColor="#214A7E"
+            backgroundColor="#026AAF"
             textColor="white"
           />
         </div>
@@ -66,7 +66,7 @@ const ContactUs = () => {
             alt="hamburger-menu"
           />
         </div>
-      </nav>  
+      </nav>
       <Contact />
       <Footer />
     </div>

@@ -70,7 +70,7 @@ const offers = {
 
 const Career = () => {
   const router = useRouter();
-  
+
   return (
     <div className={Styles.container}>
       <nav>
@@ -115,7 +115,7 @@ const Career = () => {
           <Button
             text="Contact Us"
             route="/contact-us"
-            backgroundColor="#214A7E"
+            backgroundColor="#026AAF"
             textColor="white"
           />
         </div>
