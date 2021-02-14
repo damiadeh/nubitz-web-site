@@ -117,16 +117,16 @@ const HomePage = () => {
         <div className={Styles.accomplishments}>
           <Card />
         </div>
-      <div className={Styles.hero}>
-        <div className={Styles.hero_text}>
-          <h1>We solve problems related to IT infrastructure</h1>
-          <p>
-            We are a software development and digital marketing company existing
-            to help businesses develop solutions.
-          </p>
-          <Button text="Get Started" primary />
+        <div className={Styles.hero}>
+          <div className={Styles.hero_text}>
+            <h1>We solve problems related to IT infrastructure</h1>
+            <p>
+              We are a software development and digital marketing company
+              existing to help businesses develop solutions.
+            </p>
+            <Button text="Get Started" primary />
+          </div>
         </div>
-      </div>
       </div>
 
       <div className={Styles.accomplishmentsMobile}>
