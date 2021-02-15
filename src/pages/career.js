@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -70,6 +71,7 @@ const offers = {
 
 const Career = () => {
   const router = useRouter();
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <div className={Styles.container}>
@@ -120,13 +122,41 @@ const Career = () => {
           />
         </div>
         <div className={Styles.hamburger}>
-          <Image
+          <img
             src="/assets/menu-dark.svg"
-            width="30"
-            height="30"
             alt="hamburger-menu"
+            onClick={() => setOpenMenu(true)}
           />
         </div>
+        {openMenu && (
+          <div className={Styles.mobileNav}>
+            <div className={Styles.mobileNav_top}>
+              <img src="/assets/logo-dark.svg" alt="logo-mobile" />
+              <img
+                src="/assets/close.svg"
+                alt="close-menu"
+                onClick={() => setOpenMenu(false)}
+              />
+            </div>
+            <div className={Styles.mobileNav_lists}>
+              <ul>
+                <li onClick={() => setOpenMenu(false)}>
+                  <Link href="/about">About Us</Link>
+                </li>
+                <li onClick={() => setOpenMenu(false)}>
+                  <Link href="/project-request">Project request</Link>
+                </li>
+                <li onClick={() => setOpenMenu(false)}>
+                  <Link href="/blog">Blog</Link>
+                </li>
+                <li onClick={() => setOpenMenu(false)}>
+                  <Link href="/career">Get hired</Link>
+                </li>
+              </ul>
+            </div>
+            <button className={Styles.mobileNav_button}>Get Started</button>
+          </div>
+        )}
       </nav>
       <div className={Styles.hero}>
         <div className={Styles.textWrapper}>
