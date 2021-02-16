@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -11,6 +12,7 @@ import Stepper from "../components/stepper/stepper";
 
 const ProjectRequest = () => {
   const router = useRouter();
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <div className={Styles.container}>
@@ -52,7 +54,6 @@ const ProjectRequest = () => {
               </Link>
             </li>
           </ul>
-
           <Button
             text="Contact Us"
             route="/contact-us"
@@ -61,13 +62,45 @@ const ProjectRequest = () => {
           />
         </div>
         <div className={Styles.hamburger}>
-          <Image
+          <img
             src="/assets/menu-dark.svg"
-            width="30"
-            height="30"
             alt="hamburger-menu"
+            onClick={() => setOpenMenu(true)}
           />
         </div>
+        {openMenu && (
+          <div className={Styles.mobileNav}>
+            <div className={Styles.mobileNav_top}>
+              <Link href="/">
+                <img src="/assets/logo-dark.svg" alt="logo-mobile" />
+              </Link>
+              <img
+                src="/assets/close.svg"
+                alt="close-menu"
+                onClick={() => setOpenMenu(false)}
+              />
+            </div>
+            <div className={Styles.mobileNav_lists}>
+              <ul>
+                <li onClick={() => setOpenMenu(false)}>
+                  <Link href="/about">About Us</Link>
+                </li>
+                <li onClick={() => setOpenMenu(false)}>
+                  <Link href="/project-request">Project request</Link>
+                </li>
+                <li onClick={() => setOpenMenu(false)}>
+                  <Link href="/blog">Blog</Link>
+                </li>
+                <li onClick={() => setOpenMenu(false)}>
+                  <Link href="/career">Get hired</Link>
+                </li>
+              </ul>
+            </div>
+            <Link href="/contact-us">
+              <button className={Styles.mobileNav_button}>Contact Us</button>
+            </Link>
+          </div>
+        )}
       </nav>
       <div className={Styles.hero}>
         <SectionText

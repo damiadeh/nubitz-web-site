@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Card from "../components/cards/Card";
-
 import Button from "../components/primary-button/Button";
 import SectionFive from "../sections/homepage-sections/section-five/SectionFive";
 import SectionFour from "../sections/homepage-sections/section-four/SectionFour";
@@ -14,6 +13,7 @@ import SectionTwo from "../sections/homepage-sections/section-two/SectionTwo";
 import Contact from "../components/contact/Contact";
 import Footer from "../components/footer/Footer";
 import Styles from "../styles/home.module.scss";
+import { Style } from "@material-ui/icons";
 
 const companies = {
   items: [
@@ -53,6 +53,7 @@ const companies = {
 const HomePage = () => {
   const router = useRouter();
   const [id, setId] = useState(null);
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <div className={Styles.container}>
@@ -97,13 +98,43 @@ const HomePage = () => {
           <Button text="Get Started" primary />
         </div>
         <div className={Styles.hamburger}>
-          <Image
+          <img
             src="/assets/menu-white.svg"
-            width="30"
-            height="30"
-            alt="hamburger-menu"
+            alt="close-menu"
+            onClick={() => setOpenMenu(true)}
           />
         </div>
+        {openMenu && (
+          <div className={Styles.mobileNav}>
+            <div className={Styles.mobileNav_top}>
+              <Link href="/">
+                <img src="/assets/logo-dark.svg" alt="logo-mobile" />
+              </Link>
+              <img
+                src="/assets/close.svg"
+                alt="close-menu"
+                onClick={() => setOpenMenu(false)}
+              />
+            </div>
+            <div className={Styles.mobileNav_lists}>
+              <ul>
+                <li onClick={() => setOpenMenu(false)}>
+                  <Link href="/about">About Us</Link>
+                </li>
+                <li onClick={() => setOpenMenu(false)}>
+                  <Link href="/project-request">Project request</Link>
+                </li>
+                <li onClick={() => setOpenMenu(false)}>
+                  <Link href="/blog">Blog</Link>
+                </li>
+                <li onClick={() => setOpenMenu(false)}>
+                  <Link href="/career">Get hired</Link>
+                </li>
+              </ul>
+            </div>
+            <button className={Styles.mobileNav_button}>Get Started</button>
+          </div>
+        )}
       </nav>
       <div className={Styles.videoContainer}>
         <video
@@ -117,18 +148,17 @@ const HomePage = () => {
         <div className={Styles.accomplishments}>
           <Card />
         </div>
-      <div className={Styles.hero}>
-        <div className={Styles.hero_text}>
-          <h1>We solve problems related to IT infrastructure</h1>
-          <p>
-            We are a software development and digital marketing company existing
-            to help businesses develop solutions.
-          </p>
-          <Button text="Get Started" primary />
+        <div className={Styles.hero}>
+          <div className={Styles.hero_text}>
+            <h1>We solve problems related to IT infrastructure</h1>
+            <p>
+              We are a software development and digital marketing company
+              existing to help businesses develop solutions.
+            </p>
+            <Button text="Get Started" primary />
+          </div>
         </div>
       </div>
-      </div>
-
       <div className={Styles.accomplishmentsMobile}>
         <Card />
       </div>
