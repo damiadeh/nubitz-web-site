@@ -34,17 +34,10 @@ const SectionTwo = () => {
       </div>
       <div className={Styles.distinctions}>
         {distinctions.items.map((item) => (
-          <SectionText
-            number={item.number}
-            description={item.text}
-            mini
-            width="unset"
-            backgroundColor="#EEF3FE"
-            fontSize="15px"
-            padding="20px 15px"
-            lineHeight="25px"
-            key={item.number}
-          />
+          <div key={item.number}>
+          <img src={item.number} src={item.number} />
+          <p>{item.text}</p>
+        </div>
         ))}
       </div>
     </div>

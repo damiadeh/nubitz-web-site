@@ -8,37 +8,37 @@ const SectionThree = () => {
         number: "/assets/about/code-round.svg",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
-          id: 1
+        id: 1,
       },
       {
         number: "/assets/about/code-round.svg",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
-          id: 2
+        id: 2,
       },
       {
         number: "/assets/about/code-round.svg",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
-          id: 3
+        id: 3,
       },
       {
         number: "/assets/about/code-round.svg",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
-          id: 4
+        id: 4,
       },
       {
         number: "/assets/about/code-round.svg",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
-          id: 5
+        id: 5,
       },
       {
         number: "/assets/about/code-round.svg",
         text:
           "We create the optimal platform to develop and run digital applications for our clients",
-          id: 6
+        id: 6,
       },
     ],
   };
@@ -55,13 +55,10 @@ const SectionThree = () => {
       </div>
       <div className={Styles.distinctions}>
         {distinctions.items.map((item) => (
-          <SectionText
-            number={item.number}
-            description={item.text}
-            mini
-            width="unset"
-            key={item.id}
-          />
+          <div>
+            <img src={item.number} src={item.number} />
+            <p>{item.text}</p>
+          </div>
         ))}
       </div>
     </div>

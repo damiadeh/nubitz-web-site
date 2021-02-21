@@ -31,8 +31,13 @@
 
 .portfolio {
   padding: 15px;
-  border-radius: 8px;
   cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(0.9);
+  }
 
   &_add {
     padding: 15px;

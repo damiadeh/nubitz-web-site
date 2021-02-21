@@ -66,6 +66,15 @@
     row-gap: 2vh;
   }
 
+  img {
+    transition: transform 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
   div {
     color: white;
     padding: 15px 0;

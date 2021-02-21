@@ -68,5 +68,32 @@
       grid-template-columns: auto;
       row-gap: 5vh;
     }
+
+    div {
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        transform: translate(0, -10px);
+      }
+
+      p {
+        width: unset;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        margin: 2vh 0 0;
+
+        @media screen and (max-width: 1024px) {
+          width: unset !important;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: unset !important;
+          margin: 3vh 0;
+        }
+      }
+    }
   }
 }

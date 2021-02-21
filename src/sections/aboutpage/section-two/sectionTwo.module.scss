@@ -72,5 +72,35 @@
       grid-template-columns: auto;
       row-gap: 5vh;
     }
+
+    div {
+      background-color: #eef3fe;
+      padding: 20px 15px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: white;
+        border: 1px solid #026aaf;
+      }
+
+      p {
+        width: unset;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        margin: 2vh 0 0;
+
+        @media screen and (max-width: 1024px) {
+          width: unset !important;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: unset !important;
+          margin: 3vh 0;
+        }
+      }
+    }
   }
 }
