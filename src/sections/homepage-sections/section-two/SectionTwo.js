@@ -19,6 +19,21 @@ const littleCards = {
         "We create the optimal platform to develop and run digital applications for our clients.",
       backgroundColor: "rgba(234, 241, 246, 0.72)",
     },
+    {
+      icon: "/assets/home/section_two/lamp.svg",
+      title: "Digital Marketing",
+      text:
+        "In Nubitz, we help you create campanigns and content that drives traffic with our marketing strategies.",
+      textColor: "rgba(249, 249, 249, 0.8)",
+      titleColor: "#ffffff",
+    },
+    {
+      icon: "/assets/home/section_two/code.svg",
+      title: "Product Development",
+      text:
+        "We create the optimal platform to develop and run digital applications for our clients.",
+      backgroundColor: "rgba(234, 241, 246, 0.72)",
+    },
   ],
 };
 
