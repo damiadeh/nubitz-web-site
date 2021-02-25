@@ -4,6 +4,7 @@ const LittleCards = ({
   icon,
   title,
   text,
+  slide,
   width,
   height,
   radius,
@@ -15,6 +16,7 @@ const LittleCards = ({
     backgroundColor: "#026AAF",
     height: `${height}`,
     borderRadius: `${radius}`,
+    transform: `translateX(${slide}%)`,
   };
 
   if (backgroundColor) {
@@ -24,6 +26,7 @@ const LittleCards = ({
       borderRadius: `${radius}`,
       border: "0.5px solid #C2D9EB",
       color: "#026AAF",
+      transform: `translateX(${slide}%)`,
     };
   }
 

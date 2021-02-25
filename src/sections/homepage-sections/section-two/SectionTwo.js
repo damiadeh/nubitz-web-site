@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import LittleCards from "../../../components/little-cards/LittleCards";
 import SectionText from "../../../components/section_text/SectionText";
 import Styles from "./sectionTwo.module.scss";
@@ -21,7 +22,7 @@ const littleCards = {
     },
     {
       icon: "/assets/home/section_two/lamp.svg",
-      title: "Digital Marketing",
+      title: "Web Development",
       text:
         "In Nubitz, we help you create campanigns and content that drives traffic with our marketing strategies.",
       textColor: "rgba(249, 249, 249, 0.8)",
@@ -29,7 +30,7 @@ const littleCards = {
     },
     {
       icon: "/assets/home/section_two/code.svg",
-      title: "Product Development",
+      title: "Cloud Development",
       text:
         "We create the optimal platform to develop and run digital applications for our clients.",
       backgroundColor: "rgba(234, 241, 246, 0.72)",
@@ -38,6 +39,15 @@ const littleCards = {
 };
 
 const SectionTwo = () => {
+  const [x, setX] = useState(0);
+
+  const goLeft = () => {
+    x === 0 ? setX(-100 * (littleCards.length - 1)) : setX(x + 100);
+  };
+  const goRight = () => {
+    x === -200 ? setX(0) : setX(x - 100);
+  };
+
   return (
     <div className={Styles.main}>
       <img
@@ -59,10 +69,12 @@ const SectionTwo = () => {
               src="/assets/home/section_two/left_arrow.svg"
               alt="left arrow"
               style={{ marginRight: "3vh" }}
+              onClick={goLeft}
             />
             <img
               src="/assets/home/section_two/right_arrow.svg"
               alt="right arrow"
+              onClick={goRight}
             />
           </div>
           <div className={Styles.cards}>
@@ -77,6 +89,7 @@ const SectionTwo = () => {
                 width="200px"
                 height="272px"
                 radius="8px"
+                slide={x}
                 key={item.title}
               />
             ))}

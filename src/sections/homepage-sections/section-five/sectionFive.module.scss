@@ -46,12 +46,22 @@
   }
 }
 
+.slider {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100% 100% 100% 100% 100%;
+  align-items: center;
+  overflow-x: hidden;
+}
+
 .client {
   display: grid;
+  width: 100%;
   grid-template-columns: 27% 2% 67%;
-  column-gap: 2vh;
+  column-gap: 2%;
   align-items: center;
   margin-top: 8vh;
+  transition: .5s;
 
   @media screen and (max-width: 1024px) {
     display: block;

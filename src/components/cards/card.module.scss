@@ -26,26 +26,26 @@
     cursor: pointer;
 
     &:nth-child(1) {
-      background-color: transparent;
+      background-image: linear-gradient(to right, #026aaf, #629fca);
 
       &:hover {
-        background-image: linear-gradient(to right,#026aaf , #629fca); 
+        background-color: transparent;
       }
     }
 
     &:nth-child(2) {
-      background-color: transparent;
+      background-image: linear-gradient(to right, #026aaf, #629fca);
 
       &:hover {
-        background-image: linear-gradient(to right,#026aaf, #629fca);
+        background-color: transparent;
       }
     }
 
     &:nth-child(3) {
-      background-color: transparent;
+      background-image: linear-gradient(to right, #026aaf, #629fca);
 
       &:hover {
-        background-image: linear-gradient(to right,#026aaf, #629fca);
+        background-color: transparent;
       }
     }
 

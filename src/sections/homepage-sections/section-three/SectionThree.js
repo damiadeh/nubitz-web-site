@@ -1,6 +1,8 @@
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 import SectionText from "../../../components/section_text/SectionText";
-
-import { Divider, makeStyles, ThemeProvider } from "@material-ui/core";
+import servicesObject from "../../aboutpage/section-one/object/servicesObject";
+import { makeStyles, ThemeProvider } from "@material-ui/core";
 import theme from "./theme";
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
@@ -90,6 +92,12 @@ const languages = {
 
 const SectionThree = () => {
   const classes = useStyles();
+  const router = useRouter();
+  const [active, setActive] = useState(null);
+  const setServiceItemInLocalStorage = (service) => {
+    localStorage.setItem("currentServiceItem", JSON.stringify(service));
+    router.push("/services");
+  };
 
   return (
     <div className={Styles.container}>
@@ -103,103 +111,69 @@ const SectionThree = () => {
         </div>
         <ThemeProvider theme={theme}>
           <Timeline className={classes.root}>
-            <TimelineItem>
-              <TimelineSeparator>
-                <TimelineDot
-                  className={classes.timelineDotWhite}
-                  style={{
-                    color: "white",
-                    backgroundColor: "white",
-                  }}
-                />
-                <TimelineConnector
-                  className={classes.timelineConnector}
-                  style={{
-                    color: "rgba(253, 253, 253, 0.6)",
-                    backgroundColor: "rgba(253, 253, 253, 0.6)",
-                  }}
-                />
-              </TimelineSeparator>
-              <TimelineContent
-                className={classes.timelineContentWhite}
-                style={{
-                  color: "white",
-                }}
+            {servicesObject.items.map((item) => (
+              <TimelineItem
+                key={item.id}
+                onClick={() => setServiceItemInLocalStorage(item)}
               >
-                Web applications
-              </TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-              <TimelineSeparator>
-                <TimelineDot
-                  className={classes.timelineDot}
-                  style={{
-                    color: "rgba(253, 253, 253, 0.6)",
-                    backgroundColor: "rgba(253, 253, 253, 0.6)",
-                  }}
-                />
-                <TimelineConnector
-                  className={classes.timelineConnector}
-                  style={{
-                    color: "rgba(253, 253, 253, 0.6)",
-                    backgroundColor: "rgba(253, 253, 253, 0.6)",
-                  }}
-                />
-              </TimelineSeparator>
-              <TimelineContent
-                className={classes.timelineContent}
-                style={{
-                  color: "rgba(253, 253, 253, 0.6)",
-                }}
-              >
-                Digital Marketing applications
-              </TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-              <TimelineSeparator>
-                <TimelineDot
-                  className={classes.timelineDot}
-                  style={{
-                    color: "rgba(253, 253, 253, 0.6)",
-                    backgroundColor: "rgba(253, 253, 253, 0.6)",
-                  }}
-                />
-                <TimelineConnector
-                  className={classes.timelineConnector}
-                  style={{
-                    color: "rgba(253, 253, 253, 0.6)",
-                    backgroundColor: "rgba(253, 253, 253, 0.6)",
-                  }}
-                />
-              </TimelineSeparator>
-              <TimelineContent
-                className={classes.timelineContent}
-                style={{
-                  color: "rgba(253, 253, 253, 0.6)",
-                }}
-              >
-                Mobile applications
-              </TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-              <TimelineSeparator>
-                <TimelineDot
-                  className={classes.timelineDot}
-                  style={{
-                    color: "rgba(253, 253, 253, 0.6)",
-                    backgroundColor: "rgba(253, 253, 253, 0.6)",
-                  }}
-                />
-              </TimelineSeparator>
-              <TimelineContent
-                className={classes.timelineContent}
-                style={{
-                  color: "rgba(253, 253, 253, 0.6)",
-                }}
-              >
-                Server applications
-              </TimelineContent>
-            </TimelineItem>
+                <TimelineSeparator>
+                  {item.id <= 5 ? (
+                    <TimelineDot
+                      className={classes.timelineDotWhite}
+                      style={
+                        active === item.id
+                          ? {
+                              cursor: "pointer",
+                              color: "white",
+                              backgroundColor: "white",
+                            }
+                          : {
+                              cursor: "pointer",
+                              color: "rgba(253, 253, 253, 0.6)",
+                              backgroundColor: "rgba(253, 253, 253, 0.6)",
+                            }
+                      }
+                    />
+                  ) : null}
+
+                  {item.id < 5 ? (
+                    <TimelineConnector
+                      // className={classes.timelineConnector}
+                      style={
+                        active === item.id
+                          ? {
+                              cursor: "pointer",
+                              color: "white",
+                              backgroundColor: "white",
+                            }
+                          : {
+                              cursor: "pointer",
+                              color: "rgba(253, 253, 253, 0.6)",
+                              backgroundColor: "rgba(253, 253, 253, 0.6)",
+                            }
+                      }
+                    />
+                  ) : null}
+                </TimelineSeparator>
+                <TimelineContent
+                  onMouseOver={() => setActive(item.id)}
+                  // className={classes.timelineContentWhite}
+                  style={
+                    active === item.id
+                      ? {
+                          cursor: "pointer",
+                          color: "white",
+                        }
+                      : {
+                          cursor: "pointer",
+                          color: "rgba(253, 253, 253, 0.6)",
+                        }
+                  }
+                >
+                  {item.name}
+                </TimelineContent>
+              </TimelineItem>
+            ))}
           </Timeline>
         </ThemeProvider>
       </div>
