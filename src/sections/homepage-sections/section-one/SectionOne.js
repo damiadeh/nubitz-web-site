@@ -1,14 +1,21 @@
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import SectionText from "../../../components/section_text/SectionText";
 import Styles from "./sectionOne.module.scss";
 
 const SectionOne = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  });
+
   return (
     <div className={Styles.container}>
       <div className={Styles.img}>
         <img src="/assets/home/section_one/section_one.svg" alt="section_one" />
       </div>
       <div>
-        <div className={Styles.text}>
+        <div className={Styles.text} data-aos="fade-left">
           <SectionText
             welcome="Welcome to Nubitz"
             title="We deal with Every Aspect of IT Solutions"
