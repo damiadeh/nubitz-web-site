@@ -14,6 +14,53 @@
   }
 }
 
+.hero {
+  .welcome {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 24px;
+    color: #796af2;
+    margin: 0;
+  }
+
+  .title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 63px;
+    text-transform: capitalize;
+    color: #fdfdfd;
+    margin: 0;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 23px;
+      line-height: 32px;
+    }
+  }
+
+  .subtext {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 24px;
+    color: #fdfdfd;
+  }
+
+  .email,
+  .phone {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 24px;
+    color: #fdfdfd;
+
+    span {
+      color: #796af2;
+    }
+  }
+}
+
 .contactInfoContainer {
   @media screen and (max-width: 768px) {
     order: 2;
@@ -63,7 +110,7 @@
 .form {
   margin-top: 3vh;
 
-  div {
+  &_wrapper {
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 3vh;
@@ -101,5 +148,56 @@
 
   .textarea {
     height: 80px;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+
+    div {
+      @media screen and (max-width: 768px) {
+        margin-bottom: 3vh;
+      }
+    }
+
+    input[type="checkbox"] {
+      background: transparent;
+    }
+
+    .checkText {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 18px;
+      color: #fdfdfd;
+      margin-left: 15px;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 18px;
+      color: #fdfdfd;
+      margin-left: 15px;
+    }
+  }
+}
+
+.buttonWrapper {
+  margin-top: 3vh;
+
+  button {
+    margin-right: 20px;
+
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+      margin-top: 3vh;
+    }
   }
 }

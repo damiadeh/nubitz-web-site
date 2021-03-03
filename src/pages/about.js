@@ -106,10 +106,16 @@ const About = () => {
         <div className={Styles.wrapper_text}>
           <h2>Who we are</h2>
           <p>
-            Is simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy textis simply dummy
-            text of the printing and typesetting industry. Lorem Ipsum has been
-            the
+            We are a global IT company, specializing in strategic IT business
+            solutions and services for complex business problems, in multiple
+            industry sectors including retail, healthcare, finance, education,
+            and more. Our vast technology and industry expertise enable us to
+            focus on cutting-edge internet technologies with the aim to develop
+            scalable, secure and easy-to-use web applications that work across
+            multiple devices. Our belief is that a good design along with the
+            judicious use of technology; helps simplify things, provide valuable
+            insights, connect people - all of which ultimately helps in the
+            success of a business.
           </p>
         </div>
         <div className={Styles.imageGrid}>

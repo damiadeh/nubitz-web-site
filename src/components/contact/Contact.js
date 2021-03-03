@@ -25,7 +25,7 @@ const contactInfo = {
 const Contact = () => {
   return (
     <div className={Styles.container}>
-      <div className={Styles.contactInfoContainer}>
+      {/* <div className={Styles.contactInfoContainer}>
         {contactInfo.items.map((item) => (
           <div className={Styles.contact} key={item.title}>
             <img src={item.icon} alt={item.title} />
@@ -35,17 +35,33 @@ const Contact = () => {
             </div>
           </div>
         ))}
+      </div> */}
+      <div className={Styles.hero}>
+        <p className={Styles.welcome}>is simply dummy text of the printing</p>
+        <h2 className={Styles.title}>
+          Lorem ipsum dolor sit amet, cons ectetur adip.
+        </h2>
+        <p className={Styles.subtext}>
+          is simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum has been the industry.
+        </p>
+        <p className={Styles.email}>
+          Email us at <span>nubitz@gmail.com</span>
+        </p>
+        <p className={Styles.phone}>
+          Or call <span>(+000) 456-45-764</span>
+        </p>
       </div>
       <div className={Styles.formContainer}>
-        <SectionText
+        {/* <SectionText
           width="550px"
           textColor="white"
           secondary
           title="we solve problems related"
           description="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the"
-        />
+        /> */}
         <form className={Styles.form}>
-          <div>
+          <div className={Styles.form_wrapper}>
             <input
               className={Styles.input}
               type="text"
@@ -53,7 +69,7 @@ const Contact = () => {
             />
             <input className={Styles.input} type="text" placeholder="Email" />
           </div>
-          <div>
+          <div className={Styles.form_wrapper}>
             <input
               className={Styles.input}
               type="text"
@@ -70,8 +86,28 @@ const Contact = () => {
             type="text"
             placeholder="Message"
           />
-          <Button text="Submit" primary width="150px" />
+          <div className={Styles.checkbox}>
+            <div>
+              <input type="checkbox" id="scales" name="scales" />
+              <label for="scales" className={Styles.checkText}>
+                Yes, i would like to recieve news {"&"} update
+              </label>
+            </div>
+            <div style={{display: "flex", alignItems: "center"}}>
+              <img src="/assets/contact/attach.svg" alt="attach" />
+              <p>Attach File</p>
+            </div>
+          </div>
         </form>
+        <div className={Styles.buttonWrapper}>
+          <Button text="Submit" primary width="150px" />
+          <Button
+            text="Try our interactive survey instead"
+            backgroundColor="#796AF2"
+            textColor="#ffffff"
+            width="300px"
+          />
+        </div>
       </div>
     </div>
   );

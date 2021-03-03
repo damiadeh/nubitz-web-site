@@ -5,6 +5,7 @@ import Styles from "./button.module.scss";
 const Button = ({
   text,
   backgroundColor,
+  marginLeft,
   textColor,
   primary,
   width,
@@ -22,6 +23,7 @@ const Button = ({
       backgroundColor: `${backgroundColor}`,
       color: `${textColor}`,
       width: `${width}`,
+      marginLeft: `${marginLeft}`
     };
   }
 
