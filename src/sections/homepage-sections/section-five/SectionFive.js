@@ -54,6 +54,9 @@ const SectionFive = () => {
           <p>Clients Review</p>
           <h2>Testimonials</h2>
         </div>
+        <div className={Styles.counter}>
+          <p>01/<span>05</span></p>
+        </div>
         <div className={Styles.slider}>
           {testimonials.items.map((item) => (
             <div
@@ -88,7 +91,7 @@ const SectionFive = () => {
                 <img
                   src="/assets/home/section_five/left_arrow.svg"
                   alt="left_arrow"
-                  style={{ marginRight: "10px" }}
+                  style={{ marginRight: "20px" }}
                   onClick={goLeft}
                 />
                 <img

@@ -19,6 +19,7 @@ const SectionText = ({
       className={Styles.text}
       style={{
         backgroundColor: `${backgroundColor}`,
+        color: `${textColor}`,
         borderRadius: "5px",
         padding: `${padding}`,
       }}

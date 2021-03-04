@@ -200,13 +200,16 @@ const SectionSix = () => {
                 title="Get the best with nubitz"
                 description="We are an IT support and IT services company existing to help businesses develop solutions that help them achieve their own desired outcomes."
                 width="560px"
+                textColor="#FDFDFD"
+                secondary
               />
             </div>
             <div>
               <Button
                 text="Get Started"
-                backgroundColor="#026AAF"
-                textColor="white"
+                // backgroundColor="#026AAF"
+                // textColor="white"
+                primary
               />
             </div>
           </div>

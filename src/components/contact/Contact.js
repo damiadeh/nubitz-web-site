@@ -86,7 +86,7 @@ const Contact = () => {
             type="text"
             placeholder="Message"
           />
-          <div className={Styles.checkbox}>
+          {/* <div className={Styles.checkbox}>
             <div>
               <input type="checkbox" id="scales" name="scales" />
               <label for="scales" className={Styles.checkText}>
@@ -97,9 +97,10 @@ const Contact = () => {
               <img src="/assets/contact/attach.svg" alt="attach" />
               <p>Attach File</p>
             </div>
-          </div>
+          </div> */}
+          <Button text="Submit" primary width="150px" />
         </form>
-        <div className={Styles.buttonWrapper}>
+        {/* <div className={Styles.buttonWrapper}>
           <Button text="Submit" primary width="150px" />
           <Button
             text="Try our interactive survey instead"
@@ -107,7 +108,7 @@ const Contact = () => {
             textColor="#ffffff"
             width="300px"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

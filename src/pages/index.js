@@ -42,10 +42,54 @@ const companies = {
       id: 4,
     },
     {
+      image: "/assets/home/accomplishments/surlatable.svg",
+      active: "/assets/home/accomplishments-active/surlatable.svg",
+      name: "Surlatable",
+      id: 2,
+    },
+    {
+      image: "/assets/home/accomplishments/singtel.svg",
+      active: "/assets/home/accomplishments-active/singtel.svg",
+      name: "Singtel",
+      id: 3,
+    },
+    {
+      image: "/assets/home/accomplishments/banamex.svg",
+      active: "/assets/home/accomplishments-active/banamex.svg",
+      name: "Banamex",
+      id: 4,
+    },
+    {
       image: "/assets/home/accomplishments/orion.svg",
       active: "/assets/home/accomplishments-active/orion.svg",
       name: "Orion",
       id: 5,
+    },
+  ],
+};
+
+const distinctions = {
+  items: [
+    {
+      number: "/assets/home/subsection/O1.svg",
+      title: "High Quality Handware",
+      text:
+        "Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy textis simply dummy text of the print",
+      id: 1,
+    },
+    {
+      number: "/assets/home/subsection/O2.svg",
+      title: "High Quality Handware",
+      text:
+        "Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy textis simply dummy text of the print",
+      id: 2,
+    },
+    {
+      number: "/assets/home/subsection/O3.svg",
+      title: "High Quality Handware",
+      text:
+        "Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy textis simply dummy text of the print",
+      id: 3,
     },
   ],
 };
@@ -162,7 +206,7 @@ const HomePage = () => {
       <div className={Styles.accomplishmentsMobile}>
         <Card />
       </div>
-      <div className={Styles.companies}>
+      {/* <div className={Styles.companies}>
         {companies.items.map((item) => (
           <div key={item.id}>
             {id === item.id ? (
@@ -180,12 +224,49 @@ const HomePage = () => {
             )}
           </div>
         ))}
-      </div>
+      </div> */}
       {/* <SectionOne /> */}
       <SectionTwo />
       <SectionThree />
       <SectionFour />
+      <div className={Styles.company}>
+        <div className={Styles.title}>
+          <p>Our distinctions</p>
+          <h2>Why Choose Us</h2>
+        </div>
+        <div className={Styles.companies}>
+          {companies.items.map((item) => (
+            <div key={item.id}>
+              {id === item.id ? (
+                <img
+                  src={item.active}
+                  alt={item.name}
+                  onMouseLeave={() => setId(null)}
+                />
+              ) : (
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  onMouseEnter={() => setId(item.id)}
+                />
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
       <SectionFive />
+      <div className={Styles.choose}>
+        <h2>Here’s Why you should Choose us</h2>
+        <div className={Styles.distinctions}>
+          {distinctions.items.map((item) => (
+            <div key={item.number}>
+              <img src={item.number} src={item.number} />
+              <h5>{item.title}</h5>
+              <p>{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
       <SectionSix />
       <Contact />
       <Footer />
