@@ -15,6 +15,11 @@
   img {
     width: 96px;
     height: 96px;
+
+    @media screen and (max-width: 1140px) {
+      width: 48px;
+      height: 60px;
+    }
   }
 
   &_title {
@@ -23,6 +28,11 @@
     font-size: 36px;
     line-height: 43px;
     margin: 56px 0 12px;
+
+    @media screen and (max-width: 1140px) {
+      font-size: 24px;
+      line-height: 34px;
+    }
   }
 
   &_text {
@@ -33,5 +43,12 @@
     letter-spacing: .05em;
     max-width: 405px;
     margin: 0;
+
+    @media screen and (max-width: 1140px) {
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: .05em;
+      max-width: 100%;
+    }
   }
 }
