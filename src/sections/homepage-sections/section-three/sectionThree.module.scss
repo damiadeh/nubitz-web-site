@@ -1,7 +1,7 @@
 .container {
   // background-color: #026aaf;
   background:#214A7E;
-  padding: 8vh 120px 5vh;
+  padding: 5vh 120px 5vh;
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
@@ -59,7 +59,7 @@
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: center;
-  column-gap: 8vh;
+  column-gap: 4vh;
   row-gap: 4vh;
 
   @media screen and (max-width: 1024px) {
@@ -78,9 +78,9 @@
 
   div {
     color: white;
-    padding: 15px 0;
+    padding: 25px 0;
     border-radius: 8px;
-    width: 131px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;

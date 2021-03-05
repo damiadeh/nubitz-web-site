@@ -311,6 +311,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        padding: 30px;
       }
 
       img {
@@ -354,6 +355,7 @@
       @media screen and (max-width: 1024px) {
         font-size: 23px;
         line-height: 32px;
+        width: unset;
       }
     }
 

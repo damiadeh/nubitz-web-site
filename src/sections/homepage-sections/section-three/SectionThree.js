@@ -72,21 +72,6 @@ const languages = {
       name: "React",
       id: 6,
     },
-    {
-      image: "/assets/home/section_three/python.svg",
-      name: "Python",
-      id: 7,
-    },
-    {
-      image: "/assets/home/section_three/php.svg",
-      name: "Php",
-      id: 8,
-    },
-    {
-      image: "/assets/home/section_three/python.svg",
-      name: "Python",
-      id: 9,
-    },
   ],
 };
 
