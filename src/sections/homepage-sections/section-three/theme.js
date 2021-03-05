@@ -8,6 +8,14 @@ const Theme = createMuiTheme({
           display: "none",
         },
       },
+      root: {
+        minHeight: "50px",
+      }
+    },
+    MuiTimeline: {
+      root: {
+        padding: "6px 0",
+      }
     },
   },
 });

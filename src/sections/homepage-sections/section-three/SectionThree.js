@@ -16,6 +16,7 @@ import Styles from "./sectionThree.module.scss";
 const useStyles = makeStyles(() => ({
   root: {
     padding: "6px 0",
+    minHeight: "50px"
   },
   divider: {
     height: "200px",
