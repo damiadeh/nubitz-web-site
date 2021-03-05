@@ -86,8 +86,8 @@ const SectionTwo = () => {
                 titleColor={item.titleColor}
                 textColor={item.textColor}
                 backgroundColor={item.backgroundColor}
-                width="500px"
-                height="400px"
+                width="520px"
+                height="420px"
                 radius="8px"
                 slide={x}
                 key={item.title}

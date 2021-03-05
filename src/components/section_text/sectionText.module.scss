@@ -55,11 +55,11 @@
   }
 
   &_title {
-    width: 489px;
+    width: 500px;
     font-style: normal;
     font-weight: 800;
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 50px;
+    line-height: 70px;
     text-transform: capitalize;
     margin: 0;
 
@@ -80,9 +80,9 @@
     width: 489px;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
-    margin: 0;
+    font-size: 23px;
+    line-height: 40px;
+    margin: 2vh 0;
 
     @media screen and (max-width: 1024px) {
       width: unset !important;
