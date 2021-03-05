@@ -9,7 +9,7 @@ const Theme = createMuiTheme({
         },
       },
       root: {
-        minHeight: "50px",
+        minHeight: "55px",
       }
     },
     MuiTimeline: {
