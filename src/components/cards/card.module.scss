@@ -25,6 +25,7 @@
     padding: 30px 30px;
     border-top: 1px solid #ffffff;
     cursor: pointer;
+    height: 250px;
 
     .white {
       display: none;
@@ -40,6 +41,10 @@
       @media screen and (max-width: 1024px) {
         display: none;
       }
+    }
+
+    .number {
+      font-size: 64px;
     }
 
     &:nth-child(1) {

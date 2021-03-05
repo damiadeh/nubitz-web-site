@@ -70,6 +70,7 @@
   img {
     transition: transform 0.2s;
     cursor: pointer;
+    width: 60px;
 
     &:hover {
       transform: scale(1.2);

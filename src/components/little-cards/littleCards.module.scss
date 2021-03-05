@@ -18,15 +18,17 @@
 
   &_title {
     font-style: normal;
-    font-weight: bold;
-    line-height: 25px;
-    font-size: 17px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    margin: 56px 0 12px;
   }
 
   &_text {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
+    font-size: 16px;
     line-height: 22px;
-    font-size: 12px;
+    letter-spacing: .05em;
   }
 }
