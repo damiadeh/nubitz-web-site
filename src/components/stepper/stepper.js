@@ -215,14 +215,14 @@ const Stepper = () => {
         {step === 3 ? (
           <Button
             text="Let's Get Started"
-            backgroundColor="#026aaf"
+            backgroundColor="#214a7e"
             textColor="white"
             width="180px"
           />
         ) : (
           <Button
             text="Next Question"
-            backgroundColor="#026aaf"
+            backgroundColor="#214a7e"
             textColor="white"
             onClick={handleStep}
           />

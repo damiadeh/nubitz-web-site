@@ -14,7 +14,7 @@ const Button = ({
 }) => {
   let useStyle = {
     backgroundColor: "#fff",
-    color: "#026AAF",
+    color: "#214a7e",
     width: `${width}`,
   };
 
