@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import SectionText from "../../../components/section_text/SectionText";
 import servicesObject from "../../aboutpage/section-one/object/servicesObject";
 import { makeStyles, ThemeProvider } from "@material-ui/core";
@@ -16,7 +18,7 @@ import Styles from "./sectionThree.module.scss";
 const useStyles = makeStyles(() => ({
   root: {
     padding: "6px 0",
-    minHeight: "50px"
+    minHeight: "50px",
   },
   divider: {
     height: "200px",
@@ -51,6 +53,56 @@ const languages = {
     {
       image: "/assets/home/section_three/ruby.svg",
       name: "Ruby",
+      id: 1,
+    },
+    {
+      image: "/assets/home/section_three/java.svg",
+      name: "Java",
+      id: 1,
+    },
+    {
+      image: "/assets/home/section_three/html.svg",
+      name: "Html",
+      id: 1,
+    },
+    {
+      image: "/assets/home/section_three/react.svg",
+      name: "React",
+      id: 1,
+    },
+    {
+      image: "/assets/home/section_three/react.svg",
+      name: "React",
+      id: 1,
+    },
+    {
+      image: "/assets/home/section_three/ruby.svg",
+      name: "Ruby",
+      id: 2,
+    },
+    {
+      image: "/assets/home/section_three/java.svg",
+      name: "Java",
+      id: 2,
+    },
+    {
+      image: "/assets/home/section_three/react.svg",
+      name: "React",
+      id: 2,
+    },
+    {
+      image: "/assets/home/section_three/html.svg",
+      name: "Html",
+      id: 2,
+    },
+    {
+      image: "/assets/home/section_three/java.svg",
+      name: "Java",
+      id: 2,
+    },
+    {
+      image: "/assets/home/section_three/react.svg",
+      name: "React",
       id: 2,
     },
     {
@@ -61,17 +113,78 @@ const languages = {
     {
       image: "/assets/home/section_three/html.svg",
       name: "Html",
+      id: 3,
+    },
+    {
+      image: "/assets/home/section_three/java.svg",
+      name: "Java",
+      id: 3,
+    },
+    {
+      image: "/assets/home/section_three/react.svg",
+      name: "React",
+      id: 3,
+    },
+    {
+      image: "/assets/home/section_three/java.svg",
+      name: "Java",
+      id: 3,
+    },
+    {
+      image: "/assets/home/section_three/react.svg",
+      name: "React",
+      id: 3,
+    },
+    {
+      image: "/assets/home/section_three/html.svg",
+      name: "Html",
       id: 4,
     },
     {
       image: "/assets/home/section_three/react.svg",
       name: "React",
-      id: 5,
+      id: 4,
+    },
+    {
+      image: "/assets/home/section_three/html.svg",
+      name: "Html",
+      id: 4,
+    },
+    {
+      image: "/assets/home/section_three/java.svg",
+      name: "Java",
+      id: 4,
     },
     {
       image: "/assets/home/section_three/react.svg",
       name: "React",
-      id: 6,
+      id: 4,
+    },
+    {
+      image: "/assets/home/section_three/react.svg",
+      name: "React",
+      id: 4,
+    },
+  ],
+};
+
+const timelineObject = {
+  items: [
+    {
+      name: "Web applications",
+      id: 1,
+    },
+    {
+      name: "Digital Marketing applications",
+      id: 2,
+    },
+    {
+      name: "Mobile applications",
+      id: 3,
+    },
+    {
+      name: "Server applications",
+      id: 4,
     },
   ],
 };
@@ -79,11 +192,15 @@ const languages = {
 const SectionThree = () => {
   const classes = useStyles();
   const router = useRouter();
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState(1);
   const setServiceItemInLocalStorage = (service) => {
     localStorage.setItem("currentServiceItem", JSON.stringify(service));
     router.push("/services");
   };
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   return (
     <div className={Styles.container}>
@@ -97,13 +214,13 @@ const SectionThree = () => {
         </div>
         <ThemeProvider theme={theme}>
           <Timeline className={classes.root}>
-            {servicesObject.items.map((item) => (
+            {timelineObject.items.map((item) => (
               <TimelineItem
                 key={item.id}
-                onClick={() => setServiceItemInLocalStorage(item)}
+                // onClick={() => setServiceItemInLocalStorage(item)}
               >
                 <TimelineSeparator>
-                  {item.id <= 5 ? (
+                  {item.id <= 4 ? (
                     <TimelineDot
                       className={classes.timelineDotWhite}
                       style={
@@ -122,7 +239,7 @@ const SectionThree = () => {
                     />
                   ) : null}
 
-                  {item.id < 5 ? (
+                  {item.id < 4 ? (
                     <TimelineConnector
                       // className={classes.timelineConnector}
                       style={
@@ -142,7 +259,8 @@ const SectionThree = () => {
                   ) : null}
                 </TimelineSeparator>
                 <TimelineContent
-                  onMouseOver={() => setActive(item.id)}
+                  // onMouseOver={() => setActive(item.id)}
+                  onClick={() => setActive(item.id)}
                   // className={classes.timelineContentWhite}
                   style={
                     active === item.id
@@ -165,10 +283,18 @@ const SectionThree = () => {
       </div>
       <div className={Styles.languages}>
         {languages.items.map((item) => (
-          <div key={item.id}>
-            <img src={item.image} alt={item.name} />
-            <p>{item.name}</p>
-          </div>
+          <>
+            {item.id === active ? (
+              <div key={item.id} className={Styles.language}>
+                <div data-aos="zoom-in">
+                  <img src={item.image} alt={item.name} />
+                  <p>{item.name}</p>
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
+          </>
         ))}
       </div>
     </div>

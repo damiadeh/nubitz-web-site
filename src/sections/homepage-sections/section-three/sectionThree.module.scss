@@ -1,6 +1,6 @@
 .container {
   // background-color: #214a7e;
-  background:#214A7E;
+  background: #214a7e;
   padding: 5vh 120px 5vh;
   display: grid;
   grid-template-columns: 40% 56%;
@@ -18,6 +18,7 @@
     flex-direction: column;
   }
 }
+
 .hero {
   color: #fdfdfd;
 
@@ -69,7 +70,7 @@
     column-gap: 2vh;
     row-gap: 2vh;
   }
-  
+
   @media screen and (max-width: 768px) {
     grid-template-columns: 48% 48%;
     column-gap: 4%;
@@ -90,7 +91,7 @@
     }
   }
 
-  div {
+  .language {
     color: white;
     padding: 25px 0;
     border-radius: 8px;
@@ -101,6 +102,13 @@
     align-items: center;
     justify-content: center;
     background-color: #173163;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
     @media screen and (max-width: 1024px) {
       height: 159px;
