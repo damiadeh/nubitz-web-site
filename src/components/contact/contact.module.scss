@@ -27,6 +27,7 @@
   }
 
   .title {
+    width: 500px;
     font-style: normal;
     font-weight: 800;
     font-size: 50px;
@@ -36,6 +37,7 @@
     margin: 0;
 
     @media screen and (max-width: 1024px) {
+      width: unset;
       font-size: 23px;
       line-height: 32px;
     }

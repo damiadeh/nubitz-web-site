@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import Card from "../components/cards/Card";
 import Button from "../components/primary-button/Button";
 import SectionFive from "../sections/homepage-sections/section-five/SectionFive";
@@ -94,10 +96,52 @@ const distinctions = {
   ],
 };
 
+const posts = {
+  items: [
+    {
+      profile: "/assets/blog/profile.png",
+      image: "/assets/blog/post.png",
+      title: "We are the world’s leading",
+      content:
+        "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
+      author: "Eric Mart",
+      date: "28 Dec, 2020",
+      animate: "fade-left",
+      id: 1,
+    },
+    {
+      profile: "/assets/blog/profile.png",
+      image: "/assets/blog/post.png",
+      title: "We are the world’s leading",
+      content:
+        "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
+      author: "Eric Mart",
+      date: "28 Dec, 2020",
+      animate: "fade-up",
+      id: 2,
+    },
+    {
+      profile: "/assets/blog/profile.png",
+      image: "/assets/blog/post.png",
+      title: "We are the world’s leading",
+      content:
+        "Eget sed nunc, adipiscing lacus purus auctor at nibh nibh. Id pharetra, hac urna, condimentum. Tristique. condimentum.Tristique.condimentum. Tristique.",
+      author: "Eric Mart",
+      date: "28 Dec, 2020",
+      animate: "fade-right",
+      id: 3,
+    },
+  ],
+};
+
 const HomePage = () => {
   const router = useRouter();
   const [id, setId] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, [])
 
   return (
     <div className={Styles.container}>
@@ -255,7 +299,7 @@ const HomePage = () => {
         </div>
       </div>
       <SectionFive />
-      <div className={Styles.choose}>
+      {/* <div className={Styles.choose}>
         <h2>Here’s Why you should Choose us</h2>
         <div className={Styles.distinctions}>
           {distinctions.items.map((item) => (
@@ -266,8 +310,35 @@ const HomePage = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       <SectionSix />
+      <div className={Styles.postContainer}>
+        <div className={Styles.heading}>
+          <p>Our Blog</p>
+          <h2>Nubitz News</h2>
+        </div>
+        <div className={Styles.post}>
+          {posts.items.map((post) => (
+            <Link href={`/blog/${encodeURIComponent(post.title)}`}>
+              <div key={post.id} data-aos="zoom-in">
+                <img src={post.image} alt="/" />
+                <div className={Styles.post_content}>
+                  <h5>{post.title}</h5>
+                  <p>{post.content}</p>
+                  <div className={Styles.post_person}>
+                    <img src={post.profile} alt="/" />
+                    <div>
+                      <p>{post.author}</p>
+                      <span>{post.date}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <span>View All Articles</span>
+      </div>
       <Contact />
       <Footer />
     </div>

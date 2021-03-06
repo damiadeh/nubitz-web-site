@@ -196,13 +196,9 @@ const SectionSix = () => {
               className={Styles.bubble}
             />
             <div>
-              <SectionText
-                title="Get the best with nubitz"
-                description="We are an IT support and IT services company existing to help businesses develop solutions that help them achieve their own desired outcomes."
-                width="560px"
-                textColor="#FDFDFD"
-                secondary
-              />
+              <h2>Get the best with nubitz</h2>
+              <p>We are an IT support and IT services company existing to help businesses develop solutions that help them achieve their own desired outcomes.</p>
+              <p></p>
             </div>
             <div>
               <Button
