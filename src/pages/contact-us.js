@@ -21,7 +21,7 @@ const ContactUs = () => {
               src="/assets/logo.svg"
               width="120"
               height="50"
-              alt="nubitz-logo"
+              alt="nubitz-logo" 
             />
           </Link>
         </div>
@@ -55,7 +55,7 @@ const ContactUs = () => {
           <Button
             text="Contact Us"
             route="/contact-us"
-            backgroundColor="#214a7e"
+            backgroundColor="#214A7E"
             textColor="white"
           />
         </div>

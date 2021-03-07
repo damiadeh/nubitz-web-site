@@ -13,7 +13,7 @@ const LittleCards = ({
   titleColor,
 }) => {
   let useStyle = {
-    // backgroundColor: "#214a7e",
+    // backgroundColor: "#214A7E",
     background: "#214A7E",
     height: `${height}`,
     borderRadius: `${radius}`,
@@ -26,7 +26,7 @@ const LittleCards = ({
       height: `${height}`,
       borderRadius: `${radius}`,
       border: "0.5px solid #C2D9EB",
-      color: "#214a7e",
+      color: "#214A7E",
       transform: `translateX(${slide}%)`,
     };
   }

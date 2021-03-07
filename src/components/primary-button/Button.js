@@ -9,12 +9,13 @@ const Button = ({
   textColor,
   primary,
   width,
+  format,
   route,
   onClick,
 }) => {
   let useStyle = {
     backgroundColor: "#fff",
-    color: "#214a7e",
+    color: "#214A7E",
     width: `${width}`,
   };
 
@@ -24,6 +25,24 @@ const Button = ({
       color: `${textColor}`,
       width: `${width}`,
       marginLeft: `${marginLeft}`
+    };
+  }
+  if(format && format=="fill"){
+    useStyle = {
+      backgroundColor: `${backgroundColor}`,
+      color: `${textColor}`,
+      width: `${width}`,
+      marginLeft: `${marginLeft}`
+    };
+  }
+  if(format && format=="outline"){
+    useStyle = {
+      background: "none",
+      color: `${textColor}`,
+      width: `${width}`,
+      marginLeft: `${marginLeft}`,
+      border: `2px solid ${textColor}`,
+      boxShadow: `2px 5px ${backgroundColor}`,
     };
   }
 

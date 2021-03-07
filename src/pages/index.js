@@ -181,9 +181,9 @@ const HomePage = () => {
               <Link href="/career">
                 <a>Get hired</a>
               </Link>
-            </li>
+            </li> 
           </ul>
-          <Button text="Get Started" primary />
+          <Button text="Get Started"  format="fill" backgroundColor="#214A7E" textColor="#fff" />
         </div>
         <div className={Styles.hamburger}>
           <img
@@ -243,7 +243,7 @@ const HomePage = () => {
               We are a software development and digital marketing company
               existing to help businesses develop solutions.
             </p>
-            <Button text="Get Started" primary />
+            <Button text="Get Started" primary format="outline" textColor="#fff" backgroundColor="#214A7E"/>
           </div>
         </div>
       </div>

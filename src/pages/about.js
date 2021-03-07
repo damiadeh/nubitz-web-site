@@ -21,7 +21,7 @@ const About = () => {
         <div className={Styles.logo_container}>
           <Link href="/">
             <Image
-              src="/assets/logo.svg"
+              src="/assets/logo.svg" 
               width="120"
               height="50"
               alt="nubitz-logo"
@@ -59,7 +59,7 @@ const About = () => {
           <Button
             text="Contact Us"
             route="/contact-us"
-            backgroundColor="#214a7e"
+            backgroundColor="#214A7E"
             textColor="white"
           />
         </div>
