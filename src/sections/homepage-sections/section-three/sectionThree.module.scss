@@ -1,4 +1,5 @@
 .container {
+<<<<<<< HEAD
   // background-color: #214a7e;
   // background: #214a7e;
   background: #171b30;
@@ -10,6 +11,15 @@
   display: flex;
   justify-content: space-between;
 
+=======
+  // background-color: #214A7E;
+  background: #214A7E;
+  padding: 5vh 120px 5vh;
+  display: grid;
+  grid-template-columns: 40% 56%;
+  align-items: center;
+  column-gap: 4%;
+>>>>>>> 8db7aa3ff30c80eabbda6f6c0f58fc8deb86ea57
   font-family: "Ubuntu", sans-serif;
 
   @media screen and (max-width: 1024px) {

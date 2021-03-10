@@ -8,6 +8,7 @@
     "@material-ui/lab": "^4.0.0-alpha.57",
     "aos": "^2.3.4",
     "express": "^4.17.1",
+    "next-on-netlify": "2.9.0",
     "http": "0.0.1-security",
     "next": "^10.0.4",
     "next-videos": "1.4.0",
@@ -24,7 +25,8 @@
     "build": "next build",
     "start": "next start",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "next-on-netlify"
   },
   "eslintConfig": {
     "extends": [

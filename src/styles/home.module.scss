@@ -45,7 +45,7 @@
             left: 0;
             bottom: 0;
             top: 25px;
-            border: 2px solid #214a7e;
+            border: 2px solid #214A7E;
           }
         }
 
@@ -440,7 +440,7 @@
         line-height: 30px;
         text-align: center;
         text-transform: capitalize;
-        color: #214a7e;
+        color: #214A7E;
       }
     }
 
@@ -470,8 +470,12 @@
   .choose {
     padding: 8vh 0 0;
     font-family: Ubuntu;
+<<<<<<< HEAD
     // background: #214a7e;
     background: #1958e3;
+=======
+    background: #214A7E;
+>>>>>>> 8db7aa3ff30c80eabbda6f6c0f58fc8deb86ea57
 
     @media screen and (max-width: 1024px) {
       padding: 30px 120px;
@@ -528,12 +532,18 @@
       }
 
       div {
+<<<<<<< HEAD
         // background: #214a7e;
         background: transparent;
         padding: 48px 43px 32px 27px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+=======
+        background: #214A7E;
+        border: 1px solid #d1e1e1;
+        padding: 20px 15px;
+>>>>>>> 8db7aa3ff30c80eabbda6f6c0f58fc8deb86ea57
         cursor: pointer;
         transition: 0.3s;
         color: #fdfdfd;

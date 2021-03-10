@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/out_functions
+/out_publish
 /.next
 /.pnp
 .pnp.js
@@ -22,3 +24,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Local Netlify folder
+.netlify
+out_functions
+out_publish

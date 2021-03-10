@@ -117,7 +117,7 @@ const Career = () => {
           <Button
             text="Contact Us"
             route="/contact-us"
-            backgroundColor="#214a7e"
+            backgroundColor="#214A7E"
             textColor="white"
           />
         </div>

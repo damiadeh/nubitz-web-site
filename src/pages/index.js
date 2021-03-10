@@ -184,7 +184,7 @@ const HomePage = () => {
               <Link href="/career">
                 <a>Get hired</a>
               </Link>
-            </li>
+            </li> 
           </ul>
         </div>
         <div className={Styles.contactButton}>Contact us</div>
