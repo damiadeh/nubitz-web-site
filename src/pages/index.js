@@ -15,7 +15,7 @@ import SectionTwo from "../sections/homepage-sections/section-two/SectionTwo";
 import Contact from "../components/contact/Contact";
 import Footer from "../components/footer/Footer";
 import Styles from "../styles/home.module.scss";
-import { Style } from "@material-ui/icons";
+import { Chip } from "@material-ui/core";
 
 const companies = {
   items: [
@@ -74,21 +74,24 @@ const distinctions = {
   items: [
     {
       number: "/assets/home/subsection/O1.svg",
-      title: "High Quality Handware",
+      title: "Leading Work Ethic",
+      numberText: "01",
       text:
         "Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy textis simply dummy text of the print",
       id: 1,
     },
     {
       number: "/assets/home/subsection/O2.svg",
-      title: "High Quality Handware",
+      title: "Transparent financial framework",
+      numberText: "02",
       text:
         "Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy textis simply dummy text of the print",
       id: 2,
     },
     {
       number: "/assets/home/subsection/O3.svg",
-      title: "High Quality Handware",
+      title: "Transmission of Proprietary Rights",
+      numberText: "03",
       text:
         "Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy textis simply dummy text of the print",
       id: 3,
@@ -141,7 +144,7 @@ const HomePage = () => {
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
-  }, [])
+  }, []);
 
   return (
     <div className={Styles.container}>
@@ -183,8 +186,8 @@ const HomePage = () => {
               </Link>
             </li>
           </ul>
-          <Button text="Get Started" primary />
         </div>
+        <div className={Styles.contactButton}>Contact us</div>
         <div className={Styles.hamburger}>
           <img
             src="/assets/menu-white.svg"
@@ -224,59 +227,76 @@ const HomePage = () => {
           </div>
         )}
       </nav>
-      <div className={Styles.videoContainer}>
-        <video
-          src={require("../../public/assets/home/header/hero-video.mp4")}
-          muted
-          loop
-          autoPlay
-        ></video>
-        <img src="/assets/home-hero.png" alt="/" className={Styles.heroImage} />
-        <div className={Styles.overlay}></div>
-        <div className={Styles.accomplishments}>
-          <Card />
-        </div>
-        <div className={Styles.hero}>
-          <div className={Styles.hero_text}>
-            <h1>We solve problems related to IT infrastructure</h1>
-            <p>
-              We are a software development and digital marketing company
-              existing to help businesses develop solutions.
-            </p>
-            <Button text="Get Started" primary />
+      <div className={Styles.mainWrapper}>
+        <div className={Styles.videoContainer}>
+          <video
+            src={require("../../public/assets/home/header/hero-video.mp4")}
+            muted
+            loop
+            autoPlay
+          ></video>
+          <img
+            src="/assets/home-hero.png"
+            alt="/"
+            className={Styles.heroImage}
+          />
+          <div className={Styles.overlay}></div>
+          <div className={Styles.hero}>
+            <div className={Styles.hero_text}>
+              <h1>Design and software development done right</h1>
+              <p>
+                We make your ideas succeed through design and software
+                development.
+              </p>
+              <div className={Styles.heroButton}>
+                Explore latest cases
+                <img src="/assets/home/header/arrow.svg" alt="arrow-right" />
+              </div>
+            </div>
+          </div>
+          <div className={Styles.accomplishments}>
+            <Card />
           </div>
         </div>
       </div>
       <div className={Styles.accomplishmentsMobile}>
         <Card />
       </div>
-      {/* <div className={Styles.companies}>
-        {companies.items.map((item) => (
-          <div key={item.id}>
-            {id === item.id ? (
-              <img
-                src={item.active}
-                alt={item.name}
-                onMouseLeave={() => setId(null)}
-              />
-            ) : (
-              <img
-                src={item.image}
-                alt={item.name}
-                onMouseEnter={() => setId(item.id)}
-              />
-            )}
-          </div>
-        ))}
-      </div> */}
       {/* <SectionOne /> */}
       <SectionTwo />
       <SectionThree />
-      <SectionFour />
+      {/* <SectionFour /> */}
+      <div className={Styles.recognition}>
+        <div className={Styles.recognition_text}>
+          <h6>Awards</h6>
+          <h2>Reviews and recognition</h2>
+          <p>
+            100% client satisfaction, flawless perfromance of our products, and
+            a leading approach to R{"&"}D has been the center of our operations.
+            <span>
+              We were honored to have recieved awards, recognitions, and
+              nominations globally accross various industries.
+            </span>
+          </p>
+        </div>
+        <div className={Styles.recognitions}>
+          <div className={Styles.recognitions_recognition}>
+            <img src="/assets/home/accomplishments/medtox.svg" alt="/" />
+          </div>
+          <div className={Styles.recognitions_recognition}>
+            <img src="/assets/home/accomplishments/medtox.svg" alt="/" />
+          </div>
+          <div className={Styles.recognitions_recognition}>
+            <img src="/assets/home/accomplishments/medtox.svg" alt="/" />
+          </div>
+          <div className={Styles.recognitions_recognition}>
+            <img src="/assets/home/accomplishments/medtox.svg" alt="/" />
+          </div>
+        </div>
+      </div>
       <div className={Styles.company}>
         <div className={Styles.title}>
-          <p>Our distinctions</p>
-          <h2>Why Choose Us</h2>
+          <h2>Our happy clients</h2>
         </div>
         <div className={Styles.companies}>
           {companies.items.map((item) => (
@@ -297,20 +317,31 @@ const HomePage = () => {
             </div>
           ))}
         </div>
+        <p>Become a client</p>
       </div>
       <SectionFive />
-      {/* <div className={Styles.choose}>
-        <h2>Here’s Why you should Choose us</h2>
+      <div className={Styles.choose}>
+        <h2 className={Styles.headline}>Why choose us</h2>
         <div className={Styles.distinctions}>
           {distinctions.items.map((item) => (
             <div key={item.number}>
-              <img src={item.number} src={item.number} />
-              <h5>{item.title}</h5>
-              <p>{item.text}</p>
+              {/* <img src={item.number} src={item.number} /> */}
+              <h3>{item.title}</h3>
+              <p>
+                We estimate the pricing using the standard workflow frameworks
+                and offer various payment options. You will not come across any
+                unexpected bills or hidden fees.
+                <span>
+                  SCRUM-certified and will ensure the project delivery is time-
+                  and cost-optimized so you can enjoy the flawless performance
+                  of your software in a timely manner.
+                </span>
+              </p>
+              <h2 className={Styles.numberText}>{item.numberText}</h2>
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
       <SectionSix />
       <div className={Styles.postContainer}>
         <div className={Styles.heading}>
@@ -323,6 +354,12 @@ const HomePage = () => {
               <div key={post.id} data-aos="zoom-in">
                 <img src={post.image} alt="/" />
                 <div className={Styles.post_content}>
+                  <Chip
+                    variant="outlined"
+                    size="small"
+                    label="#development"
+                    className={Styles.tag}
+                  />
                   <h5>{post.title}</h5>
                   <p>{post.content}</p>
                   <div className={Styles.post_person}>
@@ -337,7 +374,7 @@ const HomePage = () => {
             </Link>
           ))}
         </div>
-        <span>View All Articles</span>
+        <span className={Styles.cta}>View All Articles</span>
       </div>
       <Contact />
       <Footer />

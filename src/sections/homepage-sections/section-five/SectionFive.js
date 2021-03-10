@@ -89,13 +89,13 @@ const SectionFive = () => {
               </div>
               <div className={Styles.client_mobileArrows}>
                 <img
-                  src="/assets/home/section_five/left_arrow.svg"
+                  src="/assets/home/section_five/right-arrow.svg"
                   alt="left_arrow"
-                  style={{ marginRight: "20px" }}
+                  style={{ marginRight: "1vh" }}
                   onClick={goLeft}
                 />
                 <img
-                  src="/assets/home/section_five/right_arrow.svg"
+                  src="/assets/home/section_five/left-arrow.svg"
                   alt="right_arrow"
                   onClick={goRight}
                 />

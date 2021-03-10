@@ -6,22 +6,22 @@ import Styles from "./sectionTwo.module.scss";
 const littleCards = {
   items: [
     {
-      icon: "/assets/home/section_two/lamp.svg",
-      title: "Digital Marketing",
+      icon: "/assets/home/section_two/code2.svg",
+      title: "Web-development",
       text:
-        "In Nubitz, we help you create campanigns and content that drives traffic with our marketing strategies.",
+        "Nubitz delivers full stack customer software development along with a wide range of comprehensive solutions to reimagine and upgrade your digital presence.",
       textColor: "rgba(249, 249, 249, 0.8)",
       titleColor: "#ffffff",
     },
     {
-      icon: "/assets/home/section_two/code.svg",
+      icon: "/assets/home/section_two/code1.svg",
       title: "Product Development",
       text:
         "We create the optimal platform to develop and run digital applications for our clients.",
-      backgroundColor: "rgba(234, 241, 246, 0.72)",
+      backgroundColor: "#f5f8ff",
     },
     {
-      icon: "/assets/home/section_two/lamp.svg",
+      icon: "/assets/home/section_two/code2.svg",
       title: "Web Development",
       text:
         "In Nubitz, we help you create campanigns and content that drives traffic with our marketing strategies.",
@@ -29,11 +29,11 @@ const littleCards = {
       titleColor: "#ffffff",
     },
     {
-      icon: "/assets/home/section_two/code.svg",
+      icon: "/assets/home/section_two/code1.svg",
       title: "Cloud Development",
       text:
         "We create the optimal platform to develop and run digital applications for our clients.",
-      backgroundColor: "rgba(234, 241, 246, 0.72)",
+      backgroundColor: "#f5f8ff",
     },
   ],
 };
@@ -56,26 +56,29 @@ const SectionTwo = () => {
         className={Styles.bubble}
       />
       <div className={Styles.container}>
-        <div>
-          <SectionText
+        <div className={Styles.content}>
+          {/* <SectionText
             welcome="Our services"
             title="Our Services Are Rendered In The Areas Of Technology"
             description="As one of the best IT service providers, we take pride in being able to offer you the best quality services that solves high impact buisness challenges."
-          />
+          /> */}
+          <h2>Services we provide</h2>
+          <p>Leveraging our in-depth expertise, we quickly and effectively deliver a leading solution for your needs. Capitalize on your market potential, increase cash flows, and gauge interest among your clientele by upgrading your strategy, design, software development, data analytics and machine learning.</p>
         </div>
         <div>
           <div className={Styles.arrows}>
             <img
-              src="/assets/home/section_two/left_arrow.svg"
+              src="/assets/home/section_two/right-arrow.svg"
               alt="left arrow"
-              style={{ marginRight: "3vh" }}
+              style={{ marginRight: "1vh" }}
               onClick={goLeft}
             />
             <img
-              src="/assets/home/section_two/right_arrow.svg"
+              src="/assets/home/section_two/left-arrow.svg"
               alt="right arrow"
               onClick={goRight}
             />
+            <h3>01/<span>04</span></h3>
           </div>
           <div className={Styles.cards}>
             {littleCards.items.map((item) => (

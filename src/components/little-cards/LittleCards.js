@@ -14,19 +14,22 @@ const LittleCards = ({
 }) => {
   let useStyle = {
     // backgroundColor: "#214a7e",
-    background: "#214A7E",
+    background: "#1958e3",
+    // background: "#214A7E",
+    // width: `${width}`,
     height: `${height}`,
-    borderRadius: `${radius}`,
+    // borderRadius: `${radius}`,
     transform: `translateX(${slide}%)`,
   };
 
   if (backgroundColor) {
     useStyle = {
       backgroundColor: `${backgroundColor}`,
+      // width: `${width}`,
       height: `${height}`,
-      borderRadius: `${radius}`,
+      // borderRadius: `${radius}`,
       border: "0.5px solid #C2D9EB",
-      color: "#214a7e",
+      color: "#a9b1cc",
       transform: `translateX(${slide}%)`,
     };
   }

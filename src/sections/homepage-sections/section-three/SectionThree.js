@@ -206,13 +206,14 @@ const SectionThree = () => {
     <div className={Styles.container}>
       <div>
         <div className={Styles.hero}>
-          <h2 className={Styles.hero_title}>We do IT better</h2>
+          {/* <h2 className={Styles.hero_title}>We do IT better</h2>
           <p className={Styles.hero_description}>
             Sapien sem lectus tempor cursus. Tortor et viverra augue ipsum,
             platea sem viverra.
-          </p>
+          </p> */}
+          <h2>Technical stack</h2>
         </div>
-        <ThemeProvider theme={theme}>
+        {/* <ThemeProvider theme={theme}>
           <Timeline className={classes.root}>
             {timelineObject.items.map((item) => (
               <TimelineItem
@@ -280,6 +281,14 @@ const SectionThree = () => {
             ))}
           </Timeline>
         </ThemeProvider>
+        */}
+        <div className={Styles.timeline}>
+          <ul>
+            {timelineObject.items.map((item) => (
+              <li onClick={() => setActive(item.id)} className={active === item.id && Styles.active}><span className={Styles.circle}></span>{item.name}</li>
+            ))}
+          </ul>
+        </div>
       </div>
       <div className={Styles.languages}>
         {languages.items.map((item) => (

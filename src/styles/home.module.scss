@@ -18,7 +18,7 @@
     padding: 15px 120px 0;
     z-index: 10;
 
-    @media screen and (max-width: 768px) {
+    @media (max-width: 1380px) and (min-width: 1140px) {
       padding: 15px 20px 0;
     }
 
@@ -26,7 +26,7 @@
       display: flex;
       align-items: center;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1140px) {
         display: none;
       }
 
@@ -54,23 +54,46 @@
 
           a {
             font-weight: bold;
-            padding-right: 40px;
+            margin-right: 88px;
             font-style: normal;
             line-height: 18px;
-            font-size: 14px;
+            font-size: 16px;
             color: #fff;
             cursor: pointer;
             text-decoration: none;
             text-transform: capitalize;
+
+            &:nth-child(4) {
+              margin-right: unset;
+            }
           }
         }
+      }
+    }
+
+    .contactButton {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+      color: #fff;
+      background-color: #1958e3;
+      padding: 11px 24px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      transition: 0.4s;
+      cursor: pointer;
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+
+      @media screen and (max-width: 1140px) {
+        display: none;
       }
     }
 
     .hamburger {
       display: none;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1140px) {
         display: block;
         cursor: pointer;
       }
@@ -140,9 +163,19 @@
     }
   }
 
-  .videoContainer {
-    max-height: 100%;
+  .mainWrapper {
+    height: 100vh;
     position: relative;
+  }
+
+  .videoContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
     @media screen and (max-width: 1024px) {
       max-height: 100vh;
@@ -162,8 +195,15 @@
     }
 
     video {
+      position: absolute;
       width: 100%;
       height: 100%;
+      // -o-object-fit: cover;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
 
       @media screen and (max-width: 1024px) {
         display: none;
@@ -176,11 +216,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.6)
-      );
+      background-color: rgba(15, 15, 15, 0.3);
       // background: linear-gradient(
       //   to bottom,
       //   rgba(0, 0, 0, 0.5),
@@ -224,7 +260,7 @@
         top: -55px;
       }
 
-      @media screen and (max-width: 768px) {
+      @media (max-width: 1380px) and (min-width: 1140px) {
         position: unset;
         padding: 30px;
         width: 100%;
@@ -233,31 +269,54 @@
 
       h1 {
         font-family: Ubuntu;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 60px;
-        line-height: 60px;
-        text-transform: capitalize;
-        color: #ffffff;
-        max-width: 800px;
-        margin-bottom: 0;
+        font-weight: 800;
+        font-size: 75px;
+        line-height: 110%;
+        color: #fff;
+        max-width: 905px;
+        margin: 0 0 24px;
 
-        @media screen and (max-width: 768px) {
+        @media (max-width: 1140px) {
           font-size: 40px;
         }
       }
 
       p {
         font-family: Ubuntu;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 17px;
-        line-height: 25px;
-        color: #ffffff;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
+        margin: 0 0 32px;
       }
 
-      button {
-        margin-top: 2vh;
+      .heroButton {
+        margin: 0 0 103px;
+        padding: 17px 20px 17px 24px;
+        display: flex;
+        align-items: center;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        border: 1px solid #fff;
+        box-sizing: border-box;
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        background-color: hsla(0, 0%, 100%, 0.01);
+        cursor: pointer;
+        transition: 0.4s;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
+
+        @media screen and (max-width: 1140px) {
+          margin: 0;
+        }
+
+        img {
+          margin-left: 14px;
+        }
       }
     }
   }
@@ -271,8 +330,94 @@
     }
   }
 
+  .recognition {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30% 50%;
+    grid-column-gap: 20%;
+    font-family: "Ubuntu", sans-serif;
+    padding: 8vh 120px;
+
+    &_text {
+      h6 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #1958e3;
+        margin: 0 0 12px;
+      }
+
+      h2 {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 70px;
+        color: #0f0f0f;
+        margin: 0 0 24px;
+        letter-spacing: -0.015em;
+      }
+
+      p {
+        margin: 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: #4b4d51;
+        max-width: 406px;
+        letter-spacing: 0.05em;
+
+        span {
+          display: block;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .recognitions {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: 24px;
+      grid-row-gap: 24px;
+
+      &_recognition {
+        height: 186px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:nth-child(1) {
+          background-color: #089ff9;
+        }
+        &:nth-child(2) {
+          background-color: #f7df1e;
+        }
+        &:nth-child(3) {
+          background-color: #1958e3;
+        }
+        &:nth-child(4) {
+          background-color: #5f01d1;
+        }
+      }
+    }
+  }
+
   .company {
     padding: 8vh 0;
+    background-color: #f5f8ff;
+
+    p {
+      margin: 8vh 0 0;
+      font-family: Gilroy, sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+      color: #1958e3;
+      padding: 16px 75px;
+      text-align: center;
+      // position: relative;
+      // text-decoration: none;
+      transition: 0.4s;
+      cursor: pointer;
+    }
 
     .title {
       text-align: center;
@@ -323,9 +468,10 @@
   }
 
   .choose {
-    padding: 8vh 120px;
+    padding: 8vh 0 0;
     font-family: Ubuntu;
-    background: #214a7e;
+    // background: #214a7e;
+    background: #1958e3;
 
     @media screen and (max-width: 1024px) {
       padding: 30px 120px;
@@ -342,15 +488,14 @@
       margin-top: 2vh;
     }
 
-    h2 {
-      font-style: normal;
-      font-weight: 800;
-      font-size: 50px;
-      line-height: 63px;
-      width: 489px;
-      text-transform: capitalize;
-      color: #fdfdfd;
-      margin: 0;
+    .headline {
+      padding: 0 120px;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 70px;
+      color: #fff;
+      letter-spacing: -0.015em;
+      margin: 0 0 55px;
 
       @media screen and (max-width: 1024px) {
         font-size: 23px;
@@ -362,9 +507,9 @@
     .distinctions {
       display: grid;
       grid-template-columns: auto auto auto;
-      column-gap: 5vh;
+      border-top: 1px solid hsla(0, 0%, 100%, 0.3);
       row-gap: 8vh;
-      align-items: center;
+      // align-items: center;
       margin: 5vh 0 0;
 
       @media screen and (max-width: 1024px) {
@@ -383,30 +528,49 @@
       }
 
       div {
-        background: #214a7e;
-        border: 1px solid #d1e1e1;
-        padding: 20px 15px;
+        // background: #214a7e;
+        background: transparent;
+        padding: 48px 43px 32px 27px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         cursor: pointer;
         transition: 0.3s;
         color: #fdfdfd;
-        border-radius: 8px;
 
-        h5 {
+        &:nth-child(1) {
+          border-left: 1px solid hsla(0, 0%, 100%, 0.3);
+          margin-left: 120px;
+        }
+
+        &:nth-child(2) {
+          border-left: 1px solid hsla(0, 0%, 100%, 0.3);
+          border-right: 1px solid hsla(0, 0%, 100%, 0.3);
+        }
+
+        &:nth-child(3) {
+          border-right: 1px solid hsla(0, 0%, 100%, 0.3);
+          margin-right: 120px;
+        }
+
+        h3 {
           font-style: normal;
-          font-weight: bold;
-          font-size: 18px;
-          line-height: 20px;
-          color: #fdfdfd;
-          margin: 2vh 0 0;
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 43px;
+          margin: 0 0 24px;
         }
 
         p {
-          width: unset;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 15px;
-          line-height: 25px;
-          margin: 2vh 0 0;
+          margin: 0;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+
+          span {
+            margin-top: 22px;
+            display: inline-flex;
+          }
 
           @media screen and (max-width: 1024px) {
             width: unset !important;
@@ -416,6 +580,16 @@
             width: unset !important;
             margin: 3vh 0;
           }
+        }
+
+        .numberText {
+          font-weight: 700;
+          font-size: 64px;
+          line-height: 70px;
+          color: hsla(0, 0%, 100%, 0.1);
+          margin: 88px 0 0;
+          letter-spacing: -0.015em;
+          transition: 0.4s;
         }
       }
     }
@@ -485,6 +659,19 @@
 
       &_content {
         margin: 2vh 0;
+
+        .tag {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          color: #0f0f0f;
+          margin: 0 8px 8px 0;
+          padding: 3px 9px;
+          border-radius: 4px;
+          box-sizing: border-box;
+          border: 1px solid #0f0f0f;
+        }
+
         h5 {
           font-family: Ubuntu;
           font-style: normal;
@@ -539,17 +726,16 @@
       }
     }
 
-    span {
-      font-style: normal;
-      font-weight: bold;
-      font-size: 15px;
-      line-height: 24px;
-      color: #101112;
+    .cta {
+      margin-top: 10vh;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 43px;
+      text-decoration: none;
       display: flex;
-      align-items: center;
       justify-content: center;
-      cursor: pointer;
-      margin: 3vh 0;
+      position: relative;
+      transition: .4s;
     }
   }
 }

@@ -182,7 +182,7 @@ const SectionSix = () => {
         </div>
       </div>
 
-      <div className={Styles.tagContainer}>
+      {/* <div className={Styles.tagContainer}>
         <div className={Styles.main}>
           <div className={Styles.tagline}>
             <img
@@ -211,6 +211,7 @@ const SectionSix = () => {
           </div>
         </div>
       </div>
+    */}
     </>
   );
 };

@@ -37,14 +37,14 @@ const Contact = () => {
         ))}
       </div> */}
       <div className={Styles.hero}>
-        <p className={Styles.welcome}>is simply dummy text of the printing</p>
+        <p className={Styles.welcome}>Start your project with us now</p>
         <h2 className={Styles.title}>
-          Lorem ipsum dolor sit amet, cons ectetur adip.
+          Let’s build the greatest experience for your customers
         </h2>
-        <p className={Styles.subtext}>
+        {/* <p className={Styles.subtext}>
           is simply dummy text of the printing and typesetting industry. Lorem
           Ipsum has been the industry.
-        </p>
+        </p> */}
         <p className={Styles.email}>
           Email us at <span>nubitz@gmail.com</span>
         </p>
@@ -86,29 +86,23 @@ const Contact = () => {
             type="text"
             placeholder="Message"
           />
-          {/* <div className={Styles.checkbox}>
+          <div className={Styles.checkbox}>
             <div>
-              <input type="checkbox" id="scales" name="scales" />
-              <label for="scales" className={Styles.checkText}>
+              <span className={Styles.check}></span>
+              <p className={Styles.checkText}>
                 Yes, i would like to recieve news {"&"} update
-              </label>
+              </p>
             </div>
-            <div style={{display: "flex", alignItems: "center"}}>
+            <div style={{ display: "flex", alignItems: "center" }}>
               <img src="/assets/contact/attach.svg" alt="attach" />
               <p>Attach File</p>
             </div>
-          </div> */}
-          <Button text="Submit" primary width="150px" />
+          </div>
+          <div className={Styles.buttonWrapper}>
+            <button className={Styles.submit}>Submit</button>
+            <button className={Styles.survey}>Try our interactive survey instead</button>
+          </div>
         </form>
-        {/* <div className={Styles.buttonWrapper}>
-          <Button text="Submit" primary width="150px" />
-          <Button
-            text="Try our interactive survey instead"
-            backgroundColor="#796AF2"
-            textColor="#ffffff"
-            width="300px"
-          />
-        </div> */}
       </div>
     </div>
   );

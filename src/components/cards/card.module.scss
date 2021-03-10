@@ -1,15 +1,15 @@
 .container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   align-items: center;
   // color: #fff;
   font-family: "Ubuntu", sans-serif;
   width: 100%;
 
-  @media screen and (max-width: 1024px) {
-    // display: flex;
+  @media (max-width: 1140px) {
+    display: flex;
     // flex-wrap: nowrap;
-    grid-template-columns: 80% 80% 80%;
+    grid-template-columns: 80% 80% 80% 80%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     &::-webkit-scrollbar {
@@ -22,13 +22,14 @@
     flex-direction: column;
     align-items: flex-start;
     z-index: 10;
-    padding: 30px 30px;
+    padding: 20px 0 20px 64px;
     border-top: 1px solid #ffffff;
     cursor: pointer;
-    height: 220px;
+    // height: 220px;
 
-    @media screen and (max-width: 768px) {
-      height: 180px;
+    @media screen and (max-width: 1140px) {
+      padding: 19px 16px;
+      min-width: 270px;
     }
 
     .white {
@@ -48,84 +49,135 @@
     }
 
     .number {
-      font-size: 74px;
-      font-weight: bold;
-      
-      @media screen and (max-width: 768px) {
-        color: white;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 70px;
+      color: transparent;
+      letter-spacing: -0.015em;
+      margin: 0 0 9px;
+      transition: 0.4s;
+
+      &:hover {
+        background: unset;
+      }
+
+      @media screen and (max-width: 1140px) {
+        margin: 0;
+        font-size: 64px;
+        line-height: 70px;
+        letter-spacing: -0.015em;
+        z-index: 1;
       }
     }
 
     &:nth-child(1) {
       // background-image: linear-gradient(to right, #214a7e, #629fca);
       background-color: transparent;
-      color: #FE8C00;
+
+      .number {
+        background: linear-gradient(90deg, #da22ff, #9733ee);
+        -webkit-background-clip: text;
+      }
 
       &:hover {
         // background-image: unset;
-        background: linear-gradient(180deg, #FE8C00 0%, #F83600 100%);
-        color: #ffffff;
+        background: linear-gradient(263.56deg, #a931ff 5%, #fb31ff 104.13%);
 
-        .white {
-            display: block;
-        }
-    
-        .colored {
-            display: none;
+        .number {
+          color: white;
         }
       }
 
-      @media screen and (max-width: 1024px) {
-        background: linear-gradient(180deg, #FE8C00 0%, #F83600 100%);
+      @media screen and (max-width: 1140px) {
+        background: linear-gradient(263.56deg, #a931ff 5%, #fb31ff 104.13%);
+
+        .number {
+          color: white;
+        }
       }
     }
 
     &:nth-child(2) {
       // background-image: linear-gradient(to right, #629fca,#214a7e, );
       background-color: transparent;
-      color: #A931FF;
+      color: linear-gradient(90.87deg, #ff3194 0.81%, #e31439 104.14%);
 
+      .number {
+        background: linear-gradient(90deg, #ec008c, #fc6767);
+        -webkit-background-clip: text;
+      }
 
       &:hover {
         // background-image: unset;
-        background: linear-gradient(180deg, #B721FF 0%, #21D4FD 100%);
-        color: #ffffff;
+        background: linear-gradient(90.87deg, #ff3194 0.81%, #e31439 104.14%);
 
-        .white {
-          display: block;
-      }
-  
-      .colored {
-          display: none;
-      }
+        .number {
+          color: white;
+        }
       }
 
-      @media screen and (max-width: 1024px) {
-        background: linear-gradient(180deg, #B721FF 0%, #21D4FD 100%);
+      @media screen and (max-width: 1140px) {
+        background: linear-gradient(90.87deg, #ff3194 0.81%, #e31439 104.14%);
+
+        .number {
+          color: white;
+        }
       }
     }
 
     &:nth-child(3) {
       // background-image: linear-gradient(to right, #214a7e, #629fca);
       background-color: transparent;
-      color: #FE585B;
+      color: linear-gradient(268.49deg, #fe8c00 5.15%, #d63907 98.7%);
+
+      .number {
+        background: linear-gradient(90deg, #e65c00, #f9d423);
+        -webkit-background-clip: text;
+      }
 
       &:hover {
         // background-image: unset;
-        background: linear-gradient(180deg, #FF5858 0%, #F857A6 100%);
-        color: #ffffff;
+        background: linear-gradient(268.49deg, #fe8c00 5.15%, #d63907 98.7%);
 
-        .white {
-          display: block;
-      }
-  
-      .colored {
-          display: none;
-      }
+        .number {
+          color: #ffffff;
+        }
       }
 
-      @media screen and (max-width: 1024px) {
-        background: linear-gradient(180deg, #FF5858 0%, #F857A6 100%);
+      @media screen and (max-width: 1140px) {
+        background: linear-gradient(268.49deg, #fe8c00 5.15%, #d63907 98.7%);
+
+        .number {
+          color: white;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      // background-image: linear-gradient(to right, #214a7e, #629fca);
+      background-color: transparent;
+      color: linear-gradient(92.45deg, #3b1eeb 1.75%, #248ff2 93.53%);
+
+      .number {
+        background: linear-gradient(90deg, #0052d4, #4364f7 50%, #6fb1fc);
+        -webkit-background-clip: text;
+      }
+
+      &:hover {
+        // background-image: unset;
+        background: linear-gradient(92.45deg, #3b1eeb 1.75%, #248ff2 93.53%);
+
+        .number {
+          color: #ffffff;
+        }
+      }
+
+      @media screen and (max-width: 1140px) {
+        background: linear-gradient(92.45deg, #3b1eeb 1.75%, #248ff2 93.53%);
+
+        .number {
+          color: white;
+        }
       }
     }
 
@@ -138,12 +190,8 @@
       border-right: 1px solid #ffffff;
     }
 
-    &:nth-child(1) {
-      padding-left: 120px;
-
-      @media screen and (max-width: 768px) {
-        padding: 30px;
-      }
+    &:nth-child(4) {
+      border-left: 1px solid #ffffff;
     }
 
     p {
@@ -151,16 +199,18 @@
     }
 
     .title {
-      font-style: normal;
-      font-weight: bold;
+      margin: 0;
+      font-weight: 500;
       font-size: 24px;
-      line-height: 21px;
-      color: #ffffff;
-      margin: 1vh 0;
+      line-height: 29px;
+      color: #fff;
+      max-width: 191px;
 
-      @media screen and (max-width: 1024px) {
-        font-size: 18px;
-        color: white;
+      @media screen and (max-width: 1140px) {
+        font-size: 15px;
+        line-height: 23px;
+        letter-spacing: 0.01em;
+        z-index: 1;
       }
     }
 
