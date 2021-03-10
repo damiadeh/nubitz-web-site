@@ -6,17 +6,20 @@ const Footer = () => {
     <div className={Styles.container}>
       <div className={Styles.container_main}>
         <div className={Styles.about}>
-          <img src="/assets/footer/logo.svg" alt="logo" />
-          <p>
+          {/* <img src="/assets/footer/logo.svg" alt="logo" /> */}
+          {/* <p>
             We are a software development and digital marketing company existing
             to help businesses develop solutions to help them achieve their
             goals.
-          </p>
-          <div>
+          </p> */}
+          <h2>
+            Design and software development <span>done right</span>
+          </h2>
+          {/* <div>
             <img src="/assets/footer/facebook.svg" alt="facebook" />
             <img src="/assets/footer/linkedIn.svg" alt="linkedIn" />
             <img src="/assets/footer/twitter.svg" alt="twitter" />
-          </div>
+          </div> */}
         </div>
         <div className={Styles.quicklinks}>
           <p>Quick Links</p>
@@ -70,6 +73,20 @@ const Footer = () => {
             <li>Contact Us</li>
             <li>Get Hired</li>
           </ul>
+        </div>
+      </div>
+      <div className={Styles.extra}>
+        <div className={Styles.location}>
+          <p className={Styles.mainInfo}>
+            We are located in central Europe and USA
+          </p>
+          <div className={Styles.mainLocation}>
+            <p>Lviv,<br/>Ukraine</p>
+            <p>Washington D.C.,<br />USA</p>
+          </div>
+        </div>
+        <div className={Styles.map}>
+          <img src="/assets/footer/map.svg" alt="/" />
         </div>
       </div>
       <Divider />
