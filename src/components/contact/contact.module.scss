@@ -12,10 +12,10 @@
   padding: 88px 120px 75px;
   font-family: "Ubuntu", sans-serif;
 
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    padding: 8vh 15px;
+  @media (max-width: 1140px) {
+    padding: 96px 16px 30px;
+    grid-template-columns: auto;
+    // grid-row-gap: 64px;
   }
 }
 
@@ -63,6 +63,10 @@
     font-size: 28px;
     line-height: 39px;
     color: white;
+
+    @media (max-width: 1140px) {
+      display: none;
+    }
 
     span {
       // color: #796af2;
@@ -126,6 +130,12 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 23px;
 
+    @media (max-width: 1140px) {
+      margin-bottom: 24px;
+      grid-template-columns: 1fr;
+      grid-row-gap: 24px;
+    }
+
     &:nth-child(1) {
       margin-bottom: 25px;
     }
@@ -178,8 +188,11 @@
     align-items: center;
     justify-content: space-between;
 
-    @media screen and (max-width: 768px) {
-      display: block;
+    @media (max-width: 1140px) {
+      margin-bottom: 40px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: unset;
     }
 
     div {
@@ -187,8 +200,10 @@
       align-items: center;
       cursor: pointer;
 
-      @media screen and (max-width: 768px) {
-        margin-bottom: 3vh;
+      &:nth-child(1) {
+        @media (max-width: 1140px) {
+          margin-bottom: 40px;
+        }
       }
     }
 
@@ -218,6 +233,11 @@
   display: grid;
   grid-template-columns: 189px 1fr;
   grid-column-gap: 26px;
+
+  @media (max-width: 1140px) {
+    grid-template-columns: auto;
+    grid-row-gap: 16px;
+  }
 
   .submit {
     font-weight: 700;
