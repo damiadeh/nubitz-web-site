@@ -34,12 +34,23 @@ const testimonials = {
 
 const SectionFive = () => {
   const [x, setX] = useState(0);
+  const [step, setStep] = useState(1);
 
   const goLeft = () => {
-    x === 0 ? setX(-100 * (testimonials.length - 1)) : setX(x + 100);
+    if (x === 0) {
+      null;
+    } else {
+      setX(x + 100);
+      setStep(step - 1);
+    }
   };
   const goRight = () => {
-    x === -400 ? setX(0) : setX(x - 100);
+    if (x === -400) {
+      null;
+    } else {
+      setX(x - 100);
+      setStep(step + 1);
+    }
   };
 
   return (
@@ -55,7 +66,7 @@ const SectionFive = () => {
           <h2>Testimonials</h2>
         </div>
         <div className={Styles.counter}>
-          <p>01/<span>05</span></p>
+          <p>{`0${step}`}/<span>{`0${testimonials.items.length}`}</span></p>
         </div>
         <div className={Styles.slider}>
           {testimonials.items.map((item) => (
