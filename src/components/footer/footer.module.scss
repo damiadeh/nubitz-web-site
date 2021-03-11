@@ -26,6 +26,13 @@
     letter-spacing: -0.015em;
     max-width: 450px;
 
+    @media (max-width: 1140px) {
+      margin-bottom: 48px;
+      font-size: 48px;
+      line-height: 53px;
+      max-width: 540px;
+    }
+
     span {
       color: #1958e3;
     }
@@ -125,13 +132,13 @@
       margin: 0 0 32px;
       max-width: 270px;
     }
-  
+
     .mainLocation {
       margin-bottom: 34px;
       display: grid;
       grid-template-columns: 115px 197px;
       grid-column-gap: 49px;
-  
+
       p {
         font-size: 18px;
         line-height: 25px;
@@ -140,7 +147,7 @@
         white-space: pre-wrap;
       }
     }
-  
+
     .info {
       p {
         margin: 0;
@@ -149,7 +156,7 @@
         line-height: 34px;
         color: #1958e3;
         text-decoration: none;
-  
+
         &:nth-child(1) {
           margin-bottom: 10px;
         }

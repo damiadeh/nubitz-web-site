@@ -75,24 +75,6 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className={Styles.extra}>
-        <div className={Styles.location}>
-          <p className={Styles.mainInfo}>
-            We are located in central Europe and USA
-          </p>
-          <div className={Styles.mainLocation}>
-            <p>Lviv,<br/>Ukraine</p>
-            <p>Washington D.C.,<br />USA</p>
-          </div>
-          <div className={Styles.info}>
-            <p>nor@nubitz.com</p>
-            <p>+1 929-218-8640</p>
-          </div>
-        </div>
-        <div className={Styles.map}>
-          <img src="/assets/footer/map.svg" alt="/" />
-        </div>
-      </div>
       <Divider />
       <p className={Styles.copyright}>
         <span style={{ marginRight: "8px" }}>&#169;</span>

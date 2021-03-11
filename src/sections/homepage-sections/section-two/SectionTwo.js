@@ -35,17 +35,43 @@ const littleCards = {
         "We create the optimal platform to develop and run digital applications for our clients.",
       backgroundColor: "#f5f8ff",
     },
+    {
+      icon: "/assets/home/section_two/code2.svg",
+      title: "Web Development",
+      text:
+        "In Nubitz, we help you create campanigns and content that drives traffic with our marketing strategies.",
+      textColor: "rgba(249, 249, 249, 0.8)",
+      titleColor: "#ffffff",
+    },
+    {
+      icon: "/assets/home/section_two/code1.svg",
+      title: "Cloud Development",
+      text:
+        "We create the optimal platform to develop and run digital applications for our clients.",
+      backgroundColor: "#f5f8ff",
+    },
   ],
 };
 
 const SectionTwo = () => {
   const [x, setX] = useState(0);
+  const [step, setStep] = useState(1);
 
   const goLeft = () => {
-    x === 0 ? setX(-100 * (littleCards.length - 1)) : setX(x + 100);
+    if (x === 0) {
+      null;
+    } else {
+      setX(x + 100);
+      setStep(step - 1);
+    }
   };
   const goRight = () => {
-    x === -200 ? setX(0) : setX(x - 100);
+    if (x === -500) {
+      null;
+    } else {
+      setX(x - 100);
+      setStep(step + 1);
+    }
   };
 
   return (
@@ -63,7 +89,13 @@ const SectionTwo = () => {
             description="As one of the best IT service providers, we take pride in being able to offer you the best quality services that solves high impact buisness challenges."
           /> */}
           <h2>Services we provide</h2>
-          <p>Leveraging our in-depth expertise, we quickly and effectively deliver a leading solution for your needs. Capitalize on your market potential, increase cash flows, and gauge interest among your clientele by upgrading your strategy, design, software development, data analytics and machine learning.</p>
+          <p>
+            Leveraging our in-depth expertise, we quickly and effectively
+            deliver a leading solution for your needs. Capitalize on your market
+            potential, increase cash flows, and gauge interest among your
+            clientele by upgrading your strategy, design, software development,
+            data analytics and machine learning.
+          </p>
         </div>
         <div>
           <div className={Styles.arrows}>
@@ -78,7 +110,9 @@ const SectionTwo = () => {
               alt="right arrow"
               onClick={goRight}
             />
-            <h3>01/<span>04</span></h3>
+            <h3>
+              {`0${step}`}/<span>{`0${littleCards.items.length}`}</span>
+            </h3>
           </div>
           <div className={Styles.cards}>
             {littleCards.items.map((item) => (

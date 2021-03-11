@@ -184,7 +184,7 @@ const HomePage = () => {
               <Link href="/career">
                 <a>Get hired</a>
               </Link>
-            </li> 
+            </li>
           </ul>
         </div>
         <div className={Styles.contactButton}>Contact us</div>
@@ -344,35 +344,37 @@ const HomePage = () => {
       </div>
       <SectionSix />
       <div className={Styles.postContainer}>
-        <div className={Styles.heading}>
-          <p>Our Blog</p>
-          <h2>Nubitz News</h2>
-        </div>
-        <div className={Styles.post}>
-          {posts.items.map((post) => (
-            <Link href={`/blog/${encodeURIComponent(post.title)}`}>
-              <div key={post.id} data-aos="zoom-in">
-                <img src={post.image} alt="/" />
-                <div className={Styles.post_content}>
-                  <Chip
-                    variant="outlined"
-                    size="small"
-                    label="#development"
-                    className={Styles.tag}
-                  />
-                  <h5>{post.title}</h5>
-                  <p>{post.content}</p>
-                  <div className={Styles.post_person}>
-                    <img src={post.profile} alt="/" />
-                    <div>
-                      <p>{post.author}</p>
-                      <span>{post.date}</span>
+        <div className={Styles.postContainer_wrapper}>
+          <div className={Styles.heading}>
+            <p>Our Blog</p>
+            <h2>Nubitz News</h2>
+          </div>
+          <div className={Styles.post}>
+            {posts.items.map((post) => (
+              <Link href={`/blog/${encodeURIComponent(post.title)}`}>
+                <div key={post.id} data-aos="zoom-in">
+                  <img src={post.image} alt="/" />
+                  <div className={Styles.post_content}>
+                    <Chip
+                      variant="outlined"
+                      size="small"
+                      label="#development"
+                      className={Styles.tag}
+                    />
+                    <h5>{post.title}</h5>
+                    <p>{post.content}</p>
+                    <div className={Styles.post_person}>
+                      <img src={post.profile} alt="/" />
+                      <div>
+                        <p>{post.author}</p>
+                        <span>{post.date}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
         <span className={Styles.cta}>View All Articles</span>
       </div>
