@@ -20,11 +20,13 @@
   h2 {
     margin: 0;
     font-weight: 700;
-    font-size: 64px;
+    font-size: 60px;
     line-height: 70px;
     color: #0f0f0f;
     letter-spacing: -0.015em;
     max-width: 450px;
+
+   
 
     @media (max-width: 1140px) {
       margin-bottom: 48px;
@@ -32,10 +34,17 @@
       line-height: 53px;
       max-width: 540px;
     }
+ div{
+      margin-top: 15px;
+    }
 
+    img{
+      height: 40px;
+    }
     span {
       color: #1958e3;
     }
+    
   }
 
   p {
