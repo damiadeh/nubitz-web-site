@@ -55,7 +55,7 @@ const ContactUs = () => {
           <Button
             text="Contact Us"
             route="/contact-us"
-            backgroundColor="#214A7E"
+            backgroundColor="#1958e3"
             textColor="white"
           />
         </div>

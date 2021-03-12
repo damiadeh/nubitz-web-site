@@ -142,11 +142,11 @@ const SectionSix = () => {
                             display: "flex",
                             alignItems: "center",
                             backgroundColor: "#EEF3FE",
-                            border: "0.5px solid #214A7E",
+                            border: "0.5px solid #1958e3",
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
-                            color: "#214A7E",
+                            color: "#1958e3",
                             fontWeight: "bold",
                           }
                     }
@@ -158,7 +158,7 @@ const SectionSix = () => {
                           ? {
                               color: `${item.secondtextColor}`,
                             }
-                          : { marginRight: "10px", color: "#214A7E" }
+                          : { marginRight: "10px", color: "#1958e3" }
                       }
                     >
                       <p>{item.secondname}</p>
@@ -203,7 +203,7 @@ const SectionSix = () => {
             <div>
               <Button
                 text="Get Started"
-                // backgroundColor="#214A7E"
+                // backgroundColor="#1958e3"
                 // textColor="white"
                 primary
               />

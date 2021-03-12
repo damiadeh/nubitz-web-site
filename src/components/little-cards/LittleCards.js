@@ -13,9 +13,9 @@ const LittleCards = ({
   titleColor,
 }) => {
   let useStyle = {
-    // backgroundColor: "#214a7e",
+    // backgroundColor: "#1958e3",
     background: "#1958e3",
-    // background: "#214A7E",
+    // background: "#1958e3",
     // width: `${width}`,
     height: `${height}`,
     // borderRadius: `${radius}`,
