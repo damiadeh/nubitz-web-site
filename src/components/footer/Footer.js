@@ -1,4 +1,5 @@
 import { Divider } from "@material-ui/core";
+import { Style } from "@material-ui/icons";
 import Styles from "./footer.module.scss";
 
 const Footer = () => {
@@ -71,9 +72,13 @@ const Footer = () => {
           <p>Get In Touch</p>
           <ul>
             <li>Contact Us</li>
-            <li>Get Hired</li>
+            <li>Careers</li>
           </ul>
         </div>
+      </div>
+      <div className={Styles.extra}>
+        <p>nor@nubitz.com</p>
+        <p>+1 929-218-8640</p>
       </div>
       <Divider />
       <p className={Styles.copyright}>

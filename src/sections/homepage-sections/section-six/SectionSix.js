@@ -14,7 +14,7 @@ const SectionSix = () => {
 
   return (
     <>
-      <div className={Styles.container}>
+      <div className={Styles.container} id="cases">
         <SectionText
           welcome="Case study"
           title="Our portfolio"

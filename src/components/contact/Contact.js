@@ -24,7 +24,7 @@ const contactInfo = {
 
 const Contact = () => {
   return (
-    <div className={Styles.container}>
+    <div className={Styles.container} id="contact">
       {/* <div className={Styles.contactInfoContainer}>
         {contactInfo.items.map((item) => (
           <div className={Styles.contact} key={item.title}>
@@ -90,13 +90,13 @@ const Contact = () => {
             <div>
               <span className={Styles.check}></span>
               <p className={Styles.checkText}>
-                Yes, i would like to recieve news {"&"} update
+                Yes, I would like to recieve news {"&"} update
               </p>
             </div>
-            <div style={{ display: "flex", alignItems: "center" }}>
+            {/* <div style={{ display: "flex", alignItems: "center" }}>
               <img src="/assets/contact/attach.svg" alt="attach" />
               <p>Attach File</p>
-            </div>
+            </div> */}
           </div>
           <div className={Styles.buttonWrapper}>
             <button className={Styles.submit}>Submit</button>

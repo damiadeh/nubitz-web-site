@@ -60,7 +60,7 @@ const services = () => {
             </li>
             <li className={router.pathname === "/career" ? Styles.active : ""}>
               <Link href="/career">
-                <a>Get hired</a>
+                <a>Careers</a>
               </Link>
             </li>
           </ul>
@@ -102,7 +102,7 @@ const services = () => {
                   <Link href="/blog">Blog</Link>
                 </li>
                 <li onClick={() => setOpenMenu(false)}>
-                  <Link href="/career">Get hired</Link>
+                  <Link href="/career">Careers</Link>
                 </li>
               </ul>
             </div>

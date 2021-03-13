@@ -4,11 +4,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Link as Scroll } from "react-scroll";
 import Card from "../components/cards/Card";
-import Button from "../components/primary-button/Button";
 import SectionFive from "../sections/homepage-sections/section-five/SectionFive";
-import SectionFour from "../sections/homepage-sections/section-four/SectionFour";
-import SectionOne from "../sections/homepage-sections/section-one/SectionOne";
 import SectionSix from "../sections/homepage-sections/section-six/SectionSix";
 import SectionThree from "../sections/homepage-sections/section-three/SectionThree";
 import SectionTwo from "../sections/homepage-sections/section-two/SectionTwo";
@@ -182,12 +180,14 @@ const HomePage = () => {
             </li>
             <li className={router.pathname === "/career" ? Styles.active : ""}>
               <Link href="/career">
-                <a>Get hired</a>
+                <a>Careers</a>
               </Link>
             </li>
           </ul>
         </div>
-        <div className={Styles.contactButton}>Contact us</div>
+        <Scroll to="contact" spy={true} smooth={true} duration={1000}>
+          <div className={Styles.contactButton}>Contact us</div>
+        </Scroll>
         <div className={Styles.hamburger}>
           <img
             src="/assets/menu-white.svg"
@@ -219,7 +219,7 @@ const HomePage = () => {
                   <Link href="/blog">Blog</Link>
                 </li>
                 <li onClick={() => setOpenMenu(false)}>
-                  <Link href="/career">Get hired</Link>
+                  <Link href="/career">Careers</Link>
                 </li>
               </ul>
             </div>
@@ -248,10 +248,12 @@ const HomePage = () => {
                 We make your ideas succeed through design and software
                 development.
               </p>
-              <div className={Styles.heroButton}>
-                Explore latest cases
-                <img src="/assets/home/header/arrow.svg" alt="arrow-right" />
-              </div>
+              <Scroll to="cases" spy={true} smooth={true} duration={1000}>
+                <div className={Styles.heroButton}>
+                  Explore latest cases
+                  <img src="/assets/home/header/arrow.svg" alt="arrow-right" />
+                </div>
+              </Scroll>
             </div>
           </div>
           <div className={Styles.accomplishments}>
