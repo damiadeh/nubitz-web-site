@@ -170,6 +170,10 @@
   .mainWrapper {
     // height: 80vh;
     position: relative;
+
+    @media screen and (min-height: 850px) {
+      height: 80vh;
+    }
   }
 
   .videoContainer {
