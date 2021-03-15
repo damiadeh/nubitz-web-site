@@ -6,6 +6,8 @@
 /out_publish
 /.next
 /.pnp
+/out_functions
+/out_publish
 .pnp.js
 
 # testing

@@ -5,6 +5,7 @@
   &_main {
     display: grid;
     padding: 10vh 120px 8vh;
+    padding-bottom: 15px;
     grid-template-columns: auto auto auto auto;
     column-gap: 10vh;
     align-items: flex-start;
@@ -176,6 +177,7 @@
 
 .extra {
   padding: 5vh 120px;
+  padding-top: 0%;
 
   @media screen and (max-width: 1140px) {
     padding: 30px;
