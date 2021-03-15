@@ -41,26 +41,31 @@ const services = {
   items: [
     {
       image: "/assets/project-request/services/web.svg",
+      imageActive: "/assets/project-request/services/web-white.png",
       title: "Web Development",
       id: 1,
     },
     {
-      image: "/assets/project-request/services/apple.svg",
+      image: "/assets/project-request/services/apple-blue.png",
+      imageActive: "/assets/project-request/services/apple.svg",
       title: "IOS App",
       id: 2,
     },
     {
       image: "/assets/project-request/services/android.svg",
+      imageActive: "/assets/project-request/services/android-white.png",
       title: "Android App",
       id: 3,
     },
     {
       image: "/assets/project-request/services/branding.svg",
+      imageActive: "/assets/project-request/services/branding-white.png",
       title: "Branding",
       id: 4,
     },
     {
       image: "/assets/project-request/services/ai.svg",
+      imageActive: "/assets/project-request/services/ai-white.png",
       title: "AI Development",
       id: 5,
     },
@@ -250,7 +255,11 @@ const Stepper = () => {
                 }}
               >
                 {item.image !== null && (
-                  <img src={item.image} alt={item.title} />
+                  <img
+                    src={item.id === servicesId ? item.imageActive : item.image}
+                    alt={item.title}
+                    width="40px"
+                  />
                 )}
                 <p>{item.title}</p>
               </div>
