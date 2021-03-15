@@ -89,6 +89,22 @@
       column-gap: 2%;
     }
 
+    .active {
+      background-color: #1958e3;
+      color: #ffffff;
+      border: 1px solid rgba(0, 16, 60, 0.4);
+      box-sizing: border-box;
+      box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 5px;
+      padding: 50px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
     .request {
       color: #1958e3;
       cursor: pointer;
@@ -102,11 +118,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-
-      &:nth-child(2) {
-        background-color: #1958e3;
-        color: #ffffff;
-      }
+      font-weight: bold;
     }
   }
 

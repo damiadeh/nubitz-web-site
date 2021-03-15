@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Button from "../primary-button/Button";
 import SectionText from "../section_text/SectionText";
 import Styles from "./contact.module.scss";
@@ -23,6 +24,25 @@ const contactInfo = {
 };
 
 const Contact = () => {
+  const [fullname, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phonenumber, setPhoneNumber] = useState("");
+  const [companyname, setCompanyName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = {
+      fullname,
+      email,
+      phonenumber,
+      companyname,
+      message,
+    };
+
+    console.log(data);
+  };
+  
   return (
     <div className={Styles.container} id="contact">
       {/* <div className={Styles.contactInfoContainer}>
@@ -60,31 +80,45 @@ const Contact = () => {
           title="we solve problems related"
           description="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the"
         /> */}
-        <form className={Styles.form}>
+        <form className={Styles.form} onClick={handleSubmit}>
           <div className={Styles.form_wrapper}>
             <input
               className={Styles.input}
+              onChange={(e) => setFullName(e.target.value)}
               type="text"
               placeholder="Full Name"
+              value={fullname}
             />
-            <input className={Styles.input} type="text" placeholder="Email" />
+            <input
+              className={Styles.input}
+              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              placeholder="Email"
+              value={email}
+            />
           </div>
           <div className={Styles.form_wrapper}>
             <input
               className={Styles.input}
+              onChange={(e) => setPhoneNumber(e.target.value)}
               type="text"
               placeholder="Phone Number"
+              value={phonenumber}
             />
             <input
               className={Styles.input}
+              onChange={(e) => setCompanyName(e.target.value)}
               type="text"
-              placeholder="Compnay's Name"
+              placeholder="Company's Name"
+              value={companyname}
             />
           </div>
           <textarea
             className={Styles.textarea}
+            onChange={(e) => setMessage(e.target.value)}
             type="text"
             placeholder="Message"
+            value={message}
           />
           <div className={Styles.checkbox}>
             <div>
@@ -99,8 +133,12 @@ const Contact = () => {
             </div> */}
           </div>
           <div className={Styles.buttonWrapper}>
-            <button className={Styles.submit}>Submit</button>
-            <button className={Styles.survey}>Try our interactive survey instead</button>
+            <button className={Styles.submit} type="submit">
+              Submit
+            </button>
+            <button className={Styles.survey}>
+              Try our interactive survey instead
+            </button>
           </div>
         </form>
       </div>

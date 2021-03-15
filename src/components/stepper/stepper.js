@@ -7,26 +7,32 @@ const industry = {
     {
       image: "/assets/project-request/hospital.svg",
       title: "Hospital",
+      id: 1,
     },
     {
       image: "/assets/project-request/transaction.svg",
       title: "Fintech",
+      id: 2,
     },
     {
       image: "/assets/project-request/rocket.svg",
       title: "Start Up",
+      id: 3,
     },
     {
       image: "/assets/project-request/ecommerce.svg",
       title: "E-Commerce",
+      id: 4,
     },
     {
       image: "/assets/project-request/presentation.svg",
       title: "Education",
+      id: 5,
     },
     {
       image: null,
       title: "Others",
+      id: 6,
     },
   ],
 };
@@ -36,26 +42,32 @@ const services = {
     {
       image: "/assets/project-request/services/web.svg",
       title: "Web Development",
+      id: 1,
     },
     {
       image: "/assets/project-request/services/apple.svg",
       title: "IOS App",
+      id: 2,
     },
     {
       image: "/assets/project-request/services/android.svg",
       title: "Android App",
+      id: 3,
     },
     {
       image: "/assets/project-request/services/branding.svg",
       title: "Branding",
+      id: 4,
     },
     {
       image: "/assets/project-request/services/ai.svg",
       title: "AI Development",
+      id: 5,
     },
     {
       image: null,
       title: "Others",
+      id: 6,
     },
   ],
 };
@@ -64,18 +76,23 @@ const duration = {
   items: [
     {
       title: "Less than 1 month",
+      id: 1,
     },
     {
       title: "1-3 months",
+      id: 2,
     },
     {
       title: "3-6 months",
+      id: 3,
     },
     {
       title: "6-9 months",
+      id: 4,
     },
     {
       title: "More than 9 months",
+      id: 5,
     },
   ],
 };
@@ -84,22 +101,33 @@ const budget = {
   items: [
     {
       title: "Less than $40",
+      id: 1,
     },
     {
       title: "$40 - $90",
+      id: 2,
     },
     {
       title: "$90 and above",
+      id: 3,
     },
   ],
 };
 
 const Stepper = () => {
   const [step, setStep] = useState(0);
+  const [industryId, setIndustryId] = useState(2);
+  const [servicesId, setServicesId] = useState(2);
+  const [durationId, setDurationId] = useState(2);
+  const [budgetId, setBudgetId] = useState(2);
   const [industryActive, setIndustryActive] = useState(false);
   const [servicesActive, setServicesActive] = useState(false);
   const [durationActive, setDurationActive] = useState(false);
   const [budgetActive, setBudgetActive] = useState(false);
+  const [dataIndustry, setDataIndustry] = useState("Fintech");
+  const [dataServices, setDataServices] = useState("IOS App");
+  const [dataDuration, setDataDuration] = useState("1-3 months");
+  const [dataBudget, setDataBudget] = useState("$40 - $90");
 
   const handleStep = () => {
     if (step < 4) {
@@ -120,6 +148,17 @@ const Stepper = () => {
       setDurationActive(true);
       setBudgetActive(true);
     }
+  };
+
+  const handleSubmit = () => {
+    const projectRequest = {
+      dataIndustry,
+      dataServices,
+      dataDuration,
+      dataBudget,
+    };
+
+    console.log(projectRequest);
   };
 
   return (
@@ -182,7 +221,16 @@ const Stepper = () => {
       <div className={Styles.requests}>
         {step === 0
           ? industry.items.map((item) => (
-              <div className={Styles.request} key={item.title}>
+              <div
+                className={
+                  item.id === industryId ? Styles.active : Styles.request
+                }
+                key={item.title}
+                onClick={() => {
+                  setIndustryId(item.id);
+                  setDataIndustry(item.title);
+                }}
+              >
                 {item.image !== null && (
                   <img src={item.image} alt={item.title} />
                 )}
@@ -191,7 +239,16 @@ const Stepper = () => {
             ))
           : step === 1
           ? services.items.map((item) => (
-              <div className={Styles.request} key={item.title}>
+              <div
+                className={
+                  item.id === servicesId ? Styles.active : Styles.request
+                }
+                key={item.title}
+                onClick={() => {
+                  setServicesId(item.id);
+                  setDataServices(item.title);
+                }}
+              >
                 {item.image !== null && (
                   <img src={item.image} alt={item.title} />
                 )}
@@ -200,13 +257,31 @@ const Stepper = () => {
             ))
           : step === 2
           ? duration.items.map((item) => (
-              <div className={Styles.request} key={item.title}>
+              <div
+                className={
+                  item.id === durationId ? Styles.active : Styles.request
+                }
+                key={item.title}
+                onClick={() => {
+                  setDurationId(item.id);
+                  setDataDuration(item.title);
+                }}
+              >
                 <p>{item.title}</p>
               </div>
             ))
           : step === 3 &&
             budget.items.map((item) => (
-              <div className={Styles.request} key={item.title}>
+              <div
+                className={
+                  item.id === budgetId ? Styles.active : Styles.request
+                }
+                key={item.title}
+                onClick={() => {
+                  setBudgetId(item.id);
+                  setDataBudget(item.title);
+                }}
+              >
                 <p>{item.title}</p>
               </div>
             ))}
@@ -218,6 +293,7 @@ const Stepper = () => {
             backgroundColor="#1958e3"
             textColor="white"
             width="180px"
+            onClick={handleSubmit}
           />
         ) : (
           <Button
