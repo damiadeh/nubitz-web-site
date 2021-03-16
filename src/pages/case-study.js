@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -13,9 +13,11 @@ const CaseStudy = () => {
   const router = useRouter();
   const [caseStudyItem, setCaseStudyItem] = useState(0);
   const [openMenu, setOpenMenu] = useState(false);
+  let myRef = useRef()
 
   useEffect(() => {
     getIdFromLocalStorage();
+    window.scrollTo({ behavior: 'smooth', top: myRef.current.offsetTop })
   }, []);
 
   const getIdFromLocalStorage = () => {
@@ -43,7 +45,7 @@ const CaseStudy = () => {
             />
           </Link>
         </div>
-        <div className={Styles.nav_items}>
+        <div className={Styles.nav_items} ref={myRef}>
           <ul>
             <li className={router.pathname === "/about" ? Styles.active : ""}>
               <Link href="/about">
