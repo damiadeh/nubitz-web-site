@@ -150,7 +150,7 @@ const HomePage = () => {
         <div className={Styles.logo_container}>
           <Link href="/">
             <Image
-              src="/assets/home/header/logo.svg"
+              src="/assets/home/accomplishments/logopix.svg"
               width="100"
               height="50"
               alt="nubitz-logo"
@@ -348,7 +348,7 @@ const HomePage = () => {
       <div className={Styles.postContainer}>
         <div className={Styles.postContainer_wrapper}>
           <div className={Styles.heading}>
-            <p>Our Blog</p>
+            <p className={Styles.topHead}> Our Blog</p>
             <h2>Nubitz News</h2>
           </div>
           <div className={Styles.post}>

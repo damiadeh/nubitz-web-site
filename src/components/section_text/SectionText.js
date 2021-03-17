@@ -29,7 +29,7 @@ const SectionText = ({
         style={
           !secondary
             ? {
-                color: " #2d5e98",
+                color: " #1958e3",
               }
             : { color: `${textColor}` }
         }
