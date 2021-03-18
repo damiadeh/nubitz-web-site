@@ -29,6 +29,7 @@ const Contact = () => {
   const [phonenumber, setPhoneNumber] = useState("");
   const [companyname, setCompanyName] = useState("");
   const [message, setMessage] = useState("");
+  const [checked, setChecked] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,7 +43,12 @@ const Contact = () => {
 
     console.log(data);
   };
-  
+
+  const handleCheck = (e) => {
+    console.log("xx", e.target.checked);
+    setChecked(e.target.checked);
+  };
+
   return (
     <div className={Styles.container} id="contact">
       {/* <div className={Styles.contactInfoContainer}>
@@ -80,7 +86,7 @@ const Contact = () => {
           title="we solve problems related"
           description="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the"
         /> */}
-        <form className={Styles.form} onClick={handleSubmit}>
+        <form className={Styles.form}>
           <div className={Styles.form_wrapper}>
             <input
               className={Styles.input}
@@ -122,7 +128,14 @@ const Contact = () => {
           />
           <div className={Styles.checkbox}>
             <div>
-              <span className={Styles.check}></span>
+              {/* <span className={Styles.check}></span> */}
+              <input
+                id="checkbox_id"
+                type="checkbox"
+                checked={checked}
+                onChange={handleCheck}
+              />
+
               <p className={Styles.checkText}>
                 Yes, I would like to recieve news {"&"} update
               </p>
@@ -133,12 +146,16 @@ const Contact = () => {
             </div> */}
           </div>
           <div className={Styles.buttonWrapper}>
-            <button className={Styles.submit} type="submit">
+            <button
+              className={Styles.submit}
+              type="submit"
+              onClick={handleSubmit}
+            >
               Submit
             </button>
-            <button className={Styles.survey}>
+            {/* <button className={Styles.survey}>
               Try our interactive survey instead
-            </button>
+            </button> */}
           </div>
         </form>
       </div>

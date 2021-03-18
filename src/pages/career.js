@@ -195,13 +195,16 @@ const Career = () => {
                 </div>
               </div>
               <div className={Styles.vacancy_bottom}>
-                <img src="/assets/career/location.svg" alt="location" />
-                <p>Seoul, South Korea</p>
+                <div className={Styles.vacancy_bottomInner}>
+                  <img src="/assets/career/location.svg" alt="location" />
+                  <p>Seoul, South Korea</p>
+                </div>
+
+                <button>
+                  Apply
+                  <img src="/assets/career/arrow.svg" alt="/" />
+                </button>
               </div>
-              <button>
-                Apply
-                <img src="/assets/career/arrow.svg" alt="/" />
-              </button>
             </div>
           ))}
         </div>

@@ -228,13 +228,22 @@
           }
         }
 
+        &_bottomInner{
+          display: flex;
+          align-items: flex-start;
+          flex-direction: row;
+          align-self: flex-end;
+        }
+
         &_bottom {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           justify-content: flex-end;
+          flex-direction: column;
 
           img {
             margin-right: 10px;
+            align-self: center;
           }
 
           p {

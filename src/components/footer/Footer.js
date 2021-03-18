@@ -1,5 +1,6 @@
 import { Divider } from "@material-ui/core";
 import { Style } from "@material-ui/icons";
+import { Link } from "react-scroll";
 import Styles from "./footer.module.scss";
 
 const Footer = () => {
@@ -25,54 +26,100 @@ const Footer = () => {
         <div className={Styles.quicklinks}>
           <p>Quick Links</p>
           <ul>
-            <li>About Us</li>
-            <li>Portfolio</li>
-            <li>Testimonials</li>
-            <li>Blog</li>
-            <li>Technology</li>
-            <li>Portfolio</li>
-            <li>Project Request</li>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About Us</a>
+            </li>
+            <li>
+              <a href="/project-request">Project Request</a>
+            </li>
+            <li>
+              <a href="/blog">Blog</a>
+            </li>
+            <li>
+              <a href="/career">Careers</a>
+            </li>
+            <li>
+              <a href="/contact-us">Contact Us</a>
+            </li>
           </ul>
         </div>
         <div className={Styles.services}>
           <p>Services</p>
           <ul>
-            <li>Digital Martketing</li>
-            <li>Product Design</li>
-            <li>Product Development</li>
-            <li>Web Development</li>
-            <li>Cloud Services</li>
+            <li>
+              <a href="/services">Digital Martketing</a>
+            </li>
+            <li>
+              <a href="/services">Product Design</a>
+            </li>
+            <li>
+              <a href="/services">Product Development</a>
+            </li>
+            <li>
+              <a href="/services">Web Development</a>
+            </li>
+            <li>
+              <a href="/services">Cloud Services</a>
+            </li>
           </ul>
         </div>
         <div className={Styles.mobile_mid}>
           <div className={Styles.mobile_quicklinks}>
             <p>Quick Links</p>
             <ul>
-              <li>About Us</li>
-              <li>Portfolio</li>
-              <li>Testimonials</li>
-              <li>Blog</li>
-              <li>Technology</li>
-              <li>Portfolio</li>
-              <li>Project Request</li>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/about">About Us</a>
+              </li>
+              <li>
+                <a href="/project-request">Project Request</a>
+              </li>
+              <li>
+                <a href="/blog">Blog</a>
+              </li>
+              <li>
+                <a href="/career">Careers</a>
+              </li>
+              <li>
+                <a href="/contact-us">Contact Us</a>
+              </li>
             </ul>
           </div>
           <div className={Styles.mobile_services}>
             <p>Services</p>
             <ul>
-              <li>Digital Martketing</li>
-              <li>Product Design</li>
-              <li>Product Development</li>
-              <li>Web Development</li>
-              <li>Cloud Services</li>
+              <li>
+                <a href="/services">Digital Martketing</a>
+              </li>
+              <li>
+                <a href="/services">Product Design</a>
+              </li>
+              <li>
+                <a href="/services">Product Development</a>
+              </li>
+              <li>
+                <a href="/services">Web Development</a>
+              </li>
+              <li>
+                <a href="/services">Cloud Services</a>
+              </li>
             </ul>
           </div>
         </div>
         <div className={Styles.contact}>
           <p>Get In Touch</p>
           <ul>
-            <li>Contact Us</li>
-            <li>Careers</li>
+            <li>
+              <a href="/career">Careers</a>
+            </li>
+            <li>
+              <a href="/contact-us">Contact Us</a>
+            </li>
           </ul>
         </div>
       </div>

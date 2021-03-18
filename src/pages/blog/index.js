@@ -180,8 +180,9 @@ const blog = () => {
                 </Link>
               </li>
             </ul>
-
-            <Button text="Get Started" primary />
+            <Link href="/contact-us">
+              <Button text="Contact Us" primary />
+            </Link>
           </div>
           <div className={Styles.hamburger}>
             <img
