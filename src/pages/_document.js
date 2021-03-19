@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
 					<meta name='robots' content='index, nofollow' />
 					<meta name='apple-mobile-web-app-title' content='Eze' />
 
-					<link rel='icon' href='/favicon.ico' />
+					<link rel='icon' href='/assets/favicon.ico' />
 
 					<meta content='IE=edge' httpEquiv='X-UA-Compatible' />
 					<meta content='#0855ba' name='theme-color' />
