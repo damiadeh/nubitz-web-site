@@ -214,7 +214,7 @@
 			justify-content: center;
 			border-radius: 3px;
 			box-sizing: border-box;
-			border: 2px solid var(--white);
+			border: 2px solid #fff;
 		}
 
 		p {
@@ -222,7 +222,7 @@
 			font-weight: 500;
 			font-size: var(--font-h4);
 			line-height: 23px;
-			color: var(--white);
+			color: #fff;
 			max-height: 22.4px;
 		}
 	}
@@ -243,8 +243,8 @@
 		font-size: var(--font-h5);
 		line-height: 21px;
 		color: #0f0f0f;
-		background-color: var(--white);
-		border: 1px solid var(--white);
+		background-color: #fff;
+		border: 1px solid #fff;
 		padding: 17px;
 		border: none;
 		text-align: center;
@@ -256,7 +256,7 @@
 		font-weight: 700;
 		font-size: var(--font-h5);
 		line-height: 21px;
-		color: var(--white);
+		color: #fff;
 		background-color: var(--primary);
 		border: 1px solid var(--primary);
 		padding: 17px;

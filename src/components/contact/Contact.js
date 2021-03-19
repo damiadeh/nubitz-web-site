@@ -1,6 +1,9 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencei                            */
+/* -------------------------------------------------------------------------- */
 import React, { useState } from "react";
-import Button from "../primary-button/Button";
-import SectionText from "../section_text/SectionText";
+
+/* --------------------------------- Styles --------------------------------- */
 import Styles from "./contact.module.scss";
 
 const contactInfo = {
@@ -68,10 +71,7 @@ const Contact = () => {
 					<h2 className={Styles.title}>
 						Let’s build the greatest experience for your customers
 					</h2>
-					{/* <p className={Styles.subtext}>
-          is simply dummy text of the printing and typesetting industry. Lorem
-          Ipsum has been the industry.
-        </p> */}
+
 					<p className={Styles.email}>
 						Email us at <span>nubitz@gmail.com</span>
 					</p>
@@ -80,13 +80,6 @@ const Contact = () => {
 					</p>
 				</div>
 				<div className={Styles.formContainer}>
-					{/* <SectionText
-          width="550px"
-          textColor="white"
-          secondary
-          title="we solve problems related"
-          description="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the"
-        /> */}
 					<form className={Styles.form}>
 						<div className={Styles.form_wrapper}>
 							<input
@@ -129,7 +122,6 @@ const Contact = () => {
 						/>
 						<div className={Styles.checkbox}>
 							<div>
-								{/* <span className={Styles.check}></span> */}
 								<input
 									id='checkbox_id'
 									type='checkbox'
@@ -141,10 +133,6 @@ const Contact = () => {
 									Yes, I would like to recieve news {"&"} update
 								</p>
 							</div>
-							{/* <div style={{ display: "flex", alignItems: "center" }}>
-              <img src="/assets/contact/attach.svg" alt="attach" />
-              <p>Attach File</p>
-            </div> */}
 						</div>
 						<div className={Styles.buttonWrapper}>
 							<button
@@ -153,9 +141,6 @@ const Contact = () => {
 								onClick={handleSubmit}>
 								Submit
 							</button>
-							{/* <button className={Styles.survey}>
-              Try our interactive survey instead
-            </button> */}
 						</div>
 					</form>
 				</div>

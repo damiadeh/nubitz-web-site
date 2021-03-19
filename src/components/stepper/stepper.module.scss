@@ -83,7 +83,7 @@
 
 		.active {
 			background-color: var(--primary);
-			color: var(--white) fff;
+			color: var(--white);
 			border: 1px solid rgba(0, 16, 60, 0.4);
 			box-sizing: border-box;
 			box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.05);
@@ -100,7 +100,7 @@
 		.request {
 			color: var(--primary);
 			cursor: pointer;
-			background: var(--white) fff;
+			background: var(--white);
 			border: 1px solid rgba(0, 16, 60, 0.4);
 			box-sizing: border-box;
 			box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.05);

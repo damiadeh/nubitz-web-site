@@ -195,7 +195,9 @@ const HomePage = () => {
 								))}
 							</div>
 						</div>
-						<span className={Styles.cta}>View All Articles</span>
+						<Link href='/blog'>
+							<span className={Styles.cta}>View All Articles</span>
+						</Link>
 					</div>
 				</div>
 			</div>

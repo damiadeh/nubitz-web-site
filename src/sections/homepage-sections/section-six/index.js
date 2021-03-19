@@ -11,9 +11,8 @@ import Styles from "./sectionSix.module.scss";
 
 const SectionSix = () => {
 	const router = useRouter();
-	const setItemInLocalStorage = (item) => {
-		localStorage.setItem("caseStudy", JSON.stringify(item));
-		router.push("/case-study");
+	const setItemInLocalStorage = () => {
+		router.push("/project-request");
 	};
 
 	return (
