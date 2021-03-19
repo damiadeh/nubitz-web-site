@@ -600,8 +600,7 @@
 		}
 
 		.cta {
-			margin-top: 10vh;
-			margin-bottom: 10vh;
+			padding: 4rem 0;
 			font-weight: 600;
 			font-size: calc(var(--font-h1) + 1px);
 			line-height: 43px;
@@ -613,10 +612,9 @@
 			transition: 0.4s;
 			z-index: 1;
 
-			@media (max-width: 1140px) {
+			@media (max-width: 992px) {
 				margin-bottom: unset;
-				padding-top: 25px;
-				padding-bottom: 25px;
+				padding: 2rem 0;
 				font-size: calc(var(--font-h3) + 2px);
 				line-height: 29px;
 				color: var(--white);
@@ -628,14 +626,14 @@
 				position: absolute;
 				z-index: -1;
 				left: 0;
-				bottom: -10vh;
+				bottom: 0;
 				height: 8px;
 				width: 100%;
 				background: var(--primary);
 				transform-origin: 0% 100%;
 				transition: transform 0.35s;
 
-				@media (max-width: 1140px) {
+				@media (max-width: 992px) {
 					display: none;
 				}
 			}
@@ -644,7 +642,7 @@
 				color: white;
 
 				&::after {
-					transform: scaleY(25);
+					transform: scaleY(30);
 					background: var(--primary);
 					color: white;
 				}
