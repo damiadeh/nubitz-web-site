@@ -3,14 +3,14 @@
 		width: 182px;
 		font-style: normal;
 		font-weight: 500;
-		font-size: 20px;
+		font-size: calc(var(--font-h4) + 2px);
 		line-height: 29px;
 		text-transform: capitalize;
 		margin: 0 0 5px;
 
 		@media screen and (max-width: 1140px) {
 			margin-bottom: 16px;
-			font-size: 18px;
+			font-size: var(--font-h4);
 			line-height: 22px;
 			width: unset !important;
 		}
@@ -74,7 +74,7 @@
 		&_mini {
 			font-style: normal;
 			font-weight: bold;
-			font-size: 16px;
+			font-size: var(--font-h5);
 			line-height: 30px;
 		}
 	}
@@ -83,7 +83,7 @@
 		width: 489px;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 23px;
+		font-size: calc(var(--font-h3) + 1px);
 		line-height: 40px;
 		margin: 2vh 0;
 
@@ -96,7 +96,7 @@
 		@media screen and (max-width: 768px) {
 			width: unset !important;
 			margin: 3vh 0;
-			font-size: 16px;
+			font-size: var(--font-h5);
 			line-height: 24px;
 		}
 
@@ -104,7 +104,7 @@
 			width: unset;
 			font-style: normal;
 			font-weight: normal;
-			font-size: 16px;
+			font-size: var(--font-h5);
 			line-height: 26px;
 			margin: 0;
 		}

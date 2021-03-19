@@ -18,9 +18,9 @@
 			text-transform: capitalize;
 			font-style: normal;
 			line-height: 48px;
-			color: #1958e3;
+			color: var(--primary);
 			font-weight: 800;
-			font-size: 32px;
+			font-size: calc(var(--font-h2) + 4px);
 			margin: 0;
 		}
 
@@ -30,7 +30,7 @@
 			text-align: center;
 			line-height: 26px;
 			color: #333333;
-			font-size: 16px;
+			font-size: var(--font-h5);
 			width: 850px;
 			margin: 0;
 
@@ -70,7 +70,7 @@
 				width: unset;
 				font-style: normal;
 				font-weight: normal;
-				font-size: 16px;
+				font-size: var(--font-h5);
 				line-height: 26px;
 				margin: 2vh 0 0;
 

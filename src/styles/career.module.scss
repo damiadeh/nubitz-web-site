@@ -26,7 +26,7 @@
 			}
 
 			.vacancy {
-				background: #ffffff;
+				background: var(--white) fff;
 				border: 1px solid #6979b7;
 				box-sizing: border-box;
 				border-radius: 5px;
@@ -44,7 +44,7 @@
 					p {
 						font-style: normal;
 						font-weight: 800;
-						font-size: 16px;
+						font-size: var(--font-h5);
 						line-height: 25px;
 						text-transform: capitalize;
 						color: #333333;
@@ -105,7 +105,7 @@
 					p {
 						font-style: normal;
 						font-weight: normal;
-						font-size: 16px;
+						font-size: var(--font-h5);
 						line-height: 20px;
 						text-transform: capitalize;
 						color: #333333;
@@ -115,12 +115,12 @@
 				button {
 					width: 100%;
 					padding: 15px;
-					background: #1958e3;
+					background: var(--primary);
 					backdrop-filter: blur(4px);
 					border-radius: 5px;
 					font-style: normal;
 					font-weight: 600;
-					font-size: 18px;
+					font-size: var(--font-h4);
 					line-height: 27px;
 					color: #fdfdfd;
 					display: flex;
@@ -165,15 +165,15 @@
 				&_title {
 					font-style: normal;
 					font-weight: bold;
-					font-size: 18px;
-					color: #1958e3;
+					font-size: var(--font-h4);
+					color: var(--primary);
 					margin: 0;
 				}
 
 				&_description {
 					font-style: normal;
 					font-weight: normal;
-					font-size: 15px;
+					font-size: calc(var(--font-p) + 1px);
 					line-height: 24px;
 					color: #333533;
 					margin: 2vh 0;
@@ -187,22 +187,22 @@
 			width: 489px;
 			font-style: normal;
 			font-weight: 800;
-			font-size: 32px;
+			font-size: calc(var(--font-h2) + 4px);
 			line-height: 30px;
 			text-transform: capitalize;
-			color: #1958e3;
+			color: var(--primary);
 			margin: 0;
 
 			@media screen and (max-width: 992px) {
 				width: unset !important;
-				font-size: 20px;
+				font-size: calc(var(--font-h4) + 2px);
 			}
 		}
 
 		p {
 			font-style: normal;
 			font-weight: normal;
-			font-size: 16px;
+			font-size: var(--font-h5);
 			line-height: 20px;
 			color: #333333;
 			margin: 2vh 0 4vh;

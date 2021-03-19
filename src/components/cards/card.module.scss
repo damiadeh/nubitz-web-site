@@ -2,7 +2,7 @@
 	display: grid;
 	grid-template-columns: auto auto auto auto;
 	align-items: center;
-	// color: #fff;
+	// color: var(--white);
 
 	width: 100%;
 
@@ -71,7 +71,7 @@
 		}
 
 		&:nth-child(1) {
-			// background-image: linear-gradient(to right, #1958e3, #629fca);
+			// background-image: linear-gradient(to right, var(--primary), #629fca);
 			background-color: transparent;
 
 			.number {
@@ -98,7 +98,7 @@
 		}
 
 		&:nth-child(2) {
-			// background-image: linear-gradient(to right, #629fca,#1958e3, );
+			// background-image: linear-gradient(to right, #629fca,var(--primary), );
 			background-color: transparent;
 			color: linear-gradient(90.87deg, #ff3194 0.81%, #e31439 104.14%);
 
@@ -126,7 +126,7 @@
 		}
 
 		&:nth-child(3) {
-			// background-image: linear-gradient(to right, #1958e3, #629fca);
+			// background-image: linear-gradient(to right, var(--primary), #629fca);
 			background-color: transparent;
 			color: linear-gradient(268.49deg, #fe8c00 5.15%, #d63907 98.7%);
 
@@ -140,7 +140,7 @@
 				background: linear-gradient(268.49deg, #fe8c00 5.15%, #d63907 98.7%);
 
 				.number {
-					color: #ffffff;
+					color: var(--white) fff;
 				}
 			}
 
@@ -154,7 +154,7 @@
 		}
 
 		&:nth-child(4) {
-			// background-image: linear-gradient(to right, #1958e3, #629fca);
+			// background-image: linear-gradient(to right, var(--primary), #629fca);
 			background-color: transparent;
 			color: linear-gradient(92.45deg, #3b1eeb 1.75%, #248ff2 93.53%);
 
@@ -168,7 +168,7 @@
 				background: linear-gradient(92.45deg, #3b1eeb 1.75%, #248ff2 93.53%);
 
 				.number {
-					color: #ffffff;
+					color: var(--white) fff;
 				}
 			}
 
@@ -201,13 +201,13 @@
 		.title {
 			margin: 0;
 			font-weight: 500;
-			font-size: 24px;
+			font-size: calc(var(--font-h3) + 2px);
 			line-height: 29px;
-			color: #fff;
+			color: var(--white);
 			max-width: 191px;
 
 			@media screen and (max-width: 992px) {
-				font-size: 15px;
+				font-size: calc(var(--font-p) + 1px);
 				line-height: 23px;
 				letter-spacing: 0.01em;
 				z-index: 1;

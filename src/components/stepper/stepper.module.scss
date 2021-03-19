@@ -12,12 +12,12 @@
 			margin: 0;
 			font-style: normal;
 			font-weight: 500;
-			font-size: 18px;
+			font-size: var(--font-h4);
 			color: #b8b6bf;
 			cursor: pointer;
 
 			@media screen and (max-width: 768px) {
-				font-size: 14px;
+				font-size: var(--font-p);
 			}
 
 			@media screen and (max-width: 420px) {
@@ -26,7 +26,7 @@
 		}
 
 		span {
-			font-size: 18px;
+			font-size: var(--font-h4);
 			color: #b8b6bf;
 			padding: 0 30px;
 			font-weight: 500;
@@ -48,16 +48,16 @@
 		h5 {
 			font-style: normal;
 			font-weight: bold;
-			font-size: 22px;
+			font-size: var(--font-h3);
 			line-height: 34px;
-			color: #1958e3;
+			color: var(--primary);
 			margin: 0;
 		}
 
 		p {
 			font-style: normal;
 			font-weight: normal;
-			font-size: 16px;
+			font-size: var(--font-h5);
 			line-height: 25px;
 			color: #333333;
 			margin: 5px 0 0;
@@ -82,8 +82,8 @@
 		}
 
 		.active {
-			background-color: #1958e3;
-			color: #ffffff;
+			background-color: var(--primary);
+			color: var(--white) fff;
 			border: 1px solid rgba(0, 16, 60, 0.4);
 			box-sizing: border-box;
 			box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.05);
@@ -98,9 +98,9 @@
 		}
 
 		.request {
-			color: #1958e3;
+			color: var(--primary);
 			cursor: pointer;
-			background: #ffffff;
+			background: var(--white) fff;
 			border: 1px solid rgba(0, 16, 60, 0.4);
 			box-sizing: border-box;
 			box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.05);

@@ -16,9 +16,9 @@
 			text-transform: capitalize;
 			font-style: normal;
 			line-height: 48px;
-			color: #1958e3;
+			color: var(--primary);
 			font-weight: 800;
-			font-size: 32px;
+			font-size: calc(var(--font-h2) + 4px);
 			margin: 0;
 		}
 
@@ -28,7 +28,7 @@
 			text-align: center;
 			line-height: 26px;
 			color: #333333;
-			font-size: 16px;
+			font-size: var(--font-h5);
 			width: 850px;
 			margin: 0;
 
@@ -69,14 +69,14 @@
 
 			&:hover {
 				background-color: white;
-				border: 1px solid #1958e3;
+				border: 1px solid var(--primary);
 			}
 
 			p {
 				width: unset;
 				font-style: normal;
 				font-weight: normal;
-				font-size: 15px;
+				font-size: calc(var(--font-p) + 1px);
 				line-height: 25px;
 				margin: 2vh 0 0;
 

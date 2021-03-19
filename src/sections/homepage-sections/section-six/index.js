@@ -144,11 +144,11 @@ const SectionSix = () => {
 															display: "flex",
 															alignItems: "center",
 															backgroundColor: "#EEF3FE",
-															border: "0.5px solid #1958e3",
+															border: "0.5px solid var(--primary)",
 															display: "flex",
 															justifyContent: "center",
 															alignItems: "center",
-															color: "#1958e3",
+															color: "var(--primary)",
 															fontWeight: "bold",
 													  }
 											}>
@@ -159,7 +159,7 @@ const SectionSix = () => {
 														? {
 																color: `${item.secondtextColor}`,
 														  }
-														: { marginRight: "10px", color: "#1958e3" }
+														: { marginRight: "10px", color: "var(--primary)" }
 												}>
 												<p>{item.secondname}</p>
 												<span>{item.secondproduct}</span>

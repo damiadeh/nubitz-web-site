@@ -38,22 +38,22 @@
 	h2 {
 		font-style: normal;
 		font-weight: 800;
-		font-size: 32px;
+		font-size: calc(var(--font-h2) + 4px);
 		line-height: 48px;
 		text-transform: capitalize;
 		margin: 0;
-		color: #101112;
+		color: var(--text-black);
 	}
 
 	p {
 		margin: 0;
 		font-style: normal;
 		font-weight: 600;
-		font-size: 16px;
+		font-size: var(--font-h5);
 		line-height: 30px;
 		text-align: center;
 		text-transform: capitalize;
-		color: #1958e3;
+		color: var(--primary);
 	}
 }
 

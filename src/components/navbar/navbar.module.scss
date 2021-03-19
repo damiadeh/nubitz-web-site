@@ -69,7 +69,7 @@
 					left: 0;
 					bottom: 0;
 					top: 25px;
-					border: 2px solid #1958e3;
+					border: 2px solid var(--primary);
 				}
 			}
 
@@ -82,7 +82,7 @@
 					font-style: normal;
 
 					line-height: 18px;
-					font-size: 16px;
+					font-size: var(--font-h5);
 					color: #fff;
 					position: relative;
 					cursor: pointer;
@@ -103,10 +103,10 @@
 
 	.contactButton {
 		font-weight: 700;
-		font-size: 16px;
+		font-size: var(--font-h5);
 		line-height: 21px;
 		color: #fff;
-		background-color: #1958e3;
+		background-color: var(--primary);
 		padding: 11px 24px;
 		border: 1px solid transparent;
 		text-decoration: none;
@@ -160,7 +160,7 @@
 						text-decoration: none;
 						font-style: normal;
 						font-weight: bold;
-						font-size: 18px;
+						font-size: var(--font-h4);
 						line-height: 28px;
 						color: #00103c;
 					}
@@ -174,7 +174,7 @@
 			width: 100%;
 			padding: 20px 0;
 			color: #ffffff;
-			font-size: 18px;
+			font-size: var(--font-h4);
 			font-weight: bold;
 			outline: none;
 		}

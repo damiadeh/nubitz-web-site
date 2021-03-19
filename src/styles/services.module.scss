@@ -24,14 +24,14 @@
 			width: 489px;
 			font-style: normal;
 			font-weight: 800;
-			font-size: 32px;
+			font-size: calc(var(--font-h2) + 4px);
 			line-height: 48px;
 			text-transform: capitalize;
 			margin: 0;
 
 			@media screen and (max-width: 992px) {
 				width: unset !important;
-				font-size: 23px;
+				font-size: calc(var(--font-h3) + 1px);
 			}
 		}
 
@@ -39,7 +39,7 @@
 			width: 489px;
 			font-style: normal;
 			font-weight: normal;
-			font-size: 16px;
+			font-size: var(--font-h5);
 			line-height: 26px;
 			margin-bottom: 0;
 
@@ -80,11 +80,11 @@
 			width: 182px;
 			font-style: normal;
 			font-weight: 600;
-			font-size: 15px;
+			font-size: calc(var(--font-p) + 1px);
 			line-height: 30px;
 			text-transform: capitalize;
 			margin: 0 0 5px;
-			color: #1958e3;
+			color: var(--primary);
 
 			@media screen and (max-width: 992px) {
 				width: unset !important;
@@ -94,21 +94,21 @@
 		&_title {
 			font-style: normal;
 			font-weight: 800;
-			font-size: 32px;
+			font-size: calc(var(--font-h2) + 4px);
 			line-height: 48px;
 			text-transform: capitalize;
 			margin: 0;
 
 			@media screen and (max-width: 992px) {
 				width: unset !important;
-				font-size: 23px;
+				font-size: calc(var(--font-h3) + 1px);
 			}
 		}
 
 		&_description {
 			font-style: normal;
 			font-weight: normal;
-			font-size: 16px;
+			font-size: var(--font-h5);
 			line-height: 26px;
 			margin-bottom: 0;
 
@@ -189,11 +189,11 @@
 			width: 182px;
 			font-style: normal;
 			font-weight: 600;
-			font-size: 15px;
+			font-size: calc(var(--font-p) + 1px);
 			line-height: 30px;
 			text-transform: capitalize;
 			margin: 0 0 5px;
-			color: #1958e3;
+			color: var(--primary);
 
 			@media screen and (max-width: 992px) {
 				width: unset !important;
@@ -204,14 +204,14 @@
 			width: 320px;
 			font-style: normal;
 			font-weight: 800;
-			font-size: 32px;
+			font-size: calc(var(--font-h2) + 4px);
 			line-height: 48px;
 			text-transform: capitalize;
 			margin: 0;
 
 			@media screen and (max-width: 992px) {
 				width: unset !important;
-				font-size: 23px;
+				font-size: calc(var(--font-h3) + 1px);
 			}
 		}
 
@@ -219,7 +219,7 @@
 			width: 350px;
 			font-style: normal;
 			font-weight: normal;
-			font-size: 16px;
+			font-size: var(--font-h5);
 			line-height: 26px;
 			margin-bottom: 0;
 
@@ -235,7 +235,7 @@
 
 		&_boxes {
 			&_box {
-				background: #ffffff;
+				background: var(--white) fff;
 				border: 1px solid rgba(0, 16, 60, 0.4);
 				box-sizing: border-box;
 				box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.05);
@@ -253,7 +253,7 @@
 				p {
 					font-style: normal;
 					font-weight: bold;
-					font-size: 14px;
+					font-size: var(--font-p);
 					line-height: 20px;
 					color: #00103c;
 					text-align: center;
@@ -290,7 +290,7 @@
 			text-align: center;
 			font-style: normal;
 			font-weight: 800;
-			font-size: 24px;
+			font-size: calc(var(--font-h3) + 2px);
 			line-height: 48px;
 			color: #242423;
 			margin: 0;
@@ -339,7 +339,7 @@
 				h5 {
 					font-style: normal;
 					font-weight: 800;
-					font-size: 24px;
+					font-size: calc(var(--font-h3) + 2px);
 					line-height: 40px;
 					text-transform: capitalize;
 					color: #fdfdfd;

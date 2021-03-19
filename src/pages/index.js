@@ -26,7 +26,7 @@ const HomePage = () => {
 	const [id, setId] = useState(null);
 
 	useEffect(() => {
-		Aos.init({ duration: 2000 });
+		Aos.init({ duration: 500 });
 	}, []);
 
 	return (

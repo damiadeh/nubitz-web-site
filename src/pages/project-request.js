@@ -16,7 +16,7 @@ const ProjectRequest = () => {
 				<div className='wrapper'>
 					<div className={Styles.hero}>
 						<SectionText
-							textColor='#1958e3'
+							textColor='var(--primary)'
 							title='Ut mattis iaculis nulla donec quam enim amet dictum a. Auctor.'
 							description='Mauris volutpat maecenas quis molestie pellentesque sit diam egestas sed. Est ornare bibendum ut facilisis rhoncus porta habitant. Scelerisque amet ut posuere sit nulla urna vitae amet. Nulla sit lorem tortor, nunc. Sed'
 						/>
