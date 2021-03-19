@@ -195,10 +195,12 @@ const HomePage = () => {
 								))}
 							</div>
 						</div>
-						<Link href='/blog'>
-							<span className={Styles.cta}>View All Articles</span>
-						</Link>
 					</div>
+					<Link href='/blog'>
+						<div className={Styles.cta}>
+							<p>View All Articles</p>
+						</div>
+					</Link>
 				</div>
 			</div>
 		</Layout>

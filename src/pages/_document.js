@@ -21,6 +21,7 @@ export default class MyDocument extends Document {
 					<meta content='IE=edge' httpEquiv='X-UA-Compatible' />
 					<meta content='#0855ba' name='theme-color' />
 					<meta content='#0855ba' name='msapplication-TileColor' />
+					<link rel='stylesheet' href='/styles/nprogress.css' />
 				</Head>
 				<body>
 					<Main />

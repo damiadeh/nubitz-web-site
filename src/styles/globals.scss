@@ -141,3 +141,15 @@ main {
 	margin-right: auto;
 	margin-left: auto;
 }
+
+.app__section {
+	animation: fadein normal 0.5s ease;
+	@keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}

@@ -25,7 +25,7 @@ const Layout = ({
 	variant = "light",
 }) => {
 	return (
-		<>
+		<div className='app__section'>
 			<Head>
 				<title>{title}</title>
 			</Head>
@@ -33,7 +33,7 @@ const Layout = ({
 			<main>{children}</main>
 			<Contact />
 			<Footer />
-		</>
+		</div>
 	);
 };
 
