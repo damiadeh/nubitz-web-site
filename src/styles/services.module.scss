@@ -1,143 +1,8 @@
 .container {
-	nav {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 15px 120px;
-		z-index: 10;
-
-		@media screen and (max-width: 768px) {
-			padding: 15px 20px 0;
-		}
-
-		.nav_items {
-			display: flex;
-			align-items: center;
-
-			@media screen and (max-width: 768px) {
-				display: none;
-			}
-
-			ul {
-				display: flex;
-				align-items: center;
-				z-index: 10;
-
-				.active a {
-					&::after {
-						content: "";
-						position: absolute;
-						width: 24px;
-						height: 0px;
-						left: 0;
-						bottom: 0;
-						top: 25px;
-						border: 2px solid #1958e3;
-					}
-				}
-
-				li {
-					list-style: none;
-					position: relative;
-
-					a {
-						font-weight: normal;
-						padding-right: 40px;
-						font-style: normal;
-						line-height: 18px;
-						font-size: 14px;
-						color: #00103c;
-						cursor: pointer;
-						text-decoration: none;
-						text-transform: capitalize;
-
-						&:hover {
-							font-weight: bold;
-						}
-					}
-				}
-			}
-		}
-
-		.hamburger {
-			display: none;
-
-			@media screen and (max-width: 768px) {
-				display: block;
-				cursor: pointer;
-			}
-		}
-
-		.mobileNav {
-			width: 100%;
-			height: 100vh;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 1;
-			background-color: #f2f4f7;
-			transition: all 0.6s ease;
-			padding: 15px 20px;
-			animation-duration: 0.5s;
-			animation-name: slidein;
-
-			&_top {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-			}
-
-			&_lists {
-				ul {
-					padding: 0;
-					margin-top: 5vh;
-
-					li {
-						list-style: none;
-						padding: 15px 0;
-
-						a {
-							text-decoration: none;
-							font-style: normal;
-							font-weight: bold;
-							font-size: 18px;
-							line-height: 28px;
-							color: #00103c;
-						}
-					}
-				}
-			}
-
-			&_button {
-				background-color: #00103c;
-				border: 1px solid #00103c;
-				width: 100%;
-				padding: 20px 0;
-				color: #ffffff;
-				font-size: 18px;
-				font-weight: bold;
-				outline: none;
-			}
-
-			@keyframes slidein {
-				from {
-					margin-right: 0%;
-					width: 0%;
-				}
-
-				to {
-					margin-left: 0%;
-					width: 100%;
-				}
-			}
-		}
-	}
-
 	.hero {
 		img {
 			position: relative;
-			height: 100vh;
+			height: 80vh;
 
 			@media screen and (max-width: 768px) {
 				object-fit: cover;
@@ -146,8 +11,8 @@
 
 		&_text {
 			position: absolute;
-			padding: 0 120px;
-			top: 45%;
+
+			top: 35%;
 			color: white;
 
 			@media screen and (max-width: 768px) {
@@ -164,7 +29,7 @@
 			text-transform: capitalize;
 			margin: 0;
 
-			@media screen and (max-width: 1024px) {
+			@media screen and (max-width: 992px) {
 				width: unset !important;
 				font-size: 23px;
 			}
@@ -178,7 +43,7 @@
 			line-height: 26px;
 			margin-bottom: 0;
 
-			@media screen and (max-width: 1024px) {
+			@media screen and (max-width: 992px) {
 				width: unset !important;
 			}
 
@@ -221,7 +86,7 @@
 			margin: 0 0 5px;
 			color: #1958e3;
 
-			@media screen and (max-width: 1024px) {
+			@media screen and (max-width: 992px) {
 				width: unset !important;
 			}
 		}
@@ -234,7 +99,7 @@
 			text-transform: capitalize;
 			margin: 0;
 
-			@media screen and (max-width: 1024px) {
+			@media screen and (max-width: 992px) {
 				width: unset !important;
 				font-size: 23px;
 			}
@@ -247,7 +112,7 @@
 			line-height: 26px;
 			margin-bottom: 0;
 
-			@media screen and (max-width: 1024px) {
+			@media screen and (max-width: 992px) {
 				width: unset !important;
 			}
 
@@ -309,7 +174,7 @@
 		}
 
 		.wrapper {
-			padding: 15vh 120px;
+			padding: 6rem 0;
 			display: grid;
 			grid-template-columns: 48% 48%;
 			column-gap: 4%;
@@ -330,7 +195,7 @@
 			margin: 0 0 5px;
 			color: #1958e3;
 
-			@media screen and (max-width: 1024px) {
+			@media screen and (max-width: 992px) {
 				width: unset !important;
 			}
 		}
@@ -344,7 +209,7 @@
 			text-transform: capitalize;
 			margin: 0;
 
-			@media screen and (max-width: 1024px) {
+			@media screen and (max-width: 992px) {
 				width: unset !important;
 				font-size: 23px;
 			}
@@ -358,7 +223,7 @@
 			line-height: 26px;
 			margin-bottom: 0;
 
-			@media screen and (max-width: 1024px) {
+			@media screen and (max-width: 992px) {
 				width: unset !important;
 			}
 
@@ -415,7 +280,7 @@
 	}
 
 	.projects {
-		padding: 5vh 120px;
+		padding: 5rem 0;
 
 		@media screen and (max-width: 768px) {
 			padding: 5vh 15px;

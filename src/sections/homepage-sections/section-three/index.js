@@ -20,39 +20,41 @@ const SectionThree = () => {
 
 	return (
 		<div className={Styles.container}>
-			<div>
-				<div className={Styles.hero}>
-					<h2>Technical stack</h2>
-				</div>
+			<div className='wrapper'>
+				<div>
+					<div className={Styles.hero}>
+						<h2>Technical stack</h2>
+					</div>
 
-				<div className={Styles.timeline}>
-					<ul>
-						{TIMELINE_OBJECTS.items.map((item) => (
-							<li
-								onClick={() => setActive(item.id)}
-								className={active === item.id && Styles.active}>
-								<span className={Styles.circle}></span>
-								{item.name}
-							</li>
-						))}
-					</ul>
+					<div className={Styles.timeline}>
+						<ul>
+							{TIMELINE_OBJECTS.items.map((item) => (
+								<li
+									onClick={() => setActive(item.id)}
+									className={active === item.id && Styles.active}>
+									<span className={Styles.circle}></span>
+									{item.name}
+								</li>
+							))}
+						</ul>
+					</div>
 				</div>
-			</div>
-			<div className={Styles.languages}>
-				{LANGUAGES.items.map((item) => (
-					<>
-						{item.id === active ? (
-							<div key={item.id} className={Styles.language}>
-								<div data-aos='zoom-in'>
-									<img src={item.image} alt={item.name} />
-									<p>{item.name}</p>
+				<div className={Styles.languages}>
+					{LANGUAGES.items.map((item) => (
+						<>
+							{item.id === active ? (
+								<div key={item.id} className={Styles.language}>
+									<div data-aos='zoom-in'>
+										<img src={item.image} alt={item.name} />
+										<p>{item.name}</p>
+									</div>
 								</div>
-							</div>
-						) : (
-							""
-						)}
-					</>
-				))}
+							) : (
+								""
+							)}
+						</>
+					))}
+				</div>
 			</div>
 		</div>
 	);

@@ -29,9 +29,9 @@ const CaseStudy = () => {
 			<nav
 				style={{
 					backgroundColor: `${
-						!caseStudyItem.backgroundColor
-							? caseStudyItem.secondbackgroundColor
-							: caseStudyItem.backgroundColor
+						!caseStudyItem?.backgroundColor
+							? caseStudyItem?.secondbackgroundColor
+							: caseStudyItem?.backgroundColor
 					}`,
 				}}>
 				<div className={Styles.logo_container}>
@@ -115,23 +115,23 @@ const CaseStudy = () => {
 				className={Styles.hero}
 				style={{
 					backgroundColor: `${
-						!caseStudyItem.backgroundColor
-							? caseStudyItem.secondbackgroundColor
-							: caseStudyItem.backgroundColor
+						!caseStudyItem?.backgroundColor
+							? caseStudyItem?.secondbackgroundColor
+							: caseStudyItem?.backgroundColor
 					}`,
 				}}>
 				<div className={Styles.hero_container}>
 					<div className={Styles.hero_text}>
 						<img src='/assets/case-study/ova-logo.svg' alt='ova-logo' />
 						<h3>
-							{!caseStudyItem.name
-								? caseStudyItem.secondname
-								: caseStudyItem.name}
+							{!caseStudyItem?.name
+								? caseStudyItem?.secondname
+								: caseStudyItem?.name}
 						</h3>
 						<p>
-							{!caseStudyItem.product
-								? caseStudyItem.secondproduct
-								: caseStudyItem.product}
+							{!caseStudyItem?.product
+								? caseStudyItem?.secondproduct
+								: caseStudyItem?.product}
 						</p>
 					</div>
 					<div className={Styles.hero_image}>

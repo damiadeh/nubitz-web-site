@@ -37,6 +37,14 @@
 				color: var(--text-black);
 			}
 		}
+		&_min {
+			background: #fff;
+			.nav_items {
+				a {
+					color: var(--text-black);
+				}
+			}
+		}
 	}
 	.nav_items {
 		display: flex;
@@ -72,12 +80,18 @@
 					font-weight: bold;
 					margin-right: 88px;
 					font-style: normal;
+
 					line-height: 18px;
 					font-size: 16px;
 					color: #fff;
+					position: relative;
 					cursor: pointer;
 					text-decoration: none;
 					text-transform: capitalize;
+
+					&:hover {
+						opacity: 0.5;
+					}
 
 					&:nth-child(4) {
 						margin-right: unset;

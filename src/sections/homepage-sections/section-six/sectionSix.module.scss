@@ -1,9 +1,6 @@
 .container {
-	padding: 15vh 120px 5vh;
-
-	@media screen and (max-width: 1024px) {
-		padding: 30px;
-	}
+	display: block;
+	padding: 7rem 0;
 }
 
 .wrapper {
@@ -12,7 +9,7 @@
 	column-gap: 2vh;
 	margin-top: 2vh;
 
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 992px) {
 		display: block;
 	}
 
@@ -22,16 +19,16 @@
 		column-gap: 2vh;
 		margin-top: 2vh;
 
-		@media screen and (max-width: 1024px) {
+		@media screen and (max-width: 992px) {
 			display: block;
 		}
 	}
 }
 
 .portfolio {
-	padding: 15px;
+	padding: 1.8rem;
 	cursor: pointer;
-	border-radius: 8px;
+	border-radius: 1px;
 	transition: all 0.2s ease-in-out;
 
 	&:hover {
@@ -39,16 +36,16 @@
 	}
 
 	&_add {
-		padding: 15px;
-		border-radius: 8px;
+		padding: 1.8rem;
+		border-radius: 1px;
 
-		@media screen and (max-width: 1024px) {
+		@media screen and (max-width: 992px) {
 			height: 327px;
 			margin: 2vh 0 0;
 		}
 	}
 
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 992px) {
 		margin: 2vh 0 0;
 	}
 }
@@ -59,16 +56,18 @@
 	p {
 		font-style: normal;
 		font-weight: 600;
-		font-size: 16px;
-		line-height: 27px;
-		margin: 0;
+		font-size: 30px;
+		margin-bottom: 1px;
+		/* margin: 0; */
+		margin-top: 0;
 	}
 
 	span {
 		font-style: normal;
 		font-weight: normal;
-		font-size: 11px;
+		font-size: 15px;
 		line-height: 18px;
+		color: #ffffffb5;
 	}
 }
 
@@ -78,7 +77,7 @@
 	justify-content: center;
 
 	img {
-		@media screen and (max-width: 1024px) {
+		@media screen and (max-width: 992px) {
 			width: 300px;
 		}
 	}
@@ -87,7 +86,7 @@
 .tagContainer {
 	padding: 15vh 120px 5vh;
 
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 992px) {
 		display: block;
 		padding: 0 0 5vh;
 	}
@@ -113,7 +112,7 @@
 		text-transform: capitalize;
 		color: #fdfdfd;
 
-		@media screen and (max-width: 1024px) {
+		@media screen and (max-width: 992px) {
 			width: unset !important;
 			font-size: 23px;
 			line-height: 20px;
@@ -128,7 +127,7 @@
 		color: #fdfdfd;
 		width: 660px;
 
-		@media screen and (max-width: 1024px) {
+		@media screen and (max-width: 992px) {
 			width: unset !important;
 		}
 
@@ -154,12 +153,12 @@
 			right: 0;
 		}
 
-		@media screen and (max-width: 1024px) {
+		@media screen and (max-width: 992px) {
 			display: none;
 		}
 	}
 
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 992px) {
 		display: block;
 		padding: 8vh 15px;
 		border-radius: unset;

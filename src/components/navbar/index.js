@@ -25,7 +25,10 @@ const Navbar = ({ variant = "light" }) => {
 	}
 	const [openMenu, setOpenMenu] = useState(false);
 	return (
-		<nav className={`${userScrolledUp && Styles.scrolled_up} ${Styles.navbar}`}>
+		<nav
+			className={`${userScrolledUp && Styles.scrolled_up} ${Styles.navbar} ${
+				variant !== "light" && Styles.scrolled_up_min
+			}`}>
 			<div className='wrapper'>
 				<div className={Styles.logo_container}>
 					<Link href='/'>
