@@ -10,9 +10,12 @@
 	.mainWrapper {
 		// height: 80vh;
 		position: relative;
-		height: 725px;
+		height: 78.5vh;
 		@media (max-width: 990px) {
 			height: auto;
+		}
+		@media (max-height: 809px) {
+			height: 650px;
 		}
 	}
 
