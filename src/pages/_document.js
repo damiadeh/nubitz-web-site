@@ -12,11 +12,7 @@ export default class MyDocument extends Document {
 					<title>Nubitz | Design and software development done right</title>
 					<meta property='og:type' content='website' />
 					<meta property='og:url' content='https://nubitz.com' />
-					<meta
-						property='og:title'
-						content='Design and software development done right
-- We make your ideas succeed through design and software development'
-					/>
+					<meta property='og:title' content='Nubitz' />
 					<meta
 						property='og:description'
 						content='Design and software development done right
