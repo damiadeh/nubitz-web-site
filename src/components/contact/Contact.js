@@ -1,7 +1,8 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencei                            */
 /* -------------------------------------------------------------------------- */
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 /* --------------------------------- Styles --------------------------------- */
 import Styles from "./contact.module.scss";
@@ -34,17 +35,23 @@ const Contact = () => {
 	const [message, setMessage] = useState("");
 	const [checked, setChecked] = useState(false);
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		const data = {
-			fullname,
-			email,
-			phonenumber,
-			companyname,
-			message,
-		};
+	const recaptchaRef = useRef();
 
-		console.log(data);
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+
+		const token = await recaptchaRef.current.executeAsync();
+		if (token) {
+			const data = {
+				fullname,
+				email,
+				phonenumber,
+				companyname,
+				message,
+			};
+
+			console.log(data);
+		}
 	};
 
 	const handleCheck = (e) => {
@@ -134,6 +141,11 @@ const Contact = () => {
 								</p>
 							</div>
 						</div>
+						<ReCAPTCHA
+							ref={recaptchaRef}
+							size='invisible'
+							sitekey='6Lfk4IwaAAAAACF64zvRZlfXCCmg0aonU_ey1O5I'
+						/>
 						<div className={Styles.buttonWrapper}>
 							<button
 								className={Styles.submit}
