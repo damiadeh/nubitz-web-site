@@ -109,7 +109,9 @@ const CaseStudy = () => {
                 </li>
               </ul>
             </div>
-            <button className={Styles.mobileNav_button}>Get Started</button>
+            <Link href="/contact-us">
+              <button className={Styles.mobileNav_button}>Get Started</button>
+            </Link>
           </div>
         )}
       </nav>

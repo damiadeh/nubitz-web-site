@@ -116,7 +116,9 @@ const Navbar = ({ variant = "light" }) => {
                 </li>
               </ul>
             </div>
-            <button className={Styles.mobileNav_button}>Get Started</button>
+            <Link href="/contact-us">
+              <button className={Styles.mobileNav_button}>Get Started</button>
+            </Link>
           </div>
         )}
       </div>

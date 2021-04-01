@@ -11,8 +11,11 @@ import Styles from "./sectionSix.module.scss";
 
 const SectionSix = () => {
   const router = useRouter();
-  const setItemInLocalStorage = () => {
-    router.push("/case-study");
+  const setItemInLocalStorage = (clonedItem) => {
+    localStorage.setItem("caseStudy", JSON.stringify(clonedItem));
+    clonedItem.id
+      ? router.push(`/case-study/${encodeURIComponent(clonedItem.id)}`)
+      : router.push(`/case-study/${encodeURIComponent(clonedItem.secondid)}`);
   };
 
   return (
